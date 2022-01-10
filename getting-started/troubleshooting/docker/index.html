@@ -3156,18 +3156,26 @@ of your <code>docker-compose.yml</code>.</p>
 <p>Run this command to display the last 100 log messages (omit <code>--tail=100</code> to see all):</p>
 <div class="highlight"><pre><span></span><code>docker-compose logs --tail<span class="o">=</span><span class="m">100</span>
 </code></pre></div>
-<p>To enable <a href="../../config-options/">debug mode</a>, add this to the environment variables of the <code>photoprism</code>
-service in your <code>docker-compose.yml</code> and restart for changes to take effect:</p>
+<p>To enable <a href="../../config-options/">debug mode</a>, set <code>PHOTOPRISM_DEBUG</code> to <code>true</code> in the <code>environment:</code> section
+of the <code>photoprism</code> service (or use the <code>--debug</code> flag when running the <code>photoprism</code> command directly):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+  <span class="nt">photoprism</span><span class="p">:</span>
+    <span class="nt">environment</span><span class="p">:</span>
+      <span class="nt">PHOTOPRISM_DEBUG</span><span class="p">:</span> <span class="s">&quot;true&quot;</span>
+</code></pre></div>
+<p>Then restart all services for the changes to take effect. It can be helpful to keep Docker running in the foreground
+while debugging so that log messages are displayed directly. To do this, omit the <code>-d</code> parameter when restarting:</p>
+<div class="highlight"><pre><span></span><code>docker-compose stop
+docker-compose up 
+</code></pre></div>
 <div class="admonition note">
 <p>If you see no errors or no logs at all, you may have started the server on a different <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr>
-and/or port. There could also be an <a href="../browsers/">issue with your browser</a>, browser plugins, firewall settings,</p>
+and/or port. There could also be an <a href="../browsers/">issue with your browser</a>, browser plugins, firewall settings,
+or other tools you may have installed.</p>
 </div>
-<p>or other tools you may have installed.</p>
 <div class="admonition tldr">
 <p>The default <a href="https://docs.docker.com/compose/">Docker Compose</a> config filename is <code>docker-compose.yml</code>. For simplicity, it doesn't need to be specified when running the <code>docker-compose</code> command in the same directory. Config files for other apps or instances should be placed in separate folders.</p>
 </div>
-<div class="highlight"><pre><span></span><code>PHOTOPRISM_DEBUG: &quot;true&quot;
-</code></pre></div>
 <h3 id="adding-swap">Adding Swap<a class="headerlink" href="#adding-swap" title="Permanent link">&para;</a></h3>
 <h4 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h4>
 <p>Open a terminal and run this command to check if your server has <abbr title="substitute for physical memory">swap</abbr> configured.</p>
