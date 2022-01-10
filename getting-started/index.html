@@ -3027,16 +3027,20 @@ The counts in the navigation are constantly updated, so you can follow the progr
 they might be in <a href="../user-guide/organize/review/">Review</a> due to low quality or incomplete metadata. 
 You can turn this and other features off in <a href="../user-guide/settings/general/">Settings</a>, 
 depending on your specific use case.</p>
-<div class="admonition note">
-<p>Our <a href="https://docs.photoprism.app/release-notes/">stable version</a> and development preview have been built into a 
-single <a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch image</a> for 64-bit AMD, Intel,
-and ARM processors. That means, <a href="raspberry-pi/">Raspberry Pi</a> 3 / 4, Apple M1, and other ARM64-based 
-devices can pull from the same repository, enjoy the exact same functionality, and can follow the regular 
-<a href="docker-compose/">installation instructions</a> after going through a short list of <a href="raspberry-pi/">requirements</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Installation Packages</p>
+<p>Everyone is invited to <a href="https://docs.photoprism.app/developer-guide/">contribute by building and testing installation packages</a>
+for Linux distributions and other operating systems! We currently don't have the resources to do this,
+as new versions are released several times a month and the long list of dependencies would lead to an enormous
+testing effort. An <a href="https://docs.photoprism.app/getting-started/freebsd/">unofficial port</a> is available for
+FreeBSD / FreeNAS users. Advanced users <a href="faq/#building-from-source">can build and install</a> PhotoPrism from the <a href="https://github.com/photoprism/photoprism">publicly available source code</a>.</p>
 </div>
-<div class="admonition tldr">
-<p>Downloadable installation packages are planned for a later release. Developers can build PhotoPrism from source
-by following the instructions in our <a href="../developer-guide/setup/">Developer Guide</a>.</p>
+<div class="admonition note">
+<p>Our <a href="https://docs.photoprism.app/release-notes/">stable version and development preview</a> have been built into a
+single <a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch Docker image</a> for 64-bit AMD, Intel,
+and ARM processors. That means, <a href="raspberry-pi/">Raspberry Pi</a> 3 / 4, Apple M1, and other ARM64-based
+devices can pull from the same repository, enjoy the exact same functionality, and can follow the regular
+<a href="docker-compose/">installation instructions</a> after going through a short list of <a href="raspberry-pi/">requirements</a>.</p>
 </div>
 <h2 id="roadmap">Roadmap<a class="headerlink" href="#roadmap" title="Permanent link">&para;</a></h2>
 <p>Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.
@@ -3057,8 +3061,7 @@ and plenty of memory for caching. Especially the conversion of RAW images and th
 videos are very demanding.</p>
 </div>
 <div class="admonition info">
-<p>RAW file conversion and TensorFlow will be disabled on servers 
-with less than 2 GB of physical memory.
+<p>RAW file conversion and TensorFlow are disabled on servers with less than 2 GB of physical memory.
 If you're running out of memory - or other system resources - while indexing, try reducing the
 <a href="https://docs.photoprism.app/getting-started/config-options/">number of workers</a>
 to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance of the server).
