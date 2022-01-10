@@ -3077,7 +3077,8 @@ mariadb: mysqld: Shutdown complete
 </div>
 <div class="admonition note">
 <p>If you see no errors or no logs at all, you may have started the server on a different <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr>
-and/or port. There could also be an <a href="browsers/">issue with your browser</a>, ad blocker, or firewall settings.</p>
+and/or port. There could also be an <a href="browsers/">issue with your browser</a>, browser plugins, firewall settings,
+or other tools you may have installed.</p>
 </div>
 <p>You can also try (re-)starting the app and database without <code>-d</code>. This keeps their containers running
 in the foreground and shows log messages for troubleshooting:</p>
@@ -3112,7 +3113,7 @@ service in your <code>docker-compose.yml</code> and restart for changes to take 
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Kernel security modules such as <a href="https://wiki.ubuntu.com/AppArmor">AppArmor</a> and <a href="https://en.wikipedia.org/wiki/Security-Enhanced_Linux">SELinux</a> are blocking permissions</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Your Raspberry Pi has not been configured according to our <a href="../raspberry-pi/#system-requirements">recommendations</a></li>
 </ul>
-<p>We recommend <a href="docker/#viewing-logs">checking your Docker logs</a> for messages like <em>disk full</em>, <em>wrong permissions</em>, <em>no route to <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr></em>,
+<p>We recommend checking <a href="docker/#viewing-logs">your Docker logs</a> for messages like <em>disk full</em>, <em>wrong permissions</em>, <em>no route to <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr></em>,
 <em>connection failed</em>, and <em>killed</em> as described above. If a service has been killed or otherwise automatically terminated,
 this points to a memory problem.</p>
 <h3 id="app-not-loading">App Not Loading<a class="headerlink" href="#app-not-loading" title="Permanent link">&para;</a></h3>
@@ -3126,7 +3127,7 @@ this points to a memory problem.</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are using an <a href="browsers/">incompatible browser</a> (try another browser)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> There is a problem with your network connection (test if other sites work)</li>
 </ul>
-<p>We recommend that you <a href="browsers/">check the browser console</a> for helpful errors and warnings.</p>
+<p>We recommend that you <a href="browsers/#getting-error-details">check the browser console</a> for helpful errors and warnings.</p>
 <h3 id="missing-pictures">Missing Pictures<a class="headerlink" href="#missing-pictures" title="Permanent link">&para;</a></h3>
 <p>If you have indexed your library and some images or videos are missing, first check <em>Library &gt; Errors</em>
 for errors and warnings. In case the application logs don't contain anything helpful:</p>
@@ -3174,7 +3175,7 @@ In case the application logs don't contain anything helpful:</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> An ad blocker blocks requests (disable it or add an exception)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are connected to the wrong server or <abbr title="Content Delivery Network">CDN</abbr>, or a <abbr title="Domain Name System">DNS</abbr> record has not been updated yet</li>
 </ul>
-<p>We also recommend <a href="docker/#viewing-logs">checking your Docker logs</a> for messages like <em>disk full</em>, <em>wrong permissions</em>, and <em>killed</em> as
+<p>We also recommend checking <a href="docker/#viewing-logs">your Docker logs</a> for messages like <em>disk full</em>, <em>wrong permissions</em>, and <em>killed</em> as
 described above. If a service has been killed or otherwise automatically terminated, this points to a memory problem.</p>
 <h3 id="videos-dont-play">Videos Don't Play<a class="headerlink" href="#videos-dont-play" title="Permanent link">&para;</a></h3>
 <p>If videos do not play and/or you only see a white/black area when you open a video:</p>
@@ -3187,7 +3188,7 @@ described above. If a service has been killed or otherwise automatically termina
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> There are network problems caused by a proxy, firewall, or unstable connection (try a direct connection)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are connected to the wrong server or <abbr title="Content Delivery Network">CDN</abbr>, or a <abbr title="Domain Name System">DNS</abbr> record has not been updated yet</li>
 </ul>
-<p>We recommend that you <a href="docker/#viewing-logs">check your Docker</a> and the <a href="browsers/">browser console</a>
+<p>We recommend that you check <a href="docker/#viewing-logs">your Docker logs</a> and <a href="browsers/#getting-error-details">the browser console</a>
 for messages related to <em><abbr title="Hypertext Transfer Protocol">HTTP</abbr> requests</em>, <em>permissions</em>, <em>security</em>, <em><abbr title="transcodes video files">FFmpeg</abbr></em>, <em>videos</em>, and <em>file conversion</em>.</p>
                 
               
