@@ -2994,9 +2994,9 @@ server that is not based on our <a href="https://dl.photoprism.app/docker/docker
 </ul>
 <p>Note that your database may also use a different character set if you imported it from another server.
 Run this command in a terminal to see the current values of the collation and character set variables (change the root
-password <code>insecure</code> as specified in your <code>docker-compose.yml</code>):</p>
+password <code>insecure</code> and database name <code>photoprism</code> as specified in your <code>docker-compose.yml</code>):</p>
 <div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s2">&quot;SHOW VARIABLES WHERE Variable_name LIKE &#39;character\_set\_%&#39; OR Variable_name LIKE &#39;collation%&#39;;&quot;</span> <span class="p">|</span> <span class="se">\</span>
-docker-compose <span class="nb">exec</span> -T mariadb mysql -uroot -pinsecure
+docker-compose <span class="nb">exec</span> -T mariadb mysql -uroot -pinsecure photoprism
 </code></pre></div>
 <h4 id="version-upgrade">Version Upgrade<a class="headerlink" href="#version-upgrade" title="Permanent link">&para;</a></h4>
 <p>If the database doesn't start properly after upgrading from an earlier MySQL or MariaDB version,
