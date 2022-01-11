@@ -3036,10 +3036,10 @@ command and restart the <code>mariadb</code> service as described above.</p>
 <h4 id="corrupted-files">Corrupted Files<a class="headerlink" href="#corrupted-files" title="Permanent link">&para;</a></h4>
 <p>If your database files get corrupted frequently, it is usually because they are stored on an unreliable device such
 as a USB flash drive, an SD card, or a shared network folder.</p>
-<ul>
-<li>Never use the same database files with more than one server instance</li>
-<li>To share a database over a network, run the database server directly on the remote server instead of sharing database files</li>
-<li>To repair your tables after you have moved the files to a local disk, you can <a href="https://mariadb.com/kb/en/innodb-recovery-modes/">start MariaDB with <code>--innodb-force-recovery=1</code></a>, similar to how you recover a lost root password as described above</li>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Never use the same database files with more than one server instance</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> To share a database over a network, run the database server directly on the remote server instead of sharing database files</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> To repair your tables after you have moved the files to a local disk, you can <a href="https://mariadb.com/kb/en/innodb-recovery-modes/">start MariaDB with <code>--innodb-force-recovery=1</code></a> (otherwise the same procedure as for recovering a lost password, see above)</li>
 </ul>
                 
               
