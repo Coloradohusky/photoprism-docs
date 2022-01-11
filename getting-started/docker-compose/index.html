@@ -3183,6 +3183,7 @@ PhotoPrism won't be able to see folders that have not been mounted. That's an im
 <p>The <em>originals</em> folder contains your original photo and video files. </p>
 <p><code>~/Pictures</code> will be mounted by default, where <code>~</code> is a shortcut for your <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
+  <span class="c1"># &quot;/host/folder:/photoprism/folder&quot;  # example</span>
   <span class="p p-Indicator">-</span> <span class="s">&quot;~/Pictures:/photoprism/originals&quot;</span>
 </code></pre></div>
 <p>All folders accessible from the <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> can be <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes">mounted</a>, 
