@@ -3115,7 +3115,7 @@ Never use easy-to-guess passwords or default values like <code>insecure</code> o
 There is no default in case no password was provided. A minimum length of 4 characters is required.</p>
 </div>
 <p>Commands on Linux may have to be prefixed with <code>sudo</code> when not running as root.
-Note that this will point the <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr> placeholder <code>~</code> to <code>/root</code> in volume mounts.
+Note that this will point the <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr> shortcut <code>~</code> to <code>/root</code> in volume mounts.
 Kernel security modules such as AppArmor and SELinux have been reported to cause
 <a href="../troubleshooting/">issues</a>.</p>
 <p>When the app has been started, open the Web <abbr title="User Interface">UI</abbr> by navigating to <a href="http://localhost:2342/">http://localhost:2342/</a>. You should see a login screen.
@@ -3139,7 +3139,7 @@ in a terminal to change an existing password. You can also reset your database f
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.</p>
 <h5 id="photoprismoriginals">/photoprism/originals<a class="headerlink" href="#photoprismoriginals" title="Permanent link">&para;</a></h5>
 <p>The <em>originals</em> folder contains your original photo and video files.
-They are mounted from <code>~/Pictures</code> in the example above, where <code>~</code> is a placeholder for 
+They are mounted from <code>~/Pictures</code> in the example above, where <code>~</code> is a shortcut for 
 your <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr>. Other folders accessible from the <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> may be <a href="https://docs.docker.com/storage/bind-mounts/">mounted</a> instead, 
 including network drives. </p>
 <p>Multiple folders can be made accessible by mounting them as subfolders:</p>

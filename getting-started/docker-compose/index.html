@@ -3111,7 +3111,7 @@ and change the <a href="../config-options/">configuration</a> as needed:</p>
 <div class="highlight"><pre><span></span><code>wget https://dl.photoprism.app/docker/docker-compose.yml
 </code></pre></div>
 <p>Commands on Linux may have to be prefixed with <code>sudo</code> when not running as root.
-Note that this will point the <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr> placeholder <code>~</code> to <code>/root</code> in the <code>volumes:</code> 
+Note that this will point the <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr> shortcut <code>~</code> to <code>/root</code> in the <code>volumes:</code> 
 section of your <code>docker-compose.yml</code>. Kernel security modules such as AppArmor and SELinux 
 have been <a href="../troubleshooting/docker/#kernel-security">reported to cause issues</a>.
 Ensure that your server has <a href="../troubleshooting/docker/#adding-swap">at least 4 GB of <abbr title="substitute for physical memory">swap</abbr></a> configured so that
@@ -3181,7 +3181,7 @@ to other apps and hosts.</p>
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.</p>
 <h5 id="photoprismoriginals">/photoprism/originals<a class="headerlink" href="#photoprismoriginals" title="Permanent link">&para;</a></h5>
 <p>The <em>originals</em> folder contains your original photo and video files. </p>
-<p><code>~/Pictures</code> will be mounted by default, where <code>~</code> is a placeholder for your <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr>:</p>
+<p><code>~/Pictures</code> will be mounted by default, where <code>~</code> is a shortcut for your <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="s">&quot;~/Pictures:/photoprism/originals&quot;</span>
 </code></pre></div>
