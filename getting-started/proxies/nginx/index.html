@@ -2887,6 +2887,14 @@
                 
                 
                 <h1 id="using-nginx-as-reverse-proxy">Using NGINX as Reverse Proxy<a class="headerlink" href="#using-nginx-as-reverse-proxy" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Getting Support</p>
+<p>In case you experience issues when using NGINX, such as failed uploads, connection errors, broken thumbnails, and video playback problems:</p>
+<ul>
+<li>Consider <a href="https://www.nginx.com/support/">asking the NGINX community for advice</a> as we do not specialize in supporting their product, which is <a href="https://github.com/photoprism/photoprism/issues?q=is%3Aissue+nginx">known to be difficult</a> to configure properly</li>
+<li>We recommend <a href="../traefik/">using Traefik as reverse proxy</a> instead because it is easier and provides more convenience</li>
+</ul>
+</div>
 <p>This <a href="https://www.serverlab.ca/tutorials/linux/web-servers-linux/how-to-configure-nginx-for-websockets/">tutorial</a> explains, how to configure NGINX WebSocket connections between your client and backend services.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
@@ -2920,6 +2928,7 @@
 </div>
 <p>At the very least you will need to adapt <code>server_name</code> and the <code>ssl_certificate</code>/<code>ssl_certificate_key</code> paths to match your setup. Please refer to their <a href="https://nginx.org/en/docs/">official documentation</a> for further details.</p>
 <div class="admonition tldr">
+<p class="admonition-title">Why use a reverse proxy?</p>
 <p>If you install PhotoPrism on a public server outside your home network, please always run it behind a secure
 HTTPS reverse proxy. Your files and passwords will otherwise be transmitted in clear text and can be intercepted
 by anyone, including your provider, hackers, and governments. Backup tools and file sync apps may refuse to

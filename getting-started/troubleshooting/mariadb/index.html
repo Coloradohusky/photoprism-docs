@@ -698,6 +698,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#unicode-support" class="md-nav__link">
+    Unicode Support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-upgrade" class="md-nav__link">
     Version Upgrade
   </a>
@@ -2924,6 +2931,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#unicode-support" class="md-nav__link">
+    Unicode Support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-upgrade" class="md-nav__link">
     Version Upgrade
   </a>
@@ -2967,6 +2981,16 @@
 <a href="../../../funding/">Sponsors</a> receive direct <a href="https://photoprism.app/contact">technical support</a> via email.
 Before reporting a bug, try to determine the cause of your problem.</p>
 </div>
+<div class="admonition note">
+<p>Official support for MySQL is discontinued as Oracle seems to have stopped shipping <a href="https://github.com/photoprism/photoprism/issues/1764">new features and improvements</a>.
+As a result, the testing effort required before each release is no longer feasible.</p>
+</div>
+<h4 id="unicode-support">Unicode Support<a class="headerlink" href="#unicode-support" title="Permanent link">&para;</a></h4>
+<p>If the logs show "incorrect string value" database errors and you are running a custom MariaDB or MySQL
+server that is not based on our <a href="https://dl.photoprism.app/docker/docker-compose.yml">default configuration</a>:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Full <a href="https://home.unicode.org/basic-info/faq/">Unicode</a> support <a href="https://mariadb.com/kb/en/setting-character-sets-and-collations/#example-changing-the-default-character-set-to-utf-8">must be enabled</a>, for example using the <code>mysqld</code> command parameters <code>--character-set-server=utf8mb4</code> and <code>--collation-server=utf8mb4_unicode_ci</code></li>
+</ul>
 <h4 id="version-upgrade">Version Upgrade<a class="headerlink" href="#version-upgrade" title="Permanent link">&para;</a></h4>
 <p>If the database doesn't start properly after upgrading from an earlier MySQL or MariaDB version,
 you may need to run this command in a terminal:</p>
