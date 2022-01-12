@@ -376,6 +376,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.photoprism.app/getting-started/troubleshooting/logs/</loc>
+         <lastmod>2022-01-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.photoprism.app/getting-started/troubleshooting/mariadb/</loc>
          <lastmod>2022-01-12</lastmod>
          <changefreq>daily</changefreq>

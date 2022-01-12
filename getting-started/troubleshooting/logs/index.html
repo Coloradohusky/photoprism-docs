@@ -13,14 +13,14 @@
         <meta name="author" content="PhotoPrism.org">
       
       
-        <link rel="canonical" href="https://docs.photoprism.app/developer-guide/media/abstraction/">
+        <link rel="canonical" href="https://docs.photoprism.app/getting-started/troubleshooting/logs/">
       
       <link rel="icon" href="../../../icons/favicon.ico">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
-        <title>Abstraction - PhotoPrism</title>
+        <title>Logs - PhotoPrism</title>
       
     
     
@@ -59,16 +59,16 @@
     
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="PhotoPrism - Abstraction">
+  <meta property="og:title" content="PhotoPrism - Logs">
   <meta property="og:description" content="User Guide">
-  <meta property="og:url" content="https://docs.photoprism.app/developer-guide/media/abstraction/">
-  <meta property="og:image" content="https://i.photoprism.app/?cover=17&title=Abstraction&description=User%20Guide">
+  <meta property="og:url" content="https://docs.photoprism.app/getting-started/troubleshooting/logs/">
+  <meta property="og:image" content="https://i.photoprism.app/?cover=17&title=Logs&description=User%20Guide">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@photoprism_app">
   <meta name="twitter:creator" content="@photoprism_app">
-  <meta name="twitter:title" content="PhotoPrism - Abstraction">
+  <meta name="twitter:title" content="PhotoPrism - Logs">
   <meta name="twitter:description" content="User Guide">
-  <meta name="twitter:image" content="https://i.photoprism.app/?cover=17&title=Abstraction&description=User%20Guide">
+  <meta name="twitter:image" content="https://i.photoprism.app/?cover=17&title=Logs&description=User%20Guide">
   <link rel="shortcut icon" sizes="512x512" type="image/png" href="/icons/logo/512.png">
   <link rel="shortcut icon" sizes="256x256" type="image/png" href="/icons/logo/256.png">
   <link rel="shortcut icon" sizes="196x196" type="image/png" href="/icons/logo/196.png">
@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#issues" class="md-skip">
+        <a href="#collecting-debug-information" class="md-skip">
           Skip to content
         </a>
       
@@ -143,7 +143,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Abstraction
+              Logs
             
           </span>
         </div>
@@ -243,13 +243,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link md-tabs__link--active">
         Getting Started
       </a>
     </li>
@@ -275,15 +277,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../developer-guide/" class="md-tabs__link">
         Developer Guide
       </a>
     </li>
@@ -357,12 +357,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
       
       
@@ -399,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         Setup
       </a>
     </li>
@@ -413,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/docker-compose/" class="md-nav__link">
+      <a href="../../docker-compose/" class="md-nav__link">
         Docker Compose
       </a>
     </li>
@@ -427,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/docker/" class="md-nav__link">
+      <a href="../../docker/" class="md-nav__link">
         Pure Docker
       </a>
     </li>
@@ -441,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/raspberry-pi/" class="md-nav__link">
+      <a href="../../raspberry-pi/" class="md-nav__link">
         Raspberry Pi
       </a>
     </li>
@@ -455,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/freebsd/" class="md-nav__link">
+      <a href="../../freebsd/" class="md-nav__link">
         FreeBSD
       </a>
     </li>
@@ -495,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/cloud/digitalocean/" class="md-nav__link">
+      <a href="../../cloud/digitalocean/" class="md-nav__link">
         DigitalOcean
       </a>
     </li>
@@ -542,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/nas/synology/" class="md-nav__link">
+      <a href="../../nas/synology/" class="md-nav__link">
         Synology
       </a>
     </li>
@@ -556,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/nas/unraid/" class="md-nav__link">
+      <a href="../../nas/unraid/" class="md-nav__link">
         Unraid
       </a>
     </li>
@@ -577,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/config-options/" class="md-nav__link">
+      <a href="../../config-options/" class="md-nav__link">
         Config Options
       </a>
     </li>
@@ -591,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/updates/" class="md-nav__link">
+      <a href="../../updates/" class="md-nav__link">
         Getting Updates
       </a>
     </li>
@@ -603,12 +605,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_11" type="checkbox" id="__nav_1_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_11" type="checkbox" id="__nav_1_11" checked>
       
       
       
@@ -631,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/troubleshooting/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         Checklists
       </a>
     </li>
@@ -643,11 +647,114 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../getting-started/troubleshooting/logs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Logs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Logs
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#web-browsers" class="md-nav__link">
+    Web Browsers
+  </a>
+  
+    <nav class="md-nav" aria-label="Web Browsers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chrome-chromium-and-edge" class="md-nav__link">
+    Chrome, Chromium, and Edge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firefox" class="md-nav__link">
+    Firefox
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safari" class="md-nav__link">
+    Safari
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-logs" class="md-nav__link">
+    Application Logs
+  </a>
+  
+    <nav class="md-nav" aria-label="Application Logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#live-logs" class="md-nav__link">
+    Live Logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors-and-warnings" class="md-nav__link">
+    Errors and Warnings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    Docker Compose
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -659,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/troubleshooting/docker/" class="md-nav__link">
+      <a href="../docker/" class="md-nav__link">
         Docker
       </a>
     </li>
@@ -673,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/troubleshooting/mariadb/" class="md-nav__link">
+      <a href="../mariadb/" class="md-nav__link">
         MariaDB
       </a>
     </li>
@@ -687,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/troubleshooting/browsers/" class="md-nav__link">
+      <a href="../browsers/" class="md-nav__link">
         Browsers
       </a>
     </li>
@@ -701,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/troubleshooting/performance/" class="md-nav__link">
+      <a href="../performance/" class="md-nav__link">
         Performance
       </a>
     </li>
@@ -748,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/proxies/traefik/" class="md-nav__link">
+      <a href="../../proxies/traefik/" class="md-nav__link">
         Traefik
       </a>
     </li>
@@ -762,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/proxies/caddy-1/" class="md-nav__link">
+      <a href="../../proxies/caddy-1/" class="md-nav__link">
         Caddy 1
       </a>
     </li>
@@ -776,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/proxies/caddy-2/" class="md-nav__link">
+      <a href="../../proxies/caddy-2/" class="md-nav__link">
         Caddy 2
       </a>
     </li>
@@ -790,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/proxies/nginx/" class="md-nav__link">
+      <a href="../../proxies/nginx/" class="md-nav__link">
         NGINX
       </a>
     </li>
@@ -804,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/proxies/apache-2/" class="md-nav__link">
+      <a href="../../proxies/apache-2/" class="md-nav__link">
         Apache 2.4
       </a>
     </li>
@@ -818,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/proxies/swag/" class="md-nav__link">
+      <a href="../../proxies/swag/" class="md-nav__link">
         SWAG
       </a>
     </li>
@@ -865,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/advanced/transcoding/" class="md-nav__link">
+      <a href="../../advanced/transcoding/" class="md-nav__link">
         Transcoding
       </a>
     </li>
@@ -879,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/advanced/kubernetes/" class="md-nav__link">
+      <a href="../../advanced/kubernetes/" class="md-nav__link">
         Kubernetes
       </a>
     </li>
@@ -893,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/advanced/backups/" class="md-nav__link">
+      <a href="../../advanced/backups/" class="md-nav__link">
         Backups
       </a>
     </li>
@@ -907,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/advanced/databases/" class="md-nav__link">
+      <a href="../../advanced/databases/" class="md-nav__link">
         Databases
       </a>
     </li>
@@ -921,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/advanced/caching/" class="md-nav__link">
+      <a href="../../advanced/caching/" class="md-nav__link">
         Caching
       </a>
     </li>
@@ -935,7 +1042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/advanced/nginx-proxy-setup/" class="md-nav__link">
+      <a href="../../advanced/nginx-proxy-setup/" class="md-nav__link">
         NGINX
       </a>
     </li>
@@ -949,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/advanced/scalability/" class="md-nav__link">
+      <a href="../../advanced/scalability/" class="md-nav__link">
         Scalability
       </a>
     </li>
@@ -970,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/faq/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -1960,14 +2067,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -1990,7 +2095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../../developer-guide/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -2004,7 +2109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/" class="md-nav__link">
+      <a href="../../../developer-guide/setup/" class="md-nav__link">
         Setup
       </a>
     </li>
@@ -2018,7 +2123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../directories/" class="md-nav__link">
+      <a href="../../../developer-guide/directories/" class="md-nav__link">
         Directories
       </a>
     </li>
@@ -2032,7 +2137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/" class="md-nav__link">
+      <a href="../../../developer-guide/configuration/" class="md-nav__link">
         Configuration
       </a>
     </li>
@@ -2046,7 +2151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tests/" class="md-nav__link">
+      <a href="../../../developer-guide/tests/" class="md-nav__link">
         Tests
       </a>
     </li>
@@ -2060,7 +2165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../issues/" class="md-nav__link">
+      <a href="../../../developer-guide/issues/" class="md-nav__link">
         Issues
       </a>
     </li>
@@ -2074,7 +2179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pull-requests/" class="md-nav__link">
+      <a href="../../../developer-guide/pull-requests/" class="md-nav__link">
         Pull Requests
       </a>
     </li>
@@ -2088,7 +2193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../code-quality/" class="md-nav__link">
+      <a href="../../../developer-guide/code-quality/" class="md-nav__link">
         Code Quality
       </a>
     </li>
@@ -2116,7 +2221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/" class="md-nav__link">
+      <a href="../../../developer-guide/documentation/" class="md-nav__link">
         Documentation
       </a>
     </li>
@@ -2130,7 +2235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../translations/" class="md-nav__link">
+      <a href="../../../developer-guide/translations/" class="md-nav__link">
         Translations
       </a>
     </li>
@@ -2170,7 +2275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ui/introduction/" class="md-nav__link">
+      <a href="../../../developer-guide/ui/introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -2184,7 +2289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ui/screenshots/" class="md-nav__link">
+      <a href="../../../developer-guide/ui/screenshots/" class="md-nav__link">
         Screenshots
       </a>
     </li>
@@ -2198,7 +2303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ui/components/" class="md-nav__link">
+      <a href="../../../developer-guide/ui/components/" class="md-nav__link">
         Components
       </a>
     </li>
@@ -2212,7 +2317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ui/design/" class="md-nav__link">
+      <a href="../../../developer-guide/ui/design/" class="md-nav__link">
         Design
       </a>
     </li>
@@ -2226,7 +2331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ui/rest-api/" class="md-nav__link">
+      <a href="../../../developer-guide/ui/rest-api/" class="md-nav__link">
         REST API
       </a>
     </li>
@@ -2240,7 +2345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ui/browsers/" class="md-nav__link">
+      <a href="../../../developer-guide/ui/browsers/" class="md-nav__link">
         Browsers
       </a>
     </li>
@@ -2259,14 +2364,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_13" type="checkbox" id="__nav_3_13" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_13" type="checkbox" id="__nav_3_13" >
       
       
       
@@ -2289,7 +2392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../import/" class="md-nav__link">
+      <a href="../../../developer-guide/media/import/" class="md-nav__link">
         Import
       </a>
     </li>
@@ -2301,56 +2404,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Abstraction
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../developer-guide/media/abstraction/" class="md-nav__link">
         Abstraction
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#issues" class="md-nav__link">
-    Issues
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2362,7 +2420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../encryption/" class="md-nav__link">
+      <a href="../../../developer-guide/media/encryption/" class="md-nav__link">
         Encryption
       </a>
     </li>
@@ -2376,7 +2434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../raw/" class="md-nav__link">
+      <a href="../../../developer-guide/media/raw/" class="md-nav__link">
         RAW Images
       </a>
     </li>
@@ -2390,7 +2448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../heif/" class="md-nav__link">
+      <a href="../../../developer-guide/media/heif/" class="md-nav__link">
         HEIF / HEIC
       </a>
     </li>
@@ -2404,7 +2462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../videos/" class="md-nav__link">
+      <a href="../../../developer-guide/media/videos/" class="md-nav__link">
         Videos
       </a>
     </li>
@@ -2418,7 +2476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../thumbnails/" class="md-nav__link">
+      <a href="../../../developer-guide/media/thumbnails/" class="md-nav__link">
         Thumbnails
       </a>
     </li>
@@ -2432,7 +2490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../samples/" class="md-nav__link">
+      <a href="../../../developer-guide/media/samples/" class="md-nav__link">
         Samples
       </a>
     </li>
@@ -2479,7 +2537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../metadata/geocoding/" class="md-nav__link">
+      <a href="../../../developer-guide/metadata/geocoding/" class="md-nav__link">
         Geocoding
       </a>
     </li>
@@ -2493,7 +2551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../metadata/colors/" class="md-nav__link">
+      <a href="../../../developer-guide/metadata/colors/" class="md-nav__link">
         Color Extraction
       </a>
     </li>
@@ -2507,7 +2565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../metadata/classification/" class="md-nav__link">
+      <a href="../../../developer-guide/metadata/classification/" class="md-nav__link">
         Image Classification
       </a>
     </li>
@@ -2521,7 +2579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../metadata/face-recognition/" class="md-nav__link">
+      <a href="../../../developer-guide/metadata/face-recognition/" class="md-nav__link">
         Face Recognition
       </a>
     </li>
@@ -2535,7 +2593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../metadata/xmp/" class="md-nav__link">
+      <a href="../../../developer-guide/metadata/xmp/" class="md-nav__link">
         XMP
       </a>
     </li>
@@ -2549,7 +2607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../metadata/exif/" class="md-nav__link">
+      <a href="../../../developer-guide/metadata/exif/" class="md-nav__link">
         EXIF
       </a>
     </li>
@@ -2563,7 +2621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../metadata/edit-exif/" class="md-nav__link">
+      <a href="../../../developer-guide/metadata/edit-exif/" class="md-nav__link">
         Edit EXIF
       </a>
     </li>
@@ -2610,7 +2668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clients/go/" class="md-nav__link">
+      <a href="../../../developer-guide/clients/go/" class="md-nav__link">
         Go
       </a>
     </li>
@@ -2657,7 +2715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../checklists/web-security/" class="md-nav__link">
+      <a href="../../../developer-guide/checklists/web-security/" class="md-nav__link">
         Web Security
       </a>
     </li>
@@ -2704,7 +2762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technologies/yaml/" class="md-nav__link">
+      <a href="../../../developer-guide/technologies/yaml/" class="md-nav__link">
         YAML
       </a>
     </li>
@@ -2718,7 +2776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technologies/golang/" class="md-nav__link">
+      <a href="../../../developer-guide/technologies/golang/" class="md-nav__link">
         Golang
       </a>
     </li>
@@ -2732,7 +2790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technologies/tensorflow/" class="md-nav__link">
+      <a href="../../../developer-guide/technologies/tensorflow/" class="md-nav__link">
         TensorFlow
       </a>
     </li>
@@ -2746,7 +2804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technologies/docker/" class="md-nav__link">
+      <a href="../../../developer-guide/technologies/docker/" class="md-nav__link">
         Docker
       </a>
     </li>
@@ -2760,7 +2818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technologies/broadway/" class="md-nav__link">
+      <a href="../../../developer-guide/technologies/broadway/" class="md-nav__link">
         Broadway
       </a>
     </li>
@@ -2774,7 +2832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technologies/external-apis/" class="md-nav__link">
+      <a href="../../../developer-guide/technologies/external-apis/" class="md-nav__link">
         External APIs
       </a>
     </li>
@@ -2917,6 +2975,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2925,15 +2985,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#issues" class="md-nav__link">
-    Issues
+  <a href="#web-browsers" class="md-nav__link">
+    Web Browsers
   </a>
+  
+    <nav class="md-nav" aria-label="Web Browsers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chrome-chromium-and-edge" class="md-nav__link">
+    Chrome, Chromium, and Edge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firefox" class="md-nav__link">
+    Firefox
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safari" class="md-nav__link">
+    Safari
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
+  <a href="#application-logs" class="md-nav__link">
+    Application Logs
+  </a>
+  
+    <nav class="md-nav" aria-label="Application Logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#live-logs" class="md-nav__link">
+    Live Logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errors-and-warnings" class="md-nav__link">
+    Errors and Warnings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    Docker Compose
   </a>
   
 </li>
@@ -2950,34 +3064,90 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/photoprism/photoprism-docs/tree/master/docs/developer-guide/media/abstraction.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/photoprism/photoprism-docs/tree/master/docs/getting-started/troubleshooting/logs.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Abstraction</h1>
-                
-                <p>We need to add file system abstraction, also to speed up testing. Afero seems to be the gold standard for this in the Go world:</p>
-<p><a href="https://github.com/spf13/afero">https://github.com/spf13/afero</a></p>
-<h2 id="issues">Issues<a class="headerlink" href="#issues" title="Permanent link">&para;</a></h2>
+                <h1 id="collecting-debug-information">Collecting Debug Information<a class="headerlink" href="#collecting-debug-information" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p>You are welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
+<a href="../../../funding/">Sponsors</a> receive direct <a href="https://photoprism.app/contact">technical support</a> via email.
+Before submitting a support request, try to determine the cause of your problem.</p>
+</div>
+<h2 id="web-browsers">Web Browsers<a class="headerlink" href="#web-browsers" title="Permanent link">&para;</a></h2>
+<p>If you have a frontend problem, it can be helpful to <a href="../browsers/#getting-error-details">check the browser console</a>
+for errors and warnings. A console is available in all modern browsers and can be activated via keyboard shortcuts
+or the browser menu.</p>
+<div class="admonition tldr">
+<p>In case you don't see any log messages, try reloading the page, as the problem may occur while the page is loading.</p>
+</div>
+<h4 id="chrome-chromium-and-edge">Chrome, Chromium, and Edge<a class="headerlink" href="#chrome-chromium-and-edge" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="https://github.com/photoprism/photoprism/issues/55">Embedded Database + Bleve for search? #55</a></li>
-<li><a href="https://github.com/photoprism/photoprism/issues/47">Postgres support? #47</a></li>
+<li>Press ⌘+Option+J (Mac) or Ctrl+Shift+J (Windows, Linux, Chrome OS) to go directly to the Developer Tools</li>
+<li>Or, navigate to <em>More tools</em> &gt; <em>Developer tools</em> in the browser menu and open the <em>Console</em> tab</li>
 </ul>
-<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<h4 id="firefox">Firefox<a class="headerlink" href="#firefox" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> - rsync for cloud storage (Google Drive, AWS, One Drive, ...)</li>
-<li><a href="https://github.com/minio">https://github.com/minio</a> - Object Storage for AI</li>
-<li><a href="https://github.com/upper/db">upper.io/db.v3</a> - a productive data access layer for Go</li>
-<li><a href="https://github.com/google/leveldb">LevelDB</a> - fast key-value storage library written at Google (written in Go)</li>
-<li><a href="http://blevesearch.com/">Bleve</a> - full-text search and indexing for Go</li>
-<li><a href="https://pingcap.com">TiDB</a> - a distributed HTAP database compatible with the MySQL protocol (written in Go)</li>
-<li><a href="https://github.com/confluentinc/ksql">KSQL</a> - the Streaming SQL Engine for Apache Kafka</li>
-<li><a href="https://github.com/cockroachdb/cockroach/">CockroachDB</a> - ultra-resilient SQL for global business (written in Go)</li>
-<li><a href="http://ledisdb.com/">LedisDB</a> - a high performance NoSQL like Redis powered by Go</li>
-<li><a href="https://github.com/go-pg/pg">https://github.com/go-pg/pg</a> - Golang ORM with focus on PostgreSQL features and performance</li>
-<li><a href="https://github.com/go-redis/redis">https://github.com/go-redis/redis</a> - Type-safe Redis client for Golang</li>
+<li>Press ⌘+Option+K (Mac) or Ctrl+Shift+K (Windows) to go directly to the Firefox Web Console panel</li>
+<li>Or, navigate to <em>Web Development</em> &gt; <em>Web Console</em> in the menu and open the <em>Console</em> panel</li>
 </ul>
+<h4 id="safari">Safari<a class="headerlink" href="#safari" title="Permanent link">&para;</a></h4>
+<p>Before you can access the console in Safari, you first need to enable the <em>Develop</em> menu:</p>
+<ol>
+<li>Choose Safari <em>Menu</em> &gt; <em>Preferences</em> and select the <em>Advanced Tab</em></li>
+<li>Select "Show Develop menu in menu bar"</li>
+</ol>
+<p>Once the <em>Develop</em> menu is enabled:</p>
+<ul>
+<li>Press Option+⌘+C to go directly to the <em>Javascript Console</em></li>
+<li>Or, navigate to <em>Develop</em> &gt; <em>Show Javascript Console</em> in the browser menu</li>
+</ul>
+<h2 id="application-logs">Application Logs<a class="headerlink" href="#application-logs" title="Permanent link">&para;</a></h2>
+<p>Make sure <em>Logs</em> is enabled under <em>Settings</em> &gt; <em>General</em> so you can see log messages in the Web UI.</p>
+<h4 id="live-logs">Live Logs<a class="headerlink" href="#live-logs" title="Permanent link">&para;</a></h4>
+<p>The continuously updated live logs in <em>Library</em> &gt; <em>Logs</em> are especially useful for diagnosing indexing and import issues,
+but also display other types of logs (depending on the <a href="../../config-options/#basic-settings">log level</a>):</p>
+<ol>
+<li>Click on <em>Library</em> in the main navigation</li>
+<li>Open the <em>Logs</em> tab on the right-hand side</li>
+</ol>
+<div class="admonition note">
+<p>Only a limited number of messages are visible to limit memory usage. You can see the same messages in the
+<a href="#docker-compose">Docker logs</a>. This can be more convenient if you want to search for older messages related
+to a particular file or attach your full logs to a <a href="../../../user-guide/#getting-support">support request</a>.</p>
+</div>
+<h4 id="errors-and-warnings">Errors and Warnings<a class="headerlink" href="#errors-and-warnings" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Expand the main navigation</li>
+<li>Open the <em>Library</em> sub navigation</li>
+<li>Click on <em>Errors</em></li>
+</ol>
+<p><img alt="" src="../img/ui-error-logs.jpg" /></p>
+<h2 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">&para;</a></h2>
+<p>Run this command to display the last 100 log messages (omit <code>--tail=100</code> to see all):</p>
+<div class="highlight"><pre><span></span><code>docker-compose logs --tail<span class="o">=</span><span class="m">100</span>
+</code></pre></div>
+<p>To enable <a href="../../config-options/">debug mode</a>, set <code>PHOTOPRISM_DEBUG</code> to <code>true</code> in the <code>environment:</code> section
+of the <code>photoprism</code> service (or use the <code>--debug</code> flag when running the <code>photoprism</code> command directly):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+  <span class="nt">photoprism</span><span class="p">:</span>
+    <span class="nt">environment</span><span class="p">:</span>
+      <span class="nt">PHOTOPRISM_DEBUG</span><span class="p">:</span> <span class="s">&quot;true&quot;</span>
+</code></pre></div>
+<p>Then restart all services for the changes to take effect. It can be helpful to keep Docker running in the foreground
+while debugging so that log messages are displayed directly. To do this, omit the <code>-d</code> parameter when restarting:</p>
+<div class="highlight"><pre><span></span><code>docker-compose stop
+docker-compose up 
+</code></pre></div>
+<div class="admonition note">
+<p>If you see no errors or no logs at all, you may have started the server on a different host
+and/or port. There could also be an <a href="../browsers/">issue with your browser</a>, browser plugins, firewall settings,
+or other tools you may have installed.</p>
+</div>
+<div class="admonition tldr">
+<p>The default <a href="https://docs.docker.com/compose/">Docker Compose</a> config filename is <code>docker-compose.yml</code>. For simplicity, it doesn't need to be specified when running the <code>docker-compose</code> command in the same directory. Config files for other apps or instances should be placed in separate folders.</p>
+</div>
                 
               
               
@@ -3008,9 +3178,9 @@
         
         
         <a
-                href="../import/"
+                href="../"
                 class="md-footer__link md-footer__link--prev"
-                aria-label="Previous: Import"
+                aria-label="Previous: Checklists"
                 rel="prev"
         >
             <div class="md-footer__button md-icon">
@@ -3021,7 +3191,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-                    Import
+                    Checklists
                 </div>
             </div>
         </a>
@@ -3031,9 +3201,9 @@
         
         
         <a
-                href="../encryption/"
+                href="../docker/"
                 class="md-footer__link md-footer__link--next"
-                aria-label="Next: Encryption"
+                aria-label="Next: Docker"
                 rel="next"
         >
             <div class="md-footer__title">
@@ -3041,7 +3211,7 @@
               <span class="md-footer__direction">
                 Next
               </span>
-                    Encryption
+                    Docker
                 </div>
             </div>
             <div class="md-footer__button md-icon">

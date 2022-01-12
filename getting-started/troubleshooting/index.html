@@ -747,6 +747,20 @@
   
   
     <li class="md-nav__item">
+      <a href="logs/" class="md-nav__link">
+        Logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="docker/" class="md-nav__link">
         Docker
       </a>
@@ -3116,7 +3130,7 @@ or other tools you may have installed.</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <a href="docker/#kernel-security">Kernel security modules</a> such as <a href="https://wiki.ubuntu.com/AppArmor">AppArmor</a> and <a href="https://en.wikipedia.org/wiki/Security-Enhanced_Linux">SELinux</a> are blocking permissions</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Your Raspberry Pi has not been configured according to our <a href="../raspberry-pi/#system-requirements">recommendations</a></li>
 </ul>
-<p>We recommend checking <a href="docker/#viewing-logs">your Docker logs</a> for messages like <em>disk full</em>, <em>wrong permissions</em>, <em>no route to <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr></em>,
+<p>We recommend checking <a href="logs/#docker-compose">your Docker logs</a> for messages like <em>disk full</em>, <em>wrong permissions</em>, <em>no route to <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr></em>,
 <em>connection failed</em>, and <em>killed</em> as described above. If a service has been killed or otherwise automatically terminated,
 this points to a memory problem.</p>
 <h3 id="app-not-loading">App Not Loading<a class="headerlink" href="#app-not-loading" title="Permanent link">&para;</a></h3>
@@ -3134,8 +3148,8 @@ connection or the server was started only a few seconds ago. In case this does n
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are connected to the wrong server, <abbr title="Virtual Private Network">VPN</abbr>, <abbr title="Content Delivery Network">CDN</abbr>, or a <abbr title="Domain Name System">DNS</abbr> record has not been updated yet</li>
 </ul>
 <h3 id="missing-pictures">Missing Pictures<a class="headerlink" href="#missing-pictures" title="Permanent link">&para;</a></h3>
-<p>If you have indexed your library and some images or videos are missing, first check <em>Library &gt; Errors</em>
-for errors and warnings. In case the application logs don't contain anything helpful:</p>
+<p>If you have indexed your library and some images or videos are missing, first <a href="logs/#errors-and-warnings">check <em>Library &gt; Errors</em> for errors and warnings</a>.
+In case the application logs don't contain anything helpful:</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The pictures are in <a href="../../user-guide/organize/review/">Review</a> due to low quality or incomplete metadata</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The <a href="../faq/#what-media-file-types-are-supported">file type</a> is generally unsupported</li>
@@ -3159,7 +3173,7 @@ for errors and warnings. In case the application logs don't contain anything hel
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are connected to the wrong server, <abbr title="Virtual Private Network">VPN</abbr>, <abbr title="Content Delivery Network">CDN</abbr>, or a <abbr title="Domain Name System">DNS</abbr> record has not been updated yet</li>
 </ul>
 <h3 id="broken-thumbnails">Broken Thumbnails<a class="headerlink" href="#broken-thumbnails" title="Permanent link">&para;</a></h3>
-<p>If some pictures have broken or missing thumbnails, first check <em>Library &gt; Errors</em> for errors and warnings.
+<p>If some pictures have broken or missing thumbnails, first <a href="logs/#errors-and-warnings">check <em>Library &gt; Errors</em> for errors and warnings</a>.
 In case the application logs don't contain anything helpful:</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The issue can be resolved by reloading the page or clearing the browser cache</li>
@@ -3180,7 +3194,7 @@ In case the application logs don't contain anything helpful:</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> An ad blocker or other plugins block requests (disable them or add an exception)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are connected to the wrong server, <abbr title="Virtual Private Network">VPN</abbr>, <abbr title="Content Delivery Network">CDN</abbr>, or a <abbr title="Domain Name System">DNS</abbr> record has not been updated yet</li>
 </ul>
-<p>We also recommend checking <a href="docker/#viewing-logs">your Docker logs</a> for messages like <em>disk full</em>, <em>wrong permissions</em>, and <em>killed</em> as
+<p>We also recommend checking <a href="logs/#docker-compose">your Docker logs</a> for messages like <em>disk full</em>, <em>wrong permissions</em>, and <em>killed</em> as
 described above. If a service has been killed or otherwise automatically terminated, this points to a memory problem.</p>
 <h3 id="videos-dont-play">Videos Don't Play<a class="headerlink" href="#videos-dont-play" title="Permanent link">&para;</a></h3>
 <p>If videos do not play and/or you only see a white/black area when you open a video:</p>
@@ -3194,7 +3208,7 @@ described above. If a service has been killed or otherwise automatically termina
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> There are other network problems caused by a proxy, firewall, or unstable connection (try a direct connection)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are connected to the wrong server, <abbr title="Virtual Private Network">VPN</abbr>, <abbr title="Content Delivery Network">CDN</abbr>, or a <abbr title="Domain Name System">DNS</abbr> record has not been updated yet</li>
 </ul>
-<p>We recommend that you check <a href="docker/#viewing-logs">your Docker logs</a> and <a href="browsers/#getting-error-details">the browser console</a>
+<p>We recommend that you check <a href="logs/#docker-compose">your Docker logs</a> and <a href="logs/#web-browsers">the browser console</a>
 for messages related to <em><abbr title="Hypertext Transfer Protocol">HTTP</abbr> requests</em>, <em>permissions</em>, <em>security</em>, <em><abbr title="transcodes video files">FFmpeg</abbr></em>, <em>videos</em>, and <em>file conversion</em>.</p>
                 
               
@@ -3249,9 +3263,9 @@ for messages related to <em><abbr title="Hypertext Transfer Protocol">HTTP</abbr
         
         
         <a
-                href="docker/"
+                href="logs/"
                 class="md-footer__link md-footer__link--next"
-                aria-label="Next: Docker"
+                aria-label="Next: Logs"
                 rel="next"
         >
             <div class="md-footer__title">
@@ -3259,7 +3273,7 @@ for messages related to <em><abbr title="Hypertext Transfer Protocol">HTTP</abbr
               <span class="md-footer__direction">
                 Next
               </span>
-                    Docker
+                    Logs
                 </div>
             </div>
             <div class="md-footer__button md-icon">
