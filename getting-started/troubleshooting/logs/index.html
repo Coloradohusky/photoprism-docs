@@ -684,69 +684,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#web-browsers" class="md-nav__link">
-    Web Browsers
-  </a>
-  
-    <nav class="md-nav" aria-label="Web Browsers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#chrome-chromium-and-edge" class="md-nav__link">
-    Chrome, Chromium, and Edge
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#firefox" class="md-nav__link">
-    Firefox
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#safari" class="md-nav__link">
-    Safari
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#application-logs" class="md-nav__link">
-    Application Logs
-  </a>
-  
-    <nav class="md-nav" aria-label="Application Logs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#live-logs" class="md-nav__link">
     Live Logs
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#errors-and-warnings" class="md-nav__link">
     Errors and Warnings
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#chrome-chromium-and-edge" class="md-nav__link">
+    Chrome, Chromium, and Edge
+  </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker-compose" class="md-nav__link">
-    Docker Compose
+  <a href="#firefox" class="md-nav__link">
+    Firefox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safari" class="md-nav__link">
+    Safari
   </a>
   
 </li>
@@ -2985,69 +2952,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#web-browsers" class="md-nav__link">
-    Web Browsers
-  </a>
-  
-    <nav class="md-nav" aria-label="Web Browsers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#chrome-chromium-and-edge" class="md-nav__link">
-    Chrome, Chromium, and Edge
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#firefox" class="md-nav__link">
-    Firefox
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#safari" class="md-nav__link">
-    Safari
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#application-logs" class="md-nav__link">
-    Application Logs
-  </a>
-  
-    <nav class="md-nav" aria-label="Application Logs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#live-logs" class="md-nav__link">
     Live Logs
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#errors-and-warnings" class="md-nav__link">
     Errors and Warnings
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#chrome-chromium-and-edge" class="md-nav__link">
+    Chrome, Chromium, and Edge
+  </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker-compose" class="md-nav__link">
-    Docker Compose
+  <a href="#firefox" class="md-nav__link">
+    Firefox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safari" class="md-nav__link">
+    Safari
   </a>
   
 </li>
@@ -3073,12 +3007,33 @@
 <div class="admonition info">
 <p>You are welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
 <a href="../../../funding/">Sponsors</a> receive direct <a href="https://photoprism.app/contact">technical support</a> via email.
-Before submitting a support request, try to determine the cause of your problem.</p>
+Before <a href="../../../user-guide/#getting-support">submitting a support request</a>, try to determine the cause of your problem.</p>
 </div>
-<h2 id="web-browsers">Web Browsers<a class="headerlink" href="#web-browsers" title="Permanent link">&para;</a></h2>
-<p>If you have a frontend problem, it can be helpful to <a href="../browsers/#getting-error-details">check the browser console</a>
-for errors and warnings. A console is available in all modern browsers and can be activated via keyboard shortcuts
-or the browser menu.</p>
+<div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Web App</label><div class="tabbed-content">
+<p>Make sure <em>Logs</em> is enabled under <em>Settings</em> &gt; <em>General</em> so you can see log messages in the Web UI.</p>
+<h4 id="live-logs">Live Logs<a class="headerlink" href="#live-logs" title="Permanent link">&para;</a></h4>
+<p>The continuously updated live logs in <em>Library</em> &gt; <em>Logs</em> are especially useful for diagnosing indexing and import issues,
+but also display other types of logs (depending on the <a href="../../config-options/#basic-settings">log level</a>):</p>
+<ol>
+<li>Navigate to <em>Library</em></li>
+<li>Open the <em>Logs</em> tab</li>
+</ol>
+<div class="admonition note">
+<p>Only a limited number of messages are visible to limit memory usage. You can see the same messages in the
+<a href="../docker/#viewing-logs">Docker logs</a>. This can be more convenient if you want to search for older messages related
+to a particular file or attach your full logs to a <a href="../../../user-guide/#getting-support">support request</a>.</p>
+</div>
+<h4 id="errors-and-warnings">Errors and Warnings<a class="headerlink" href="#errors-and-warnings" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Expand the main navigation</li>
+<li>Open the <em>Library</em> sub navigation</li>
+<li>Navigate to <em>Library</em> &gt; <em>Errors</em></li>
+</ol>
+<p><img alt="" src="../img/ui-error-logs.jpg" /></p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Browser</label><div class="tabbed-content">
+<p>If you <a href="../browsers/">have a frontend problem</a>, it can be helpful to check the browser console for errors and warnings.
+A console is available in all modern browsers and can be activated via keyboard shortcuts or the browser menu.</p>
 <div class="admonition tldr">
 <p>In case you don't see any log messages, try reloading the page, as the problem may occur while the page is loading.</p>
 </div>
@@ -3103,28 +3058,8 @@ or the browser menu.</p>
 <li>Press Option+⌘+C to go directly to the <em>Javascript Console</em></li>
 <li>Or, navigate to <em>Develop</em> &gt; <em>Show Javascript Console</em> in the browser menu</li>
 </ul>
-<h2 id="application-logs">Application Logs<a class="headerlink" href="#application-logs" title="Permanent link">&para;</a></h2>
-<p>Make sure <em>Logs</em> is enabled under <em>Settings</em> &gt; <em>General</em> so you can see log messages in the Web UI.</p>
-<h4 id="live-logs">Live Logs<a class="headerlink" href="#live-logs" title="Permanent link">&para;</a></h4>
-<p>The continuously updated live logs in <em>Library</em> &gt; <em>Logs</em> are especially useful for diagnosing indexing and import issues,
-but also display other types of logs (depending on the <a href="../../config-options/#basic-settings">log level</a>):</p>
-<ol>
-<li>Click on <em>Library</em> in the main navigation</li>
-<li>Open the <em>Logs</em> tab on the right-hand side</li>
-</ol>
-<div class="admonition note">
-<p>Only a limited number of messages are visible to limit memory usage. You can see the same messages in the
-<a href="#docker-compose">Docker logs</a>. This can be more convenient if you want to search for older messages related
-to a particular file or attach your full logs to a <a href="../../../user-guide/#getting-support">support request</a>.</p>
 </div>
-<h4 id="errors-and-warnings">Errors and Warnings<a class="headerlink" href="#errors-and-warnings" title="Permanent link">&para;</a></h4>
-<ol>
-<li>Expand the main navigation</li>
-<li>Open the <em>Library</em> sub navigation</li>
-<li>Click on <em>Errors</em></li>
-</ol>
-<p><img alt="" src="../img/ui-error-logs.jpg" /></p>
-<h2 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">&para;</a></h2>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Docker Logs</label><div class="tabbed-content">
 <p>Run this command to display the last 100 log messages (omit <code>--tail=100</code> to see all):</p>
 <div class="highlight"><pre><span></span><code>docker-compose logs --tail<span class="o">=</span><span class="m">100</span>
 </code></pre></div>
@@ -3147,6 +3082,8 @@ or other tools you may have installed.</p>
 </div>
 <div class="admonition tldr">
 <p>The default <a href="https://docs.docker.com/compose/">Docker Compose</a> config filename is <code>docker-compose.yml</code>. For simplicity, it doesn't need to be specified when running the <code>docker-compose</code> command in the same directory. Config files for other apps or instances should be placed in separate folders.</p>
+</div>
+</div>
 </div>
                 
               
