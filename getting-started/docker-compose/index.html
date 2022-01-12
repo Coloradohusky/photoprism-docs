@@ -3186,9 +3186,9 @@ PhotoPrism won't be able to see folders that have not been mounted. That's an im
   <span class="c1"># &quot;/host/folder:/photoprism/folder&quot;  # example</span>
   <span class="p p-Indicator">-</span> <span class="s">&quot;~/Pictures:/photoprism/originals&quot;</span>
 </code></pre></div>
-<p>All folders accessible from the <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> can be <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes">mounted</a>, 
-including <a href="../troubleshooting/mariadb/#corrupted-files">network drives</a>. Multiple folders can be made accessible by mounting them as subfolders
-of <code>/photoprism/originals</code>:</p>
+<p>You can <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes">mount any folder</a> accessible from the
+<abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> instead, including <a href="../faq/#how-can-i-mount-network-shares-with-docker">network drives</a>. Additional directories may
+be mounted as subfolders of <code>/photoprism/originals</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="s">&quot;/home/username/Pictures:/photoprism/originals&quot;</span>
   <span class="p p-Indicator">-</span> <span class="s">&quot;/example/friends:/photoprism/originals/friends&quot;</span>
