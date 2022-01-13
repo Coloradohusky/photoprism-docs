@@ -2109,6 +2109,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#acceptance-criteria" class="md-nav__link">
+    Acceptance Criteria
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#effectiveness-efficiency" class="md-nav__link">
     Effectiveness &gt; Efficiency
   </a>
@@ -2957,6 +2964,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#acceptance-criteria" class="md-nav__link">
+    Acceptance Criteria
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#effectiveness-efficiency" class="md-nav__link">
     Effectiveness &gt; Efficiency
   </a>
@@ -2990,8 +3004,8 @@
                 <h1 id="issues">Issues<a class="headerlink" href="#issues" title="Permanent link">&para;</a></h1>
 <p>We use GitHub issues for managing <a href="https://github.com/photoprism/photoprism/labels/bug">bugs</a>, 
 <a href="https://github.com/photoprism/photoprism/labels/idea">ideas</a>,
-and <a href="https://github.com/photoprism/photoprism/labels/todo">todos</a>.</p>
-<p>Issues labeled <a href="https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22">help wanted</a> / <a href="https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy">easy</a> can be good (first) contributions.
+and <a href="https://github.com/photoprism/photoprism/labels/todo">todos</a>.
+Issues labeled <a href="https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22">help wanted</a> / <a href="https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy">easy</a> can be good (first) contributions.
 Reach out if you're unsure, or would like to work on something else.</p>
 <h3 id="upcoming-features-and-improvements">Upcoming Features and Improvements<a class="headerlink" href="#upcoming-features-and-improvements" title="Permanent link">&para;</a></h3>
 <p>Our <a href="https://github.com/photoprism/photoprism/projects/5">public roadmap</a> shows what tasks are in progress,
@@ -3004,11 +3018,17 @@ so that we know what is most popular.</p>
 <p>Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.</p>
 </div>
 <h3 id="how-to-write-user-stories">How to Write User Stories<a class="headerlink" href="#how-to-write-user-stories" title="Permanent link">&para;</a></h3>
-<p>Start the description of new ideas and todos with a <a href="https://en.wikipedia.org/wiki/User_story">user story</a> similar to this: </p>
+<p>Start describing new ideas and tasks with a <a href="https://en.wikipedia.org/wiki/User_story">user story</a> similar to this one:</p>
 <p><tt>As a [type of person] I'd like to be able to [do something] so that I can [get some result].</tt></p>
-<p>That makes it easier for others to understand who wants what and why. It can take a lot of time to read between the lines otherwise. It takes even more time if the wrong thing gets done.</p>
-<p>Issues should therefore contain a list of acceptance criteria that clearly define when a story is done so that it can be properly implemented and tested. Use MAY, SHOULD and MUST as keywords to indicate priorities. This <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">Markdown</a> example renders with <a href="https://help.github.com/articles/about-task-lists/">clickable checkboxes</a>:</p>
+<p>This makes it easier for everyone to understand who wants what and why. Reading between the lines can otherwise cost a
+lot of time. It becomes even more expensive when the wrong things are implemented, or they don't bring any benefit.</p>
+<h3 id="acceptance-criteria">Acceptance Criteria<a class="headerlink" href="#acceptance-criteria" title="Permanent link">&para;</a></h3>
+<p>Issues should include a list of <em>Acceptance Criteria</em> that clearly specify when a story is ready to be implemented
+and then finally tested. We recommend using MAY, SHOULD, and MUST as keywords to indicate priorities.</p>
+<p>Clickable <a href="https://help.github.com/articles/about-task-lists/">checkboxes</a> for each item can be created via
+<a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">GitHub Markdown</a>:</p>
 <div class="highlight"><pre><span></span><code>Acceptance Criteria:
+
 - [ ] &quot;Log In&quot; button MUST be visible on /login page
 - [ ] &quot;Log In&quot; button MAY be disabled if password field is empty
 - [ ] Page SHOULD use existing Vuetify components
