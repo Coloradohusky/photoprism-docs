@@ -3040,18 +3040,16 @@
                 
                 
                 <h1 id="translations">Translations<a class="headerlink" href="#translations" title="Permanent link">&para;</a></h1>
-<p>PhotoPrism uses <a href="https://en.wikipedia.org/wiki/Gettext">gettext</a> for localizing frontend and backend.
-It's one of the most widely adopted standards for translating user interfaces.</p>
-<p>Human-readable messages like <code>File not found</code> are used as ids for finding matching translations, 
-and used as defaults whenever there is no translation available.</p>
-<p>Messages may optionally contain placeholders, like <code>Found %{n} files</code>, for numbers and 
-other variables.</p>
-<p>We strongly recommend <a href="https://poedit.net/download">Poedit</a> for creating and updating translations.
-Download is free for Mac, Windows and Linux.
-Its source code can be obtained on <a href="https://github.com/vslavik/poedit">GitHub</a>.</p>
-<div class="admonition note">
-<p>We first translate new strings with a translator. This can lead to grammatical errors and misunderstandings. Please list all translations in your language to check them.</p>
-<p>If you already contributed translations before, keep those files. When you decide to contribute again, you can just search for changes between those two files to see what strings are new. </p>
+<p>PhotoPrism uses <a href="https://en.wikipedia.org/wiki/Gettext">gettext</a> for frontend and backend localization.
+It is one of the most widely used standards for user interface translation:</p>
+<ul>
+<li>Human-readable messages such as <code>File not found</code> are used as identifiers to search for appropriate translations. They also serve as default values when no translation is available.</li>
+<li>Messages can optionally contain placeholders for numbers and other variables, for example <code>Found %{n} files</code>.</li>
+</ul>
+<p>We recommend <a href="https://poedit.net/download">Poedit</a> for creating and updating translations. The download is free
+for Mac, Windows and Linux. The source code can be obtained on <a href="https://github.com/vslavik/poedit">GitHub</a>.</p>
+<div class="admonition example">
+<p><strong>If translations are missing, we pre-translate messages using services such as DeepL and Google Translate.</strong> This can lead to grammatical errors and misunderstandings. Native speakers should check existing translations and improve them if necessary. You can use the version compare feature on GitHub to detect changes in translation files.</p>
 </div>
 <h2 id="frontend">Frontend<a class="headerlink" href="#frontend" title="Permanent link">&para;</a></h2>
 <p>Localizations can be found in <code>/frontend/src/locales</code>. The POT file, only containing message ids, 
@@ -3084,7 +3082,7 @@ You can open, edit and save them with Poedit to update existing translations.</p
 <li>Run <code>npm run gettext-compile</code> to compile existing translations into a single <code>translations.json</code> file</li>
 <li>To test your translations you need to build the frontend again using <code>npm run build</code> or <code>npm run watch</code></li>
 </ul>
-<div class="admonition note">
+<div class="admonition example">
 <p>A binary <code>*.mo</code> (machine object) file will be automatically saved along with every <code>*.po</code> file. 
 You won't be able to open those in a text editor, but please include them in git commits or when sending
 translations via email. The compiled <code>translations.json</code> file is not required for pull requests 
@@ -3117,9 +3115,9 @@ which will be automatically created by Poedit.</p>
 <li>Now you can start proofreading and adding the missing translations</li>
 <li>Once you're done, save the changes in the default.po file</li>
 </ul>
-<div class="admonition info">
-<p>Note that this will only work when you have gettext installed on your system.
-We recommend using our latest development image as described in the Developer Guide.</p>
+<div class="admonition example">
+<p>This will only work when you have gettext installed on your system. We recommend using our latest development
+image as described in the <a href="../setup/">setup instructions</a>.</p>
 </div>
                 
               
