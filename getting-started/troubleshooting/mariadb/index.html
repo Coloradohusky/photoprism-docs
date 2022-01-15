@@ -712,6 +712,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#cannot-connect" class="md-nav__link">
+    Cannot Connect
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#unicode-support" class="md-nav__link">
     Unicode Support
   </a>
@@ -2945,6 +2952,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#cannot-connect" class="md-nav__link">
+    Cannot Connect
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#unicode-support" class="md-nav__link">
     Unicode Support
   </a>
@@ -2998,6 +3012,31 @@ Before <a href="../../../user-guide/#getting-support">submitting a support reque
 <div class="admonition note">
 <p>Official support for MySQL is discontinued as Oracle seems to have stopped shipping <a href="https://github.com/photoprism/photoprism/issues/1764">new features and improvements</a>.
 As a result, the testing effort required before each release is no longer feasible.</p>
+</div>
+<h4 id="cannot-connect">Cannot Connect<a class="headerlink" href="#cannot-connect" title="Permanent link">&para;</a></h4>
+<p>First, verify that you are using the correct port (default is <code>3306</code>) and hostname or IP address:</p>
+<ul>
+<li>in the Docker environment, the default hostname is <code>mariadb</code> (same as the service name) </li>
+<li>use <code>localhost</code> on your host if the port has been exposed as described below</li>
+<li>use your private host IP from inside your home network (see network settings)</li>
+</ul>
+<p>If this doesn't help, check the <a href="../docker/#viewing-logs">Docker Logs</a> for messages like <em>disk full</em>, <em>disk quota exceeded</em>,
+<em>wrong permissions</em>, <em>no route to host</em>, <em>connection failed</em>, and <em>killed</em>:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Make sure that the database <em>storage</em> folder is readable and writable</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If the MariaDB service has been killed or otherwise automatically terminated, this can point to a <a href="../docker/#adding-swap">memory problem</a> (add swap and/or memory; remove or increase usage limits)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> In case the logs also show "disk full" or "disk quota exceeded" errors, either <a href="../docker/#disk-space">the disk containing the <em>storage</em> folder is full</a> (add storage) or a disk usage limit is configured (remove or increase it)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Log messages that contain "no route to host" may also indicate a general network configuration problem (follow our <a href="https://dl.photoprism.app/docker/">examples</a>)</li>
+</ul>
+<p>To connect to MariaDB from your host or home network, you need to expose port <code>3306</code> in your <code>docker-compose.yml</code>
+and <a href="../../docker-compose/#step-2-start-the-server">restart the service for changes to take effect</a>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+  <span class="nt">mariadb</span><span class="p">:</span>
+    <span class="nt">ports</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;3306:3306&quot;</span>
+</code></pre></div>
+<div class="admonition danger">
+<p>Never expose your database to the public Internet in this way, for example, if it is running on a cloud server.</p>
 </div>
 <h4 id="unicode-support">Unicode Support<a class="headerlink" href="#unicode-support" title="Permanent link">&para;</a></h4>
 <p>If the logs show "incorrect string value" database errors and you are running a custom MariaDB or MySQL

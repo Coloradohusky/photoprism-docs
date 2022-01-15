@@ -3092,8 +3092,8 @@ the last 100 log messages (omit <code>--tail=100</code> to see all):</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Log messages that contain "no route to <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr>" indicate a <a href="mariadb/">problem with the database</a> or network configuration (follow our <a href="https://dl.photoprism.app/docker/">examples</a>)</li>
 </ul>
 </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Make sure you are using the correct protocol (http or https), port (default is 2342), and hostname or IP address
-(default is localhost)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Make sure you are using the correct protocol (default is <code>http</code>), port (default is <code>2342</code>), and hostname or IP address
+(default is <code>localhost</code>)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Note that <abbr title="Hypertext Transfer Protocol">HTTP</abbr> security headers will prevent the app from loading in a frame (override them)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Verify your computer meets the <a href="../#system-requirements">system requirements</a></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Go through the <a href="#fatal-server-errors">checklist for fatal server errors</a></li>
@@ -3151,7 +3151,7 @@ or other tools you may have installed.</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <a href="docker/#kernel-security">Kernel security modules</a> such as <a href="https://wiki.ubuntu.com/AppArmor">AppArmor</a> and <a href="https://en.wikipedia.org/wiki/Security-Enhanced_Linux">SELinux</a> are blocking permissions</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Your Raspberry Pi has not been configured according to our <a href="../raspberry-pi/#system-requirements">recommendations</a></li>
 </ul>
-<p>We recommend checking <a href="docker/#viewing-logs">your Docker logs</a> for messages like <em>disk full</em>, <em>disk quota exceeded</em>,
+<p>We recommend checking your <a href="docker/#viewing-logs">Docker Logs</a> for messages like <em>disk full</em>, <em>disk quota exceeded</em>,
 <em>wrong permissions</em>, <em>no route to <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr></em>, <em>connection failed</em>, and <em>killed</em>:</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If a service has been killed or otherwise automatically terminated, this points to a <a href="docker/#adding-swap">memory problem</a> (add <abbr title="substitute for physical memory">swap</abbr> and/or memory; remove or increase usage limits)</li>
@@ -3226,7 +3226,7 @@ In case the application logs don't contain anything helpful:</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> An ad blocker or other plugins block requests (disable them or add an exception)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are connected to the wrong server, <abbr title="Virtual Private Network">VPN</abbr>, <abbr title="Content Delivery Network">CDN</abbr>, or a <abbr title="Domain Name System">DNS</abbr> record has not been updated yet</li>
 </ul>
-<p>We also recommend checking <a href="docker/#viewing-logs">your Docker logs</a> for messages like <em>disk full</em>, <em>disk quota exceeded</em>,
+<p>We also recommend checking your <a href="docker/#viewing-logs">Docker Logs</a> for messages like <em>disk full</em>, <em>disk quota exceeded</em>,
 <em>wrong permissions</em>, and <em>killed</em>. If a service has been killed or otherwise automatically terminated, this points to a
 memory problem. In case the logs show "disk full" or "disk quota exceeded" errors, either <a href="docker/#disk-space">the disk containing the <em>storage</em> folder is full</a>
 (add storage) or a disk usage limit is configured (remove or increase it).</p>
@@ -3246,7 +3246,7 @@ memory problem. In case the logs show "disk full" or "disk quota exceeded" error
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> There are other network problems caused by a proxy, firewall, or unstable connection (try a direct connection)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are connected to the wrong server, <abbr title="Virtual Private Network">VPN</abbr>, <abbr title="Content Delivery Network">CDN</abbr>, or a <abbr title="Domain Name System">DNS</abbr> record has not been updated yet</li>
 </ul>
-<p>We recommend that you check <a href="docker/#viewing-logs">your Docker logs</a> and <a href="browsers/#getting-error-details">the browser console</a>
+<p>We recommend that you check your <a href="docker/#viewing-logs">Docker Logs</a> and <a href="browsers/#getting-error-details">the browser console</a>
 for messages related to <em><abbr title="Hypertext Transfer Protocol">HTTP</abbr> requests</em>, <em>permissions</em>, <em>security</em>, <em><abbr title="transcodes video files">FFmpeg</abbr></em>, <em>videos</em>, and <em>file conversion</em>.</p>
                 
               
