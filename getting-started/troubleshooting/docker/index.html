@@ -3236,9 +3236,9 @@ with the community so that less experienced users can harden their installation 
 so that the app container can access them. If you have configured specific user and group IDs, make sure they match.</p>
 <p><em>Start a full rescan if necessary, for example, if it looks like <a href="../#broken-thumbnails">thumbnails</a> or <a href="../#missing-pictures">pictures are missing</a>.</em></p>
 <h3 id="disk-space">Disk Space<a class="headerlink" href="#disk-space" title="Permanent link">&para;</a></h3>
-<p>In case the logs show "disk full" or "disk quota exceeded" errors, either the disk containing the <em>storage</em> folder is full
-(get a new one or use a different disk) or a disk usage limit is configured, for example in the Docker, Kubernetes,
-or Virtual Machine configuration (remove or increase it).</p>
+<p>In case the logs show "disk full", "quota exceeded", or "no space left" errors, either the disk containing the
+<em>storage</em> folder is full (get a new one or use a different disk) or a disk usage limit is configured, for example
+in the Docker, Kubernetes, or Virtual Machine configuration (remove or increase it).</p>
 <p>On Linux and other Unix-like operating systems, the <a href="https://opensource.com/article/18/7/how-check-free-disk-space-linux">available disk space</a>
 can be viewed by running <code>df -h</code> in a terminal.</p>
 <p>If you use <em>Docker Desktop</em> on operating systems other than Linux and/or a virtual machine, they have their own
