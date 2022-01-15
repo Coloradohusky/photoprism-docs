@@ -3120,9 +3120,9 @@ videos are very demanding.</p>
 </div>
 <div class="admonition info">
 <p>If your server runs out of memory, the index is frequently locked, or other system resources are running low
-while indexing, you should <a href="https://docs.photoprism.app/getting-started/config-options/">try reducing the number of workers</a>
+while indexing, you should <a href="../config-options/#index-workers">try reducing the number of workers</a>
 by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance
-of the server). As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.</p>
+of the server). As a measure of last resort, you may <a href="../config-options/#feature-flags">disable using TensorFlow</a> for image classification and facial recognition.</p>
 </div>
 <h3 id="architecture-specific-notes">Architecture Specific Notes<a class="headerlink" href="#architecture-specific-notes" title="Permanent link">&para;</a></h3>
 <h4 id="modern-arm64-based-devices">Modern ARM64-based Devices<a class="headerlink" href="#modern-arm64-based-devices" title="Permanent link">&para;</a></h4>

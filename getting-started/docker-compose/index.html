@@ -3276,11 +3276,11 @@ changed, added, or removed. This can also be automated using <abbr title="Comman
 <p>Easy, isn't it?</p>
 <div class="admonition info">
 <p>If your server runs out of memory, the index is frequently locked, or other system resources are running low
-while indexing, you should <a href="https://docs.photoprism.app/getting-started/config-options/">try reducing the number of workers</a>
+while indexing, you should <a href="../config-options/#index-workers">try reducing the number of workers</a>
 by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance
 of the server). Also, ensure that <a href="../troubleshooting/docker/#adding-swap">your server has at least 4 GB of <abbr title="substitute for physical memory">swap</abbr> configured</a> so that
 indexing doesn't cause restarts when there are memory usage spikes. Especially the conversion of <abbr title="image format that contains unprocessed sensor data">RAW</abbr> images and the
-transcoding of videos are very demanding. As a measure of last resort, you may disable using TensorFlow for image
+transcoding of videos are very demanding. As a measure of last resort, you may <a href="../config-options/#feature-flags">disable using TensorFlow</a> for image
 classification and facial recognition.</p>
 </div>
 <div class="admonition example">
