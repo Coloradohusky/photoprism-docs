@@ -3086,7 +3086,7 @@ the last 100 log messages (omit <code>--tail=100</code> to see all):</p>
 </code></pre></div>
 <p>Before reporting a bug:</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Check the logs for messages like <em>disk full</em>, <em>disk quota exceeded</em>, <em>wrong permissions</em>, <em>no route to <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr></em>, <em>connection failed</em>, and <em>killed</em>; if a service has been killed or otherwise automatically terminated, this points to a <a href="docker/#adding-swap">memory problem</a>; in case the logs show "disk full" or "disk quota exceeded" errors, either <a href="docker/#disk-space">the disk containing the <em>storage</em> folder is full</a> (get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes configuration (change it)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Check the logs for messages like <em>disk full</em>, <em>disk quota exceeded</em>, <em>wrong permissions</em>, <em>no route to <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr></em>, <em>connection failed</em>, and <em>killed</em>; if a service has been killed or otherwise automatically terminated, this points to a <a href="docker/#adding-swap">memory problem</a>; in case the logs show "disk full" or "disk quota exceeded" errors, either <a href="docker/#disk-space">the disk containing the <em>storage</em> folder is full</a> (get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes, Docker, or Virtual Machine configuration (change it)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Make sure you are using the correct protocol (http or https), port (default is 2342), and hostname or IP address
 (default is localhost)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Note that <abbr title="Hypertext Transfer Protocol">HTTP</abbr> security headers will prevent the app from loading in a frame (override them)</li>
@@ -3150,8 +3150,8 @@ or other tools you may have installed.</p>
 <em>connection failed</em>, and <em>killed</em> as described above. If a service has been killed or otherwise automatically terminated,
 this points to a memory problem.
 In case the logs show "disk full" or "disk quota exceeded" errors, either <a href="docker/#disk-space">the disk containing the <em>storage</em> folder is full</a>
-(get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes configuration
-(change it).</p>
+(get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes, Docker,
+or Virtual Machine configuration (change it). Start a full rescan if necessary.</p>
 <h3 id="app-not-loading">App Not Loading<a class="headerlink" href="#app-not-loading" title="Permanent link">&para;</a></h3>
 <p>If the app doesn't load in your browser when you navigate to the server <abbr title="Web Address">URL</abbr>, you can <a href="browsers/#getting-error-details">check the browser console</a>
 for helpful errors and warnings. Sometimes you just need to wait a moment, for example, if you are using a slow wireless
@@ -3175,6 +3175,7 @@ In case the application logs don't contain anything helpful:</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The <a href="../faq/#what-media-file-types-are-supported">file type</a> is generally supported, but a specific feature or codec is not</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The files have bad filesystem permissions, so they can't be opened by the indexer</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The indexer has skipped the files because they are exact duplicates</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The files are ignored based on pattern in a <code>.ppignore</code> file</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> They are in <em>Library &gt; Hidden</em> because thumbnails could not be created:<ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <em>Convert to JPEG</em> is disabled in <em>Settings &gt; Library</em></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <abbr title="transcodes video files">FFmpeg</abbr> and/or <abbr title="image format that contains unprocessed sensor data">RAW</abbr> converters are disabled in <em>Settings &gt; Advanced</em></li>
@@ -3191,6 +3192,7 @@ In case the application logs don't contain anything helpful:</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Somebody has deleted files without telling you</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are connected to the wrong server, <abbr title="Virtual Private Network">VPN</abbr>, <abbr title="Content Delivery Network">CDN</abbr>, or a <abbr title="Domain Name System">DNS</abbr> record has not been updated yet</li>
 </ul>
+<p>Start a rescan once the issue has been resolved.</p>
 <h3 id="broken-thumbnails">Broken Thumbnails<a class="headerlink" href="#broken-thumbnails" title="Permanent link">&para;</a></h3>
 <p>If some pictures have broken or missing thumbnails, first <a href="logs/">check <em>Library &gt; Errors</em> for errors and warnings</a>.
 In case the application logs don't contain anything helpful:</p>
@@ -3214,10 +3216,12 @@ In case the application logs don't contain anything helpful:</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are connected to the wrong server, <abbr title="Virtual Private Network">VPN</abbr>, <abbr title="Content Delivery Network">CDN</abbr>, or a <abbr title="Domain Name System">DNS</abbr> record has not been updated yet</li>
 </ul>
 <p>We also recommend checking <a href="docker/#viewing-logs">your Docker logs</a> for messages like <em>disk full</em>, <em>disk quota exceeded</em>, <em>wrong permissions</em>, and <em>killed</em> as
-described above. If a service has been killed or otherwise automatically terminated, this points to a memory problem.
-In case the logs show "disk full" or "disk quota exceeded" errors, either <a href="docker/#disk-space">the disk containing the <em>storage</em> folder is full</a>
-(get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes configuration
-(change it).</p>
+described above:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If a service has been killed or otherwise automatically terminated, this points to a <a href="docker/#adding-swap">memory problem</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> In case the logs show "disk full" or "disk quota exceeded" errors, either <a href="docker/#disk-space">the disk containing the <em>storage</em> folder is full</a> (get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes, Docker, or Virtual Machine configuration (change it)</li>
+</ul>
+<p>Start a rescan once the issue has been resolved.</p>
 <h3 id="videos-dont-play">Videos Don't Play<a class="headerlink" href="#videos-dont-play" title="Permanent link">&para;</a></h3>
 <p>If videos do not play and/or you only see a white/black area when you open a video:</p>
 <ul class="task-list">
