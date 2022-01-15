@@ -3227,9 +3227,12 @@ In case the application logs don't contain anything helpful:</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are connected to the wrong server, <abbr title="Virtual Private Network">VPN</abbr>, <abbr title="Content Delivery Network">CDN</abbr>, or a <abbr title="Domain Name System">DNS</abbr> record has not been updated yet</li>
 </ul>
 <p>We also recommend checking your <a href="docker/#viewing-logs">Docker Logs</a> for messages like <em>disk full</em>, <em>disk quota exceeded</em>,
-<em>no space left on device</em>, <em>wrong permissions</em>, and <em>killed</em>. If a service has been killed or otherwise automatically terminated, this points to a
-memory problem. In case the logs show "disk full", "quota exceeded", or "no space left" errors, either <a href="docker/#disk-space">the disk containing the <em>storage</em> folder is full</a>
-(add storage) or a disk usage limit is configured (remove or increase it).</p>
+<em>no space left on device</em>, <em>wrong permissions</em>, and <em>killed</em>:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If a service has been killed or otherwise automatically terminated, this points to a
+memory problem</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> In case the logs show "disk full", "quota exceeded", or "no space left" errors, either <a href="docker/#disk-space">the disk containing the <em>storage</em> folder is full</a> (add storage) or a disk usage limit is configured (remove or increase it)</li>
+</ul>
 <p><em>Depending on the cause of the problem, you may need to perform a full rescan once the issue is resolved.</em></p>
 <h3 id="videos-dont-play">Videos Don't Play<a class="headerlink" href="#videos-dont-play" title="Permanent link">&para;</a></h3>
 <p>If videos do not play and/or you only see a white/black area when you open a video:</p>
