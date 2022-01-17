@@ -3137,11 +3137,11 @@ Sign in with the user <code>admin</code> and the password configured via <code>P
 You may change it on the <a href="../../user-guide/settings/account/">account settings page</a>.
 Enabling <a href="../config-options/">public mode</a> will disable authentication.</p>
 <div class="admonition info">
-<p>If you can't connect, try starting the app without <code>-d</code>. This keeps it in the foreground
-and shows log messages for <a href="../troubleshooting/">troubleshooting</a>.
-Should the server already be running, or you see no errors, you may have started it 
-on a different <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> and/or port. There could also be an issue with your browser, 
-ad blocker, or firewall settings.</p>
+<p>It can be helpful to keep Docker running in the foreground while debugging
+so that log messages are displayed directly. To do this, omit the <code>-d</code> parameter when restarting.</p>
+<p>Should the server already be running, or you see no errors, you may have started it
+on a different <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> and/or port. There could also be an <a href="../troubleshooting/#connection-fails">issue with your browser,
+ad blocker, or firewall settings</a>.</p>
 </div>
 <div class="admonition tldr">
 <p>It is not possible to change the password via <code>PHOTOPRISM_ADMIN_PASSWORD</code> after the app has been 

@@ -3232,7 +3232,7 @@ is enabled or the <a href="../../user-guide/settings/general/">features have bee
 </div>
 <h3 id="step-2-start-the-server">Step 2: Start the server<a class="headerlink" href="#step-2-start-the-server" title="Permanent link">&para;</a></h3>
 <p>Open a terminal and change to the folder in which the <code>docker-compose.yml</code> file has been saved.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>
-Run this command to start the app and database in the background:</p>
+Run this command to start the application and database services in the background:</p>
 <div class="highlight"><pre><span></span><code>docker-compose up -d
 </code></pre></div>
 <p>Now open the Web <abbr title="User Interface">UI</abbr> by navigating to <a href="http://localhost:2342/">http://localhost:2342/</a>. You should see a login screen.
@@ -3240,11 +3240,10 @@ Sign in with the user <code>admin</code> and the initial password configured via
 You may change it on the <a href="../../user-guide/settings/account/">account settings page</a>.
 Enabling <a href="../config-options/">public mode</a> will disable authentication.</p>
 <div class="admonition info">
-<p>If you can't connect, try starting the app without <code>-d</code>: <code>docker-compose up photoprism</code>. 
-This keeps it in the foreground and shows log messages for <a href="../troubleshooting/">troubleshooting</a>.
-Should the server already be running, or you see no errors, you may have started it
-on a different <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> and/or port. There could also be an issue with your browser,
-ad blocker, or firewall settings.</p>
+<p>It can be helpful to <a href="../troubleshooting/docker/#viewing-logs">keep Docker running in the foreground while debugging</a> so that log messages are displayed directly. To do this, omit the <code>-d</code> parameter when restarting.</p>
+<p>Should the server already be running, or you see no errors, you may have started it
+on a different <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> and/or port. There could also be an <a href="../troubleshooting/#connection-fails">issue with your browser,
+ad blocker, or firewall settings</a>.</p>
 </div>
 <div class="admonition tldr">
 <p>It is not possible to change the password via <code>PHOTOPRISM_ADMIN_PASSWORD</code> after the app has been 
@@ -3252,9 +3251,9 @@ started for the first time. You may run <code>docker-compose exec photoprism pho
 in a terminal to change an existing password. You can also reset your database for a clean start.</p>
 </div>
 <p>The server port and app <a href="../config-options/">config options</a> may be changed in <code>docker-compose.yml</code> at any time.
-Remember to restart the app for changes to take effect:</p>
-<div class="highlight"><pre><span></span><code>docker-compose stop photoprism
-docker-compose up -d photoprism
+Remember to restart the services for changes to take effect:</p>
+<div class="highlight"><pre><span></span><code>docker-compose stop
+docker-compose up -d
 </code></pre></div>
 <h3 id="step-3-index-your-library">Step 3: Index your library<a class="headerlink" href="#step-3-index-your-library" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
