@@ -712,13 +712,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mysql-errors" class="md-nav__link">
-    MySQL Errors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#cannot-connect" class="md-nav__link">
     Cannot Connect
   </a>
@@ -749,6 +742,13 @@
         <li class="md-nav__item">
   <a href="#corrupted-files" class="md-nav__link">
     Corrupted Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mysql-errors" class="md-nav__link">
+    MySQL Errors
   </a>
   
 </li>
@@ -2959,13 +2959,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mysql-errors" class="md-nav__link">
-    MySQL Errors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#cannot-connect" class="md-nav__link">
     Cannot Connect
   </a>
@@ -3000,6 +2993,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mysql-errors" class="md-nav__link">
+    MySQL Errors
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3023,9 +3023,6 @@
 <a href="../../../funding/">Sponsors</a> receive direct <a href="https://photoprism.app/contact">technical support</a> via email.
 Before <a href="../../../user-guide/#getting-support">submitting a support request</a>, try to determine the cause of your problem.</p>
 </div>
-<h4 id="mysql-errors">MySQL Errors<a class="headerlink" href="#mysql-errors" title="Permanent link">&para;</a></h4>
-<p>Official <a href="../../#databases">support for MySQL is discontinued</a> as Oracle seems to have stopped shipping <a href="https://github.com/photoprism/photoprism/issues/1764">new features and improvements</a>.
-As a result, the testing effort required before each release is no longer feasible.</p>
 <h4 id="cannot-connect">Cannot Connect<a class="headerlink" href="#cannot-connect" title="Permanent link">&para;</a></h4>
 <p>First, verify that you are using the correct port (default is <code>3306</code>) and hostname or IP address:</p>
 <ul>
@@ -3109,6 +3106,9 @@ as a USB flash drive, an SD card, or a shared network folder.</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> To share a database over a network, run the database server directly on the remote server instead of sharing database files</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> To repair your tables after you have moved the files to a local disk, you can <a href="https://mariadb.com/kb/en/innodb-recovery-modes/">start MariaDB with <code>--innodb-force-recovery=1</code></a> (otherwise the same procedure as for recovering a lost password, see above)</li>
 </ul>
+<h4 id="mysql-errors">MySQL Errors<a class="headerlink" href="#mysql-errors" title="Permanent link">&para;</a></h4>
+<p>Official <a href="../../#databases">support for MySQL is discontinued</a> as Oracle seems to have stopped shipping <a href="https://github.com/photoprism/photoprism/issues/1764">new features and improvements</a>.
+As a result, the testing effort required before each release is no longer feasible.</p>
                 
               
               
