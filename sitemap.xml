@@ -21,11 +21,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.photoprism.app/license/</loc>
-         <lastmod>2022-01-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.photoprism.app/release-notes/</loc>
          <lastmod>2022-01-20</lastmod>
          <changefreq>daily</changefreq>
@@ -387,6 +382,21 @@
     </url>
     <url>
          <loc>https://docs.photoprism.app/getting-started/troubleshooting/performance/</loc>
+         <lastmod>2022-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.photoprism.app/license/agpl/</loc>
+         <lastmod>2022-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.photoprism.app/license/assets/</loc>
+         <lastmod>2022-01-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.photoprism.app/license/documentation/</loc>
          <lastmod>2022-01-20</lastmod>
          <changefreq>daily</changefreq>
     </url>

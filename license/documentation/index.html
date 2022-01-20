@@ -13,14 +13,14 @@
         <meta name="author" content="PhotoPrism.org">
       
       
-        <link rel="canonical" href="https://docs.photoprism.app/getting-started/docker-compose/">
+        <link rel="canonical" href="https://docs.photoprism.app/license/documentation/">
       
       <link rel="icon" href="../../icons/favicon.ico">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
-        <title>Docker Compose - PhotoPrism</title>
+        <title>Documentation - PhotoPrism</title>
       
     
     
@@ -59,16 +59,16 @@
     
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="PhotoPrism - Docker Compose">
+  <meta property="og:title" content="PhotoPrism - Documentation">
   <meta property="og:description" content="User Guide">
-  <meta property="og:url" content="https://docs.photoprism.app/getting-started/docker-compose/">
-  <meta property="og:image" content="https://i.photoprism.app/?cover=17&title=Docker%20Compose&description=User%20Guide">
+  <meta property="og:url" content="https://docs.photoprism.app/license/documentation/">
+  <meta property="og:image" content="https://i.photoprism.app/?cover=17&title=Documentation&description=User%20Guide">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@photoprism_app">
   <meta name="twitter:creator" content="@photoprism_app">
-  <meta name="twitter:title" content="PhotoPrism - Docker Compose">
+  <meta name="twitter:title" content="PhotoPrism - Documentation">
   <meta name="twitter:description" content="User Guide">
-  <meta name="twitter:image" content="https://i.photoprism.app/?cover=17&title=Docker%20Compose&description=User%20Guide">
+  <meta name="twitter:image" content="https://i.photoprism.app/?cover=17&title=Documentation&description=User%20Guide">
   <link rel="shortcut icon" sizes="512x512" type="image/png" href="/icons/logo/512.png">
   <link rel="shortcut icon" sizes="256x256" type="image/png" href="/icons/logo/256.png">
   <link rel="shortcut icon" sizes="196x196" type="image/png" href="/icons/logo/196.png">
@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setup-using-docker-compose" class="md-skip">
+        <a href="#photoprism-documentation-license" class="md-skip">
           Skip to content
         </a>
       
@@ -143,7 +143,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Docker Compose
+              Documentation
             
           </span>
         </div>
@@ -243,15 +243,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../.." class="md-tabs__link">
         Getting Started
       </a>
     </li>
@@ -293,13 +291,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../team/" class="md-tabs__link">
+      <a href="../../team/" class="md-tabs__link md-tabs__link--active">
         About
       </a>
     </li>
@@ -357,14 +357,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
       
       
       
@@ -401,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../getting-started/" class="md-nav__link">
         Setup
       </a>
     </li>
@@ -413,134 +411,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Docker Compose
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../getting-started/docker-compose/" class="md-nav__link">
         Docker Compose
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-configure" class="md-nav__link">
-    Step 1: Configure
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 1: Configure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#database" class="md-nav__link">
-    Database
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#volumes" class="md-nav__link">
-    Volumes
-  </a>
-  
-    <nav class="md-nav" aria-label="Volumes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#photoprismoriginals" class="md-nav__link">
-    /photoprism/originals
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#photoprismstorage" class="md-nav__link">
-    /photoprism/storage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#photoprismimport" class="md-nav__link">
-    /photoprism/import
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-start-the-server" class="md-nav__link">
-    Step 2: Start the server
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-index-your-library" class="md-nav__link">
-    Step 3: Index your library
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#command-line-interface" class="md-nav__link">
-    Command-Line Interface
-  </a>
-  
-    <nav class="md-nav" aria-label="Command-Line Interface">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -552,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
+      <a href="../../getting-started/docker/" class="md-nav__link">
         Pure Docker
       </a>
     </li>
@@ -566,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../raspberry-pi/" class="md-nav__link">
+      <a href="../../getting-started/raspberry-pi/" class="md-nav__link">
         Raspberry Pi
       </a>
     </li>
@@ -580,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../freebsd/" class="md-nav__link">
+      <a href="../../getting-started/freebsd/" class="md-nav__link">
         FreeBSD
       </a>
     </li>
@@ -620,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud/digitalocean/" class="md-nav__link">
+      <a href="../../getting-started/cloud/digitalocean/" class="md-nav__link">
         DigitalOcean
       </a>
     </li>
@@ -667,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nas/synology/" class="md-nav__link">
+      <a href="../../getting-started/nas/synology/" class="md-nav__link">
         Synology
       </a>
     </li>
@@ -681,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nas/unraid/" class="md-nav__link">
+      <a href="../../getting-started/nas/unraid/" class="md-nav__link">
         Unraid
       </a>
     </li>
@@ -702,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config-options/" class="md-nav__link">
+      <a href="../../getting-started/config-options/" class="md-nav__link">
         Config Options
       </a>
     </li>
@@ -716,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../updates/" class="md-nav__link">
+      <a href="../../getting-started/updates/" class="md-nav__link">
         Getting Updates
       </a>
     </li>
@@ -756,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
+      <a href="../../getting-started/troubleshooting/" class="md-nav__link">
         Checklists
       </a>
     </li>
@@ -770,7 +645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/logs/" class="md-nav__link">
+      <a href="../../getting-started/troubleshooting/logs/" class="md-nav__link">
         Logs
       </a>
     </li>
@@ -784,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/docker/" class="md-nav__link">
+      <a href="../../getting-started/troubleshooting/docker/" class="md-nav__link">
         Docker
       </a>
     </li>
@@ -798,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/mariadb/" class="md-nav__link">
+      <a href="../../getting-started/troubleshooting/mariadb/" class="md-nav__link">
         MariaDB
       </a>
     </li>
@@ -812,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/browsers/" class="md-nav__link">
+      <a href="../../getting-started/troubleshooting/browsers/" class="md-nav__link">
         Browsers
       </a>
     </li>
@@ -826,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/performance/" class="md-nav__link">
+      <a href="../../getting-started/troubleshooting/performance/" class="md-nav__link">
         Performance
       </a>
     </li>
@@ -873,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxies/traefik/" class="md-nav__link">
+      <a href="../../getting-started/proxies/traefik/" class="md-nav__link">
         Traefik
       </a>
     </li>
@@ -887,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxies/caddy-1/" class="md-nav__link">
+      <a href="../../getting-started/proxies/caddy-1/" class="md-nav__link">
         Caddy 1
       </a>
     </li>
@@ -901,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxies/caddy-2/" class="md-nav__link">
+      <a href="../../getting-started/proxies/caddy-2/" class="md-nav__link">
         Caddy 2
       </a>
     </li>
@@ -915,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxies/nginx/" class="md-nav__link">
+      <a href="../../getting-started/proxies/nginx/" class="md-nav__link">
         NGINX
       </a>
     </li>
@@ -929,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxies/apache-2/" class="md-nav__link">
+      <a href="../../getting-started/proxies/apache-2/" class="md-nav__link">
         Apache 2.4
       </a>
     </li>
@@ -943,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxies/swag/" class="md-nav__link">
+      <a href="../../getting-started/proxies/swag/" class="md-nav__link">
         SWAG
       </a>
     </li>
@@ -990,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/transcoding/" class="md-nav__link">
+      <a href="../../getting-started/advanced/transcoding/" class="md-nav__link">
         Transcoding
       </a>
     </li>
@@ -1004,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/kubernetes/" class="md-nav__link">
+      <a href="../../getting-started/advanced/kubernetes/" class="md-nav__link">
         Kubernetes
       </a>
     </li>
@@ -1018,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/backups/" class="md-nav__link">
+      <a href="../../getting-started/advanced/backups/" class="md-nav__link">
         Backups
       </a>
     </li>
@@ -1032,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/databases/" class="md-nav__link">
+      <a href="../../getting-started/advanced/databases/" class="md-nav__link">
         Databases
       </a>
     </li>
@@ -1046,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/caching/" class="md-nav__link">
+      <a href="../../getting-started/advanced/caching/" class="md-nav__link">
         Caching
       </a>
     </li>
@@ -1060,7 +935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/nginx-proxy-setup/" class="md-nav__link">
+      <a href="../../getting-started/advanced/nginx-proxy-setup/" class="md-nav__link">
         NGINX
       </a>
     </li>
@@ -1074,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/scalability/" class="md-nav__link">
+      <a href="../../getting-started/advanced/scalability/" class="md-nav__link">
         Scalability
       </a>
     </li>
@@ -1095,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
+      <a href="../../getting-started/faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -2877,12 +2752,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -2959,12 +2836,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" checked>
       
       
       
@@ -2987,7 +2866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../license/agpl/" class="md-nav__link">
+      <a href="../agpl/" class="md-nav__link">
         GNU AGPL
       </a>
     </li>
@@ -3001,7 +2880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../license/assets/" class="md-nav__link">
+      <a href="../assets/" class="md-nav__link">
         Digital Assets
       </a>
     </li>
@@ -3013,11 +2892,115 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../license/documentation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Documentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Documentation
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creative-commons-attribution-noncommercial-sharealike-40-international-public-license" class="md-nav__link">
+    Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License
+  </a>
+  
+    <nav class="md-nav" aria-label="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#section-1-definitions" class="md-nav__link">
+    Section 1 – Definitions.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-2-scope" class="md-nav__link">
+    Section 2 – Scope.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-3-license-conditions" class="md-nav__link">
+    Section 3 – License Conditions.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-4-sui-generis-database-rights" class="md-nav__link">
+    Section 4 – Sui Generis Database Rights.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-5-disclaimer-of-warranties-and-limitation-of-liability" class="md-nav__link">
+    Section 5 – Disclaimer of Warranties and Limitation of Liability.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-6-term-and-termination" class="md-nav__link">
+    Section 6 – Term and Termination.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-7-other-terms-and-conditions" class="md-nav__link">
+    Section 7 – Other Terms and Conditions.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-8-interpretation" class="md-nav__link">
+    Section 8 – Interpretation.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3064,84 +3047,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1-configure" class="md-nav__link">
-    Step 1: Configure
+  <a href="#creative-commons-attribution-noncommercial-sharealike-40-international-public-license" class="md-nav__link">
+    Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License
   </a>
   
-    <nav class="md-nav" aria-label="Step 1: Configure">
+    <nav class="md-nav" aria-label="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#database" class="md-nav__link">
-    Database
+  <a href="#section-1-definitions" class="md-nav__link">
+    Section 1 – Definitions.
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#volumes" class="md-nav__link">
-    Volumes
-  </a>
-  
-    <nav class="md-nav" aria-label="Volumes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#photoprismoriginals" class="md-nav__link">
-    /photoprism/originals
+  <a href="#section-2-scope" class="md-nav__link">
+    Section 2 – Scope.
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#photoprismstorage" class="md-nav__link">
-    /photoprism/storage
+  <a href="#section-3-license-conditions" class="md-nav__link">
+    Section 3 – License Conditions.
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#photoprismimport" class="md-nav__link">
-    /photoprism/import
+  <a href="#section-4-sui-generis-database-rights" class="md-nav__link">
+    Section 4 – Sui Generis Database Rights.
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-start-the-server" class="md-nav__link">
-    Step 2: Start the server
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-index-your-library" class="md-nav__link">
-    Step 3: Index your library
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#command-line-interface" class="md-nav__link">
-    Command-Line Interface
-  </a>
-  
-    <nav class="md-nav" aria-label="Command-Line Interface">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#section-5-disclaimer-of-warranties-and-limitation-of-liability" class="md-nav__link">
+    Section 5 – Disclaimer of Warranties and Limitation of Liability.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-6-term-and-termination" class="md-nav__link">
+    Section 6 – Term and Termination.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-7-other-terms-and-conditions" class="md-nav__link">
+    Section 7 – Other Terms and Conditions.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-8-interpretation" class="md-nav__link">
+    Section 8 – Interpretation.
   </a>
   
 </li>
@@ -3163,301 +3127,135 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/photoprism/photoprism-docs/tree/master/docs/getting-started/docker-compose.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/photoprism/photoprism-docs/tree/master/docs/license/documentation.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="setup-using-docker-compose">Setup Using Docker Compose<a class="headerlink" href="#setup-using-docker-compose" title="Permanent link">&para;</a></h1>
-<p>With <a href="https://docs.docker.com/compose/">Docker Compose</a>, you <a href="../../developer-guide/technologies/yaml/">use a YAML file</a>
-to configure all application services so you can easily start them with a single command.
-Before you proceed, make sure you have <a href="https://store.docker.com/search?type=edition&amp;offering=community">Docker</a>
-installed on your system. It is available for Mac, Linux, and Windows.</p>
-<div class="admonition info">
-<p>You are welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
-<a href="../../funding/">Sponsors</a> receive direct <a href="https://photoprism.app/contact">technical support</a> via email.
-Before submitting a support request, try to <a href="../troubleshooting/">determine the cause of your problem</a>.</p>
-</div>
-<h3 id="step-1-configure">Step 1: Configure<a class="headerlink" href="#step-1-configure" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Linux</label><div class="tabbed-content">
-<p>Download our <a href="https://dl.photoprism.app/docker/docker-compose.yml">docker-compose.yml</a> example
-(right click and <em>Save Link As...</em> or use <code>wget</code>) to a folder of your choice,
-and change the <a href="../config-options/">configuration</a> as needed:</p>
-<div class="highlight"><pre><span></span><code>wget https://dl.photoprism.app/docker/docker-compose.yml
-</code></pre></div>
-<p>Commands on Linux may have to be prefixed with <code>sudo</code> when not running as root.
-Note that this will point the <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr> shortcut <code>~</code> to <code>/root</code> in the <code>volumes:</code> 
-section of your <code>docker-compose.yml</code>. Kernel security modules such as AppArmor and SELinux 
-have been <a href="../troubleshooting/docker/#kernel-security">reported to cause issues</a>.
-Ensure that your server has <a href="../troubleshooting/docker/#adding-swap">at least 4 GB of <abbr title="substitute for physical memory">swap</abbr></a> configured so that
-indexing doesn't cause restarts when there are memory usage spikes.</p>
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Raspberry Pi</label><div class="tabbed-content">
-<p>Download our <a href="https://dl.photoprism.app/docker/arm64/docker-compose.yml">docker-compose.yml</a> example for 
-the Raspberry Pi 3 / 4 and other ARM64-based devices (right click and <em>Save Link As...</em> or use <code>wget</code>) to a folder of your choice,
-and change the <a href="../config-options/">configuration</a> as needed:</p>
-<div class="highlight"><pre><span></span><code>wget https://dl.photoprism.app/docker/arm64/docker-compose.yml
-</code></pre></div>
-<p>Mostly the same installation instructions as for regular Linux servers apply.
-Commands may have to be prefixed with <code>sudo</code> when not running as root.
-Ensure your device meets the <a href="../raspberry-pi/">requirements</a> and has
-<a href="../troubleshooting/docker/#adding-swap">at least 4 GB of <abbr title="substitute for physical memory">swap</abbr></a> configured before you continue.</p>
-</div>
-<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">ARMv7</label><div class="tabbed-content">
-<p>Download our <a href="https://dl.photoprism.app/docker/armv7/docker-compose.yml">docker-compose.yml</a> example for 
-older ARMv7-based devices (right click and <em>Save Link As...</em> or use <code>wget</code>) to a folder of your choice,
-and change the <a href="../config-options/">configuration</a> as needed:</p>
-<div class="highlight"><pre><span></span><code>wget https://dl.photoprism.app/docker/armv7/docker-compose.yml
-</code></pre></div>
-<p>Mostly the same installation instructions as for regular Linux servers apply.
-Commands may have to be prefixed with <code>sudo</code> when not running as root.
-Ensure your device meets the <a href="../raspberry-pi/">requirements</a> and has
-<a href="../troubleshooting/docker/#adding-swap">at least 4 GB of <abbr title="substitute for physical memory">swap</abbr></a> configured before you continue.</p>
-</div>
-<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Windows</label><div class="tabbed-content">
-<p>Download our <a href="https://dl.photoprism.app/docker/windows/docker-compose.yml">docker-compose.yml</a> example for Windows
-(right click and <em>Save Link As...</em>) to a folder of your choice, and change the <a href="../config-options/">configuration</a> as needed:</p>
-<p><a href="https://dl.photoprism.app/docker/windows/docker-compose.yml">https://dl.photoprism.app/docker/windows/docker-compose.yml</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7z"/></svg></span></p>
-<p>Windows Pro users should <a href="../img/docker-disable-wsl2.jpg">disable</a> the WSL 2 based engine in <em>Docker Settings &gt; General</em> 
-so that they can mount drives other than <code>C:</code>. This will enable Hyper-V, which 
-<a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements">Microsoft doesn't offer</a> 
-to its Windows Home customers. <a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows">Docker Desktop</a>
-uses dynamic memory allocation with WSL 2. It is important to explicitly <a href="../img/docker-resources-advanced.jpg">increase the Docker memory limit to 4 GB</a> or more when using 
-Hyper-V. The default of 2 GB can reduce indexing performance and cause unexpected restarts.
-Also, ensure that you configure at least 4 GB of <abbr title="substitute for physical memory">swap</abbr> space.</p>
-</div>
-<input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><label for="__tabbed_1_5">macOS</label><div class="tabbed-content">
-<p>Download our <a href="https://dl.photoprism.app/docker/macos/docker-compose.yml">docker-compose.yml</a> example for macOS
-(right click and <em>Save Link As...</em>) to a folder of your choice, and change the <a href="../config-options/">configuration</a> as needed:</p>
-<p><a href="https://dl.photoprism.app/docker/macos/docker-compose.yml">https://dl.photoprism.app/docker/macos/docker-compose.yml</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7z"/></svg></span></p>
-<p>It is important to <a href="../img/docker-resources-advanced.jpg">increase the Docker memory limit to 4 GB</a> or more,
-as the default of 2 GB can reduce indexing performance and cause unexpected restarts.
-Also, ensure that you configure at least 4 GB of <abbr title="substitute for physical memory">swap</abbr> space.</p>
-</div>
-</div>
-<div class="admonition danger">
-<p>Always change <code>PHOTOPRISM_ADMIN_PASSWORD</code> so that the app starts with a <strong>secure initial password</strong>.
-Never use easy-to-guess passwords or default values like <code>insecure</code> on publicly accessible servers.
-There is no default in case no password was provided. A minimum length of 4 characters is required.</p>
-</div>
-<h4 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h4>
-<p>Our example includes a pre-configured <a href="https://mariadb.com/">MariaDB</a> database server. If you remove it 
-and provide no other database server credentials, a SQLite database file will be created in the 
-<em>storage</em> folder. Local <a href="../troubleshooting/performance/#storage"><abbr title="Solid-State Drive">SSD</abbr> storage is best</a> for databases of any kind.
-Never <a href="../troubleshooting/mariadb/#corrupted-files">store</a> database files on an unreliable device such as a USB flash drive,
-an SD card, or a shared network folder.</p>
-<div class="admonition tldr">
-<p>It is not possible to change the password via <code>MYSQL_PASSWORD</code> after the database has been started 
-for the first time. Choosing a secure password is not essential if you don't <a href="../troubleshooting/mariadb/#cannot-connect">expose the database to other apps and hosts</a>.</p>
-</div>
-<h4 id="volumes">Volumes<a class="headerlink" href="#volumes" title="Permanent link">&para;</a></h4>
-<p>Since the app is running inside a container, you have to explicitly mount the <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> folders you want to use.
-PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.</p>
-<h5 id="photoprismoriginals">/photoprism/originals<a class="headerlink" href="#photoprismoriginals" title="Permanent link">&para;</a></h5>
-<p>The <em>originals</em> folder contains your original photo and video files. </p>
-<p><code>~/Pictures</code> will be mounted by default, where <code>~</code> is a shortcut for your <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr>:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
-  <span class="c1"># &quot;/host/folder:/photoprism/folder&quot;  # example</span>
-  <span class="p p-Indicator">-</span> <span class="s">&quot;~/Pictures:/photoprism/originals&quot;</span>
-</code></pre></div>
-<p>You can <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes">mount any folder</a> accessible from the
-<abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> instead, including <a href="../faq/#how-can-i-mount-network-shares-with-docker">network drives</a>. Additional directories may
-be mounted as subfolders of <code>/photoprism/originals</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="s">&quot;/home/username/Pictures:/photoprism/originals&quot;</span>
-  <span class="p p-Indicator">-</span> <span class="s">&quot;/example/friends:/photoprism/originals/friends&quot;</span>
-  <span class="p p-Indicator">-</span> <span class="s">&quot;/mnt/photos:/photoprism/originals/media&quot;</span>
-</code></pre></div>
-<p>On Windows, prefix the <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> path with the drive letter and use <code>/</code> instead of <code>\</code> as separator:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="s">&quot;D:/Example/Pictures:/photoprism/originals&quot;</span>
-</code></pre></div>
-<div class="admonition tldr">
-<p>When you enable <em>read-only mode</em>, all features that require write permission to the <em>originals</em> folder 
-are disabled, in particular import, upload, and delete. Set <code>PHOTOPRISM_READONLY</code> to <code>"true"</code>
-in <code>docker-compose.yml</code> for this. You can mount a folder with the <code>:ro</code> flag to make Docker block 
-write operations as well.</p>
-</div>
-<h5 id="photoprismstorage">/photoprism/storage<a class="headerlink" href="#photoprismstorage" title="Permanent link">&para;</a></h5>
-<p>Cache, session, thumbnail, and sidecar files will be created in the <em>storage</em> folder. Never remove the volume from
-your <code>docker-compose.yml</code> file so that you don't lose these files after restarting or upgrading the container.
-We recommend placing the <em>storage</em> folder on a <a href="../troubleshooting/performance/#storage">local <abbr title="Solid-State Drive">SSD</abbr> drive</a> for best performance.</p>
-<h5 id="photoprismimport">/photoprism/import<a class="headerlink" href="#photoprismimport" title="Permanent link">&para;</a></h5>
-<p>You may optionally mount an <em>import</em> folder from which files can be transferred to the <em>originals</em> folder
-in a structured way that avoids duplicates. Imported files receive a canonical filename and will be
-organized by year and month.</p>
-<div class="admonition tldr">
-<p>You can safely skip this. Adding files via <a href="../../user-guide/library/upload/">Web Upload</a>
-and <a href="../../user-guide/sync/webdav/">WebDAV</a> remains possible, unless <a href="../config-options/">read-only mode</a>
-is enabled or the <a href="../../user-guide/settings/general/">features have been disabled</a>.</p>
-</div>
-<h3 id="step-2-start-the-server">Step 2: Start the server<a class="headerlink" href="#step-2-start-the-server" title="Permanent link">&para;</a></h3>
-<p>Open a terminal and change to the folder in which the <code>docker-compose.yml</code> file has been saved.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>
-Run this command to start the application and database services in the background:</p>
-<div class="highlight"><pre><span></span><code>docker-compose up -d
-</code></pre></div>
-<p>Now open the Web <abbr title="User Interface">UI</abbr> by navigating to <a href="http://localhost:2342/">http://localhost:2342/</a>. You should see a login screen.
-Sign in with the user <code>admin</code> and the initial password configured via <code>PHOTOPRISM_ADMIN_PASSWORD</code>.
-You may change it on the <a href="../../user-guide/settings/account/">account settings page</a>.
-Enabling <a href="../config-options/">public mode</a> will disable authentication.</p>
-<div class="admonition info">
-<p>It can be helpful to <a href="../troubleshooting/docker/#viewing-logs">keep Docker running in the foreground while debugging</a> so that log messages are displayed directly. To do this, omit the <code>-d</code> parameter when restarting.</p>
-<p>Should the server already be running, or you see no errors, you may have started it
-on a different <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> and/or port. There could also be an <a href="../troubleshooting/#connection-fails">issue with your browser,
-ad blocker, or firewall settings</a>.</p>
-</div>
-<div class="admonition tldr">
-<p>It is not possible to change the password via <code>PHOTOPRISM_ADMIN_PASSWORD</code> after the app has been 
-started for the first time. You may run <code>docker-compose exec photoprism photoprism passwd</code> 
-in a terminal to change an existing password. You can also reset your database for a clean start.</p>
-</div>
-<p>The server port and other <a href="../config-options/">config options</a> can be changed in <code>docker-compose.yml</code> at any time.
-Remember to restart the services for changes to take effect:</p>
-<div class="highlight"><pre><span></span><code>docker-compose stop
-docker-compose up -d
-</code></pre></div>
-<h3 id="step-3-index-your-library">Step 3: Index your library<a class="headerlink" href="#step-3-index-your-library" title="Permanent link">&para;</a></h3>
-<div class="admonition note">
-<p>Ensure there is enough disk space available for creating thumbnails and verify file system permissions
-before starting to index: Files in the <em>originals</em> folder must be readable, while the <em>storage</em> folder
-including all subdirectories must be readable and writeable.</p>
-</div>
-<p>Open the Web <abbr title="User Interface">UI</abbr>, go to <em>Library</em> and click <em>Start</em> to start indexing your pictures.</p>
-<p>While indexing, JPEG sidecar files may be created for originals in other formats such as <abbr title="image format that contains unprocessed sensor data">RAW</abbr> and <abbr title="High Efficiency Image File Format">HEIF</abbr>. 
-This is required for image classification, facial recognition, and for displaying them in a Web browser. 
-Sidecar and thumbnail files will be added to the <em>storage</em> folder, so that your <em>originals</em> folder won't be modified.</p>
-<p>Your <a href="../../user-guide/organize/browse/">photos</a> and <a href="../../user-guide/organize/video/">videos</a> will 
-successively become visible in search results and other parts of the user interface. 
-Open the <em>Logs</em> tab in <em>Library</em> to watch the indexer working.</p>
-<p>Of course, you can continue using your favorite tools for processing <abbr title="image format that contains unprocessed sensor data">RAW</abbr> files, editing metadata, 
-or importing new shots. Go to <em>Library</em> and click <em>Start</em> to update the index after files have been 
-changed, added, or removed. This can also be automated using <abbr title="Command-Line Interface">CLI</abbr> commands and a <a href="https://dl.photoprism.app/docker/scheduler/">scheduler</a>.</p>
-<p>Easy, isn't it?</p>
-<div class="admonition info">
-<p>If your server runs out of memory, the index is frequently locked, or other system resources are running low:</p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Try <a href="../config-options/#index-workers">reducing the number of workers</a> by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance of the server)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Ensure that <a href="../troubleshooting/docker/#adding-swap">your server has at least 4 GB of <abbr title="substitute for physical memory">swap</abbr> configured</a> so that indexing doesn't cause restarts when there are memory usage spikes (especially the conversion of <abbr title="image format that contains unprocessed sensor data">RAW</abbr> images and the
-transcoding of videos are very demanding)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> As a measure of last resort, you may <a href="../config-options/#feature-flags">disable using TensorFlow</a> for image classification and facial recognition</li>
-</ul>
-</div>
-<div class="admonition example">
-<p><strong>Back us on <a href="https://www.patreon.com/photoprism">Patreon</a> or <a href="https://github.com/sponsors/photoprism">GitHub Sponsors</a>.</strong>
-Your continued support <a href="../../funding/">helps us</a> provide <a href="https://docs.photoprism.app/release-notes/">regular updates</a>
-and services like <a href="https://demo.photoprism.app/places">world maps</a>. Thank you! 💜</p>
-</div>
-<h3 id="command-line-interface">Command-Line Interface<a class="headerlink" href="#command-line-interface" title="Permanent link">&para;</a></h3>
-<p><code>photoprism help</code> lists all commands and <a href="../config-options/">config options</a> available in the current version:</p>
-<div class="highlight"><pre><span></span><code>docker-compose <span class="nb">exec</span> photoprism photoprism <span class="nb">help</span>
-</code></pre></div>
-<p>Use the <code>--help</code> flag to see a detailed command description, for example:</p>
-<div class="highlight"><pre><span></span><code>docker-compose <span class="nb">exec</span> photoprism photoprism backup --help
-</code></pre></div>
-<div class="admonition info">
-<p>Prefixing commands with <code>docker-compose exec [service name]</code> runs them inside an app container.
-If this fails with <em>no container found</em>, make sure the app has been started,
-its service name is the same, and you are in the folder in which the <code>docker-compose.yml</code> 
-file has been saved.</p>
-</div>
-<p>PhotoPrism's command-line interface is well suited for job automation using a
-<a href="https://dl.photoprism.app/docker/scheduler/">scheduler</a>.</p>
-<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Action</th>
-<th>Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>Start App &amp; Database</em></td>
-<td><code>docker-compose up -d</code></td>
-</tr>
-<tr>
-<td><em>Stop App &amp; Database</em></td>
-<td><code>docker-compose stop</code></td>
-</tr>
-<tr>
-<td><em>Update Container Images</em></td>
-<td><code>docker-compose pull</code></td>
-</tr>
-<tr>
-<td><em>Uninstall</em></td>
-<td><code>docker-compose rm -s -v</code></td>
-</tr>
-<tr>
-<td><em>Show Server Logs</em></td>
-<td><code>docker-compose logs --tail=100 -f</code></td>
-</tr>
-<tr>
-<td><em>Show Config Values</em></td>
-<td><code>docker-compose exec photoprism photoprism config</code></td>
-</tr>
-<tr>
-<td><em>Reset Database</em></td>
-<td><code>docker-compose exec photoprism photoprism reset</code></td>
-</tr>
-<tr>
-<td><em>Backup Database</em></td>
-<td><code>docker-compose exec photoprism photoprism backup -a -i</code></td>
-</tr>
-<tr>
-<td><em>Restore Database</em></td>
-<td><code>docker-compose exec photoprism photoprism restore -a -i</code></td>
-</tr>
-<tr>
-<td><em>Change Admin Password</em></td>
-<td><code>docker-compose exec photoprism photoprism passwd</code></td>
-</tr>
-<tr>
-<td><em>Show User Management Commands</em></td>
-<td><code>docker-compose exec photoprism photoprism users help</code></td>
-</tr>
-<tr>
-<td><em>Show Facial Recognition Commands</em></td>
-<td><code>docker-compose exec photoprism photoprism faces help</code></td>
-</tr>
-<tr>
-<td><em>Index Faces</em></td>
-<td><code>docker-compose exec photoprism photoprism faces index</code></td>
-</tr>
-<tr>
-<td><em>Reset People &amp; Faces</em></td>
-<td><code>docker-compose exec photoprism photoprism faces reset -f</code></td>
-</tr>
-<tr>
-<td><em>Transcode Videos to <abbr title="MPEG-4 / H.264">AVC</abbr></em></td>
-<td><code>docker-compose exec photoprism photoprism convert</code></td>
-</tr>
-<tr>
-<td><em>Regenerate Thumbnails</em></td>
-<td><code>docker-compose exec photoprism photoprism thumbs -f</code></td>
-</tr>
-<tr>
-<td><em>Update Index</em></td>
-<td><code>docker-compose exec photoprism photoprism index --cleanup</code></td>
-</tr>
-<tr>
-<td><em>Import Files</em></td>
-<td><code>docker-compose exec photoprism photoprism import [path]</code></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition info">
-<p class="admonition-title">Complete Rescan</p>
-<p><code>docker-compose exec photoprism photoprism index -f</code> rescans all originals, including already indexed and unchanged files. 
-This may be necessary after major upgrades.</p>
-</div>
-<div class="footnote">
-<hr />
+                <h1 id="photoprism-documentation-license">PhotoPrism® Documentation License<a class="headerlink" href="#photoprism-documentation-license" title="Permanent link">&para;</a></h1>
+<h2 id="creative-commons-attribution-noncommercial-sharealike-40-international-public-license">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License<a class="headerlink" href="#creative-commons-attribution-noncommercial-sharealike-40-international-public-license" title="Permanent link">&para;</a></h2>
+<p>By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License ("Public License"). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.</p>
+<h3 id="section-1-definitions">Section 1 – Definitions.<a class="headerlink" href="#section-1-definitions" title="Permanent link">&para;</a></h3>
+<p>a. <strong>Adapted Material</strong> means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.</p>
+<p>b. <strong>Adapter's License</strong> means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.</p>
+<p>c. <strong>BY-NC-SA Compatible License</strong> means a license listed at <a href="http://creativecommons.org/compatiblelicenses">creativecommons.org/compatiblelicenses</a>, approved by Creative Commons as essentially the equivalent of this Public License.</p>
+<p>d. <strong>Copyright and Similar Rights</strong> means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.</p>
+<p>e. <strong>Effective Technological Measures</strong> means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.</p>
+<p>f. <strong>Exceptions and Limitations</strong> means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.</p>
+<p>g. <strong>License Elements</strong> means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution, NonCommercial, and ShareAlike.</p>
+<p>h. <strong>Licensed Material</strong> means the artistic or literary work, database, or other material to which the Licensor applied this Public License.</p>
+<p>i. <strong>Licensed Rights</strong> means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.</p>
+<p>h. <strong>Licensor</strong> means the individual(s) or entity(ies) granting rights under this Public License.</p>
+<p>i. <strong>NonCommercial</strong> means not primarily intended for or directed towards commercial advantage or monetary compensation. For purposes of this Public License, the exchange of the Licensed Material for other material subject to Copyright and Similar Rights by digital file-sharing or similar means is NonCommercial provided there is no payment of monetary compensation in connection with the exchange.</p>
+<p>j. <strong>Share</strong> means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.</p>
+<p>k. <strong>Sui Generis Database Rights</strong> means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.</p>
+<p>l. <strong>You</strong> means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.</p>
+<h3 id="section-2-scope">Section 2 – Scope.<a class="headerlink" href="#section-2-scope" title="Permanent link">&para;</a></h3>
+<p>a. <strong><em>License grant.</em></strong></p>
 <ol>
-<li id="fn:1">
-<p>The default <a href="https://docs.docker.com/compose/">Docker Compose</a> config filename is <code>docker-compose.yml</code>. For simplicity, it doesn't need to be specified when running the <code>docker-compose</code> command in the same directory. Config files for other apps or instances should be placed in separate folders.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<li>Subject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:</li>
+</ol>
+<p>A. reproduce and Share the Licensed Material, in whole or in part, for NonCommercial purposes only; and</p>
+<p>B. produce, reproduce, and Share Adapted Material for NonCommercial purposes only.</p>
+<ol>
+<li>
+<p><strong>Exceptions and Limitations.</strong> For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.</p>
+</li>
+<li>
+<p><strong>Term.</strong> The term of this Public License is specified in Section 6(a).</p>
+</li>
+<li>
+<p><strong>Media and formats; technical modifications allowed.</strong> The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.</p>
+</li>
+<li>
+<p><strong>Downstream recipients.</strong></p>
 </li>
 </ol>
-</div>
+<p>A. <strong>Offer from the Licensor – Licensed Material.</strong> Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.</p>
+<p>B. <strong>Additional offer from the Licensor – Adapted Material.</strong> Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.</p>
+<p>C. <strong>No downstream restrictions.</strong> You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.</p>
+<ol>
+<li><strong>No endorsement.</strong> Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).</li>
+</ol>
+<p>b. <strong><em>Other rights.</em></strong></p>
+<ol>
+<li>
+<p>Moral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.</p>
+</li>
+<li>
+<p>Patent and trademark rights are not licensed under this Public License.</p>
+</li>
+<li>
+<p>To the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties, including when the Licensed Material is used other than for NonCommercial purposes.</p>
+</li>
+</ol>
+<h3 id="section-3-license-conditions">Section 3 – License Conditions.<a class="headerlink" href="#section-3-license-conditions" title="Permanent link">&para;</a></h3>
+<p>Your exercise of the Licensed Rights is expressly made subject to the following conditions.</p>
+<p>a. <strong><em>Attribution.</em></strong></p>
+<ol>
+<li>If You Share the Licensed Material (including in modified form), You must:</li>
+</ol>
+<p>A. retain the following if it is supplied by the Licensor with the Licensed Material:</p>
+<p>i. identification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);</p>
+<p>ii. a copyright notice;</p>
+<p>iii. a notice that refers to this Public License;</p>
+<p>iv. a notice that refers to the disclaimer of warranties;</p>
+<p>v. a URI or hyperlink to the Licensed Material to the extent reasonably practicable;</p>
+<p>B. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and</p>
+<p>C. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.</p>
+<ol>
+<li>
+<p>You may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.</p>
+</li>
+<li>
+<p>If requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.</p>
+</li>
+</ol>
+<p>b. <strong><em>ShareAlike.</em></strong></p>
+<p>In addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.</p>
+<ol>
+<li>
+<p>The Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-NC-SA Compatible License.</p>
+</li>
+<li>
+<p>You must include the text of, or the URI or hyperlink to, the Adapter's License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.</p>
+</li>
+<li>
+<p>You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter's License You apply.</p>
+</li>
+</ol>
+<h3 id="section-4-sui-generis-database-rights">Section 4 – Sui Generis Database Rights.<a class="headerlink" href="#section-4-sui-generis-database-rights" title="Permanent link">&para;</a></h3>
+<p>Where the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:</p>
+<p>a. for the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database for NonCommercial purposes only;</p>
+<p>b. if You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and</p>
+<p>c. You must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.</p>
+<p>For the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.</p>
+<h3 id="section-5-disclaimer-of-warranties-and-limitation-of-liability">Section 5 – Disclaimer of Warranties and Limitation of Liability.<a class="headerlink" href="#section-5-disclaimer-of-warranties-and-limitation-of-liability" title="Permanent link">&para;</a></h3>
+<p>a. <strong>Unless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.</strong></p>
+<p>b. <strong>To the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.</strong></p>
+<p>c. The disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.</p>
+<h3 id="section-6-term-and-termination">Section 6 – Term and Termination.<a class="headerlink" href="#section-6-term-and-termination" title="Permanent link">&para;</a></h3>
+<p>a. This Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.</p>
+<p>b. Where Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:</p>
+<ol>
+<li>
+<p>automatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or</p>
+</li>
+<li>
+<p>automatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or</p>
+</li>
+</ol>
+<p>For the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.</p>
+<p>c. For the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.</p>
+<p>d. Sections 1, 5, 6, 7, and 8 survive termination of this Public License.</p>
+<h3 id="section-7-other-terms-and-conditions">Section 7 – Other Terms and Conditions.<a class="headerlink" href="#section-7-other-terms-and-conditions" title="Permanent link">&para;</a></h3>
+<p>a. The Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.</p>
+<p>b. Any arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.</p>
+<h3 id="section-8-interpretation">Section 8 – Interpretation.<a class="headerlink" href="#section-8-interpretation" title="Permanent link">&para;</a></h3>
+<p>a. For the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.</p>
+<p>b. To the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.</p>
+<p>c. No term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.</p>
+<p>d. Nothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.</p>
                 
               
               
@@ -3488,9 +3286,9 @@ This may be necessary after major upgrades.</p>
         
         
         <a
-                href="../"
+                href="../assets/"
                 class="md-footer__link md-footer__link--prev"
-                aria-label="Previous: Setup"
+                aria-label="Previous: Digital Assets"
                 rel="prev"
         >
             <div class="md-footer__button md-icon">
@@ -3501,33 +3299,13 @@ This may be necessary after major upgrades.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-                    Setup
+                    Digital Assets
                 </div>
             </div>
         </a>
         
 
         <!-- Link to next page -->
-        
-        
-        <a
-                href="../docker/"
-                class="md-footer__link md-footer__link--next"
-                aria-label="Next: Pure Docker"
-                rel="next"
-        >
-            <div class="md-footer__title">
-                <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-                    Pure Docker
-                </div>
-            </div>
-            <div class="md-footer__button md-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-        </a>
         
     </nav>
     
