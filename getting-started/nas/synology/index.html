@@ -581,29 +581,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#frequently-asked-questions" class="md-nav__link">
-    Frequently Asked Questions
+  <a href="#will-my-device-be-fast-enough" class="md-nav__link">
+    Will my device be fast enough?
   </a>
-  
-    <nav class="md-nav" aria-label="Frequently Asked Questions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#does-my-device-meet-the-system-requirements" class="md-nav__link">
-    Does my device meet the system requirements?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#will-my-nas-be-fast-enough" class="md-nav__link">
-    Will my NAS be fast enough?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2992,29 +2972,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#frequently-asked-questions" class="md-nav__link">
-    Frequently Asked Questions
+  <a href="#will-my-device-be-fast-enough" class="md-nav__link">
+    Will my device be fast enough?
   </a>
-  
-    <nav class="md-nav" aria-label="Frequently Asked Questions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#does-my-device-meet-the-system-requirements" class="md-nav__link">
-    Does my device meet the system requirements?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#will-my-nas-be-fast-enough" class="md-nav__link">
-    Will my NAS be fast enough?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3084,13 +3044,10 @@
                 
                 
                 <h1 id="running-photoprism-on-a-synology-nas">Running PhotoPrism on a Synology NAS<a class="headerlink" href="#running-photoprism-on-a-synology-nas" title="Permanent link">&para;</a></h1>
-<h2 id="frequently-asked-questions">Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
-<h4 id="does-my-device-meet-the-system-requirements">Does my device meet the system requirements?<a class="headerlink" href="#does-my-device-meet-the-system-requirements" title="Permanent link">&para;</a></h4>
 <p>Visit the <a href="https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have">Synology Knowledge Base</a>
 to learn what <a href="../../troubleshooting/performance/#server-cpu">kind of CPU</a> and how much memory your device has.
-We <a href="../../#system-requirements">recommend</a> a 64-bit processor with <strong>at least 2 cores</strong> and <strong>4 GB of memory</strong>. 
-While PhotoPrism has been reported to work on devices with 2 GB of memory, we won't take responsibility for 
-instability or performance issues.</p>
+We <a href="../../#system-requirements">recommend</a> hosting PhotoPrism on a 64-bit system with <strong>at least 2 cores</strong> and <strong>3 GB of physical memory</strong>.</p>
+<p>RAW file conversion and TensorFlow are disabled on devices with 1 GB or less of physical memory. We take no responsibility for instability or performance issues if your NAS does not meet the minimum requirements.</p>
 <p>You will have to resort to <a href="../../raspberry-pi/#older-armv7-based-devices">32-bit Docker images</a> to run 
 PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS218j.</p>
 <div class="admonition note">
@@ -3099,12 +3056,13 @@ instead of traditional hard drives commonly used in NAS devices. Especially the 
 images and the transcoding of videos are very demanding.</p>
 </div>
 <div class="admonition info">
-<p>If your server runs out of memory, the index is frequently locked, or other system resources are running low
-while indexing, you should <a href="../../config-options/#index-workers">try reducing the number of workers</a>
-by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance
-of the server). As a measure of last resort, you may <a href="../../config-options/#feature-flags">disable using TensorFlow</a> for image classification and facial recognition.</p>
+<p>If your device runs out of memory, the index is frequently locked, or other system resources are running low:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Try <a href="../../config-options/#index-workers">reducing the number of workers</a> by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance of the server)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> As a measure of last resort, you may <a href="../../config-options/#feature-flags">disable using TensorFlow</a> for image classification and facial recognition</li>
+</ul>
 </div>
-<h4 id="will-my-nas-be-fast-enough">Will my NAS be fast enough?<a class="headerlink" href="#will-my-nas-be-fast-enough" title="Permanent link">&para;</a></h4>
+<h2 id="will-my-device-be-fast-enough">Will my device be fast enough?<a class="headerlink" href="#will-my-device-be-fast-enough" title="Permanent link">&para;</a></h2>
 <p>This largely depends on your expectations and the number of files you have. Most users report that
 PhotoPrism runs well on their Synology NAS. However, initial indexing may take much longer
 than on standard desktop computers.</p>

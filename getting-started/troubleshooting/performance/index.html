@@ -3011,7 +3011,7 @@ get faster with each generation, their hardware is optimized for minimal power c
 CPUs are often many times faster. If you've tried everything else, then only moving your instance to a more
 powerful server may help.</p>
 <div class="admonition info">
-<p><strong>If your server runs out of memory, the index is frequently locked, or other system resources are running low:</strong></p>
+<p>If your server runs out of memory, the index is frequently locked, or other system resources are running low:</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Try <a href="../../config-options/#index-workers">reducing the number of workers</a> by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance of the server)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Ensure that <a href="../docker/#adding-swap">your server has at least 4 GB of swap configured</a> so that indexing doesn't cause restarts when there are memory usage spikes (especially the conversion of RAW images and the
