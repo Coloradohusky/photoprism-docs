@@ -2191,22 +2191,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#download-test-and-config-files" class="md-nav__link">
-    Download test and config files
+  <a href="#running-tests-inside-the-docker-container" class="md-nav__link">
+    Running Tests Inside the Docker Container
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#run-tests-within-the-docker-container" class="md-nav__link">
-    Run tests within the docker container
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-tests-locally" class="md-nav__link">
-    Run tests locally
+  <a href="#running-tests-locally" class="md-nav__link">
+    Running Tests Locally
   </a>
   
 </li>
@@ -3145,22 +3138,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#download-test-and-config-files" class="md-nav__link">
-    Download test and config files
+  <a href="#running-tests-inside-the-docker-container" class="md-nav__link">
+    Running Tests Inside the Docker Container
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#run-tests-within-the-docker-container" class="md-nav__link">
-    Run tests within the docker container
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-tests-locally" class="md-nav__link">
-    Run tests locally
+  <a href="#running-tests-locally" class="md-nav__link">
+    Running Tests Locally
   </a>
   
 </li>
@@ -3245,11 +3231,14 @@
 <h4 id="test-frameworks_1">Test Frameworks<a class="headerlink" href="#test-frameworks_1" title="Permanent link">&para;</a></h4>
 <p>To test javascript code we use <a href="https://mochajs.org/">mocha</a> in combination with <a href="https://karma-runner.github.io/4.0/intro/installation.html">karma</a>, <a href="https://www.chaijs.com/">chai</a>, <a href="https://sinonjs.org/">sinon</a> and the <a href="https://github.com/mattlewis92/karma-coverage-istanbul-reporter">karma-istanbul-coverage-reporter</a>.</p>
 <h2 id="acceptance-tests">Acceptance Tests<a class="headerlink" href="#acceptance-tests" title="Permanent link">&para;</a></h2>
-<h3 id="download-test-and-config-files">Download test and config files<a class="headerlink" href="#download-test-and-config-files" title="Permanent link">&para;</a></h3>
-<p>Download the following directory and unzip it within your storage directory</p>
-<p><code>wget https://dl.photoprism.app/qa/acceptance.tar.gz</code></p>
-<h3 id="run-tests-within-the-docker-container">Run tests within the docker container<a class="headerlink" href="#run-tests-within-the-docker-container" title="Permanent link">&para;</a></h3>
-<p>You can run the tests from within the photoprism container in firefox or chromium.</p>
+<p>Before you proceed, use <code>wget</code> to download <a href="https://dl.photoprism.app/qa/acceptance.tar.gz">acceptance.tar.gz</a>
+to the storage folder and extract it there:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> storage
+wget https://dl.photoprism.app/qa/acceptance.tar.gz
+tar -xzf acceptance.tar.gz
+</code></pre></div>
+<h3 id="running-tests-inside-the-docker-container">Running Tests Inside the Docker Container<a class="headerlink" href="#running-tests-inside-the-docker-container" title="Permanent link">&para;</a></h3>
+<p>In the development container environment, you can run the tests in Firefox and Chromium:</p>
 <ul>
 <li>
 <p><code>make acceptance-run-chromium</code>: This executes all tests in headless chromium</p>
@@ -3258,8 +3247,8 @@
 <p><code>make acceptance-run-firefox</code>: This executes all tests in headless firefox</p>
 </li>
 </ul>
-<h3 id="run-tests-locally">Run tests locally<a class="headerlink" href="#run-tests-locally" title="Permanent link">&para;</a></h3>
-<p>Locally you can run the tests in all supported browsers you have installed.</p>
+<h3 id="running-tests-locally">Running Tests Locally<a class="headerlink" href="#running-tests-locally" title="Permanent link">&para;</a></h3>
+<p>Locally, you can run the tests in all supported browsers that you have installed.</p>
 <p>To run tests locally you need to install testcafe on your machine.
 <div class="highlight"><pre><span></span><code>npm install -g testcafe
 </code></pre></div></p>
