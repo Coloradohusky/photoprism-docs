@@ -3229,7 +3229,7 @@ for this. You can <a href="https://docs.docker.com/storage/bind-mounts/#use-a-re
 <p><abbr title="self-contained, serverless SQL database">SQLite</abbr>, cache, session, thumbnail, and sidecar files will be created in the <em>storage</em> folder, which is mounted as
 an <a href="https://docs.docker.com/storage/bind-mounts/">anonymous volume</a> in our example:</p>
 <ul>
-<li>You can mount a specific <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> folder instead like for <em>originals</em>, which is better for production environments</li>
+<li>You can instead mount a specific <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> folder like for <em>originals</em>, which is better for production environments</li>
 <li>Never remove the <em>storage</em> volume mount so that you don't lose these files after restarting or upgrading PhotoPrism</li>
 <li>We recommend placing the <em>storage</em> folder on a <a href="../troubleshooting/performance/#storage">local SSD drive</a> for best performance</li>
 <li>When moving your installation to another <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> or drive, move the <em>storage</em> folder along with it</li>
