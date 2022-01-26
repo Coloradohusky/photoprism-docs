@@ -3194,7 +3194,7 @@ Before <a href="../../../user-guide/#getting-support">submitting a support reque
 </div>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <p>If you can't use the <code>docker</code> and <code>docker-compose</code> commands at all, make sure <a href="https://docs.docker.com/config/daemon/#start-the-daemon-manually">Docker</a>
-is running on the <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> you are connected to and your current user has the permission to use it. The following guides explain how to install Docker:</p>
+is running on the <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> you are connected to and your current user has the permission to use it. The following guides explain how to install Docker:</p>
 <ul>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04">Ubuntu</a>, <a href="https://techviewleo.com/how-to-install-and-use-docker-in-linux-mint/">Mint</a>, <a href="https://www.linode.com/docs/guides/installing-and-using-docker-on-ubuntu-and-debian/">Debian</a>, <a href="https://wiki.archlinux.org/title/docker#Installation">Arch</a>, and <a href="https://docs.docker.com/engine/install/fedora/">Fedora</a> Linux</li>
 <li><a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows">Microsoft Windows</a></li>
@@ -3244,7 +3244,7 @@ while debugging so that log messages are displayed directly. To do this, omit th
 docker-compose up 
 </code></pre></div>
 <div class="admonition note">
-<p>If you see no errors or no logs at all, you may have started the server on a different <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr>
+<p>If you see no errors or no logs at all, you may have started the server on a different <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr>
 and/or port. There could also be an <a href="../browsers/">issue with your browser</a>, browser plugins, firewall settings,
 or other tools you may have installed.</p>
 </div>
@@ -3293,9 +3293,13 @@ configuration.</p>
 with the community so that less experienced users can harden their installation without running into issues.</p>
 </div>
 <h3 id="file-permissions">File Permissions<a class="headerlink" href="#file-permissions" title="Permanent link">&para;</a></h3>
-<p>Use a file manager, or the commands <code>chmod</code> and <code>chown</code> on Unix-like operating systems, to <a href="https://kb.iu.edu/d/abdb">change file and folder permissions</a>
-so that the app container can access them.</p>
-<p>If you have configured specific user and group IDs for PhotoPrism, make sure they match.</p>
+<p>Error messages containing "<abbr title="write protected">read-only</abbr> file system", "error creating path", or "wrong permissions" indicate a <abbr title="contains your files and folders">filesystem</abbr> permission problem:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Use a file manager, or the commands <code>ls -alh</code>, <code>chmod</code>, and <code>chown</code> on Unix-like operating systems, to <a href="https://kb.iu.edu/d/abdb">check and change <abbr title="contains your files and folders">filesystem</abbr> permissions</a> so that files and folders are readable (and writable if needed, e.g. the app and database <em>storage</em> folders)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Verify that you have <strong>not</strong> mounted the app and database <em>storage</em> folders <abbr title="write protected">read-only</abbr> on your <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> or <a href="https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount">via Docker using the <code>:ro</code> flag</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If you have configured specific user and group IDs for a service, make sure they match</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Never use <a href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a> for or within the app and database <em>storage</em> folders</li>
+</ul>
 <p><em>Start a full rescan if necessary, for example, if it looks like <a href="../#broken-thumbnails">thumbnails</a> or <a href="../#missing-pictures">pictures are missing</a>.</em></p>
 <h3 id="disk-space">Disk Space<a class="headerlink" href="#disk-space" title="Permanent link">&para;</a></h3>
 <p>In case the logs show "disk full", "quota exceeded", or "no space left" errors, either the disk containing the

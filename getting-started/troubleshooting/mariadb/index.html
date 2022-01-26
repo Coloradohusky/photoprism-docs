@@ -3102,10 +3102,11 @@ and <a href="../../docker-compose/#step-2-start-the-server">restart the service 
 <p>Never expose your database to the public Internet in this way, for example, if it is running on a cloud server.</p>
 </div>
 <p>If this doesn't help, check the <a href="../docker/#viewing-logs">Docker Logs</a> for messages like <em>disk full</em>, <em>disk quota exceeded</em>,
-<em>no space left on device</em>, <em>wrong permissions</em>, <em>no route to host</em>, <em>connection failed</em>, <em>exec format error</em>,
+<em>no space left on device</em>, <em>read-only file system</em>, <em>error creating path</em>, <em>wrong permissions</em>, <em>no route to host</em>, <em>connection failed</em>, <em>exec format error</em>,
 <em>no matching manifest</em>, and <em>killed</em>:</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Make sure that the database <em>storage</em> folder is readable and writable</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Make sure that the database <em>storage</em> folder is readable and writable: Error messages containing "read-only file system", "error creating path", or "wrong permissions" indicate a <a href="../docker/#file-permissions">filesystem permission problem</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <a href="https://en.wikipedia.org/wiki/Symbolic_link">Symbolic links</a> are used for or within the <em>storage</em> folder (replace with real paths)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If the MariaDB service has been killed or otherwise automatically terminated, this can point to a <a href="../docker/#adding-swap">memory problem</a> (add swap and/or memory; remove or increase usage limits)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> In case the logs also show "disk full", "quota exceeded", or "no space left" errors, either <a href="../docker/#disk-space">the disk containing the <em>storage</em> folder is full</a> (add storage) or a disk usage limit is configured (remove or increase it)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Log messages that contain "no route to host" may also indicate a general network configuration problem (follow our <a href="https://dl.photoprism.app/docker/">examples</a>)</li>

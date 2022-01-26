@@ -3242,7 +3242,7 @@ There is no default in case no password was provided. A minimum length of 4 char
 </div>
 <h4 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h4>
 <p>Our example includes a pre-configured <a href="https://mariadb.com/">MariaDB</a> database server. If you remove it 
-and provide no other database server credentials, a SQLite database file will be created in the 
+and provide no other database server credentials, <abbr title="self-contained, serverless SQL database">SQLite</abbr> database files will be created in the 
 <em>storage</em> folder. Local <a href="../troubleshooting/performance/#storage"><abbr title="Solid-State Drive">SSD</abbr> storage is best</a> for databases of any kind.
 Never <a href="../troubleshooting/mariadb/#corrupted-files">store</a> database files on an unreliable device such as a USB flash drive,
 an SD card, or a shared network folder.</p>
@@ -3251,7 +3251,7 @@ an SD card, or a shared network folder.</p>
 for the first time. Choosing a secure password is not essential if you don't <a href="../troubleshooting/mariadb/#cannot-connect">expose the database to other apps and hosts</a>.</p>
 </div>
 <h4 id="volumes">Volumes<a class="headerlink" href="#volumes" title="Permanent link">&para;</a></h4>
-<p>Since the app is running inside a container, you have to explicitly mount the <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> folders you want to use.
+<p>Since the app is running inside a container, you have to explicitly mount the <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> folders you want to use.
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.</p>
 <h5 id="photoprismoriginals">/photoprism/originals<a class="headerlink" href="#photoprismoriginals" title="Permanent link">&para;</a></h5>
 <p>The <em>originals</em> folder contains your original photo and video files. </p>
@@ -3261,34 +3261,38 @@ PhotoPrism won't be able to see folders that have not been mounted. That's an im
   <span class="p p-Indicator">-</span> <span class="s">&quot;~/Pictures:/photoprism/originals&quot;</span>
 </code></pre></div>
 <p>You can <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes">mount any folder</a> accessible from the
-<abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> instead, including <a href="../faq/#how-can-i-mount-network-shares-with-docker">network drives</a>. Additional directories may
+<abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> instead, including <a href="../faq/#how-can-i-mount-network-shares-with-docker">network drives</a>. Additional directories may
 be mounted as subfolders of <code>/photoprism/originals</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="s">&quot;/home/username/Pictures:/photoprism/originals&quot;</span>
   <span class="p p-Indicator">-</span> <span class="s">&quot;/example/friends:/photoprism/originals/friends&quot;</span>
   <span class="p p-Indicator">-</span> <span class="s">&quot;/mnt/photos:/photoprism/originals/media&quot;</span>
 </code></pre></div>
-<p>On Windows, prefix the <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> path with the drive letter and use <code>/</code> instead of <code>\</code> as separator:</p>
+<p>On Windows, prefix the <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> path with the drive letter and use <code>/</code> instead of <code>\</code> as separator:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="s">&quot;D:/Example/Pictures:/photoprism/originals&quot;</span>
 </code></pre></div>
 <div class="admonition tldr">
-<p>When you enable <em>read-only mode</em>, all features that require write permission to the <em>originals</em> folder 
+<p>When you enable <em><abbr title="write protected">read-only</abbr> mode</em>, all features that require write permission to the <em>originals</em> folder 
 are disabled, in particular import, upload, and delete. Set <code>PHOTOPRISM_READONLY</code> to <code>"true"</code>
-in <code>docker-compose.yml</code> for this. You can mount a folder with the <code>:ro</code> flag to make Docker block 
+in <code>docker-compose.yml</code> for this. You can <a href="https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount">mount a folder with the <code>:ro</code> flag</a> to make Docker block 
 write operations as well.</p>
 </div>
 <h5 id="photoprismstorage">/photoprism/storage<a class="headerlink" href="#photoprismstorage" title="Permanent link">&para;</a></h5>
-<p>Cache, session, thumbnail, and sidecar files will be created in the <em>storage</em> folder. Never remove the volume from
-your <code>docker-compose.yml</code> file so that you don't lose these files after restarting or upgrading the container.
-We recommend placing the <em>storage</em> folder on a <a href="../troubleshooting/performance/#storage">local <abbr title="Solid-State Drive">SSD</abbr> drive</a> for best performance.</p>
+<p>Cache, session, thumbnail, and sidecar files will be created in the <em>storage</em> folder:</p>
+<ul>
+<li>Never remove the volume from your <code>docker-compose.yml</code> file so that you don't lose these files after restarting or upgrading PhotoPrism</li>
+<li>We recommend placing the <em>storage</em> folder on a <a href="../troubleshooting/performance/#storage">local <abbr title="Solid-State Drive">SSD</abbr> drive</a> for best performance</li>
+<li>When moving your installation to another <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> or drive, move the <em>storage</em> folder along with it</li>
+<li>Never use <a href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a> for or within the <em>storage</em> folder</li>
+</ul>
 <h5 id="photoprismimport">/photoprism/import<a class="headerlink" href="#photoprismimport" title="Permanent link">&para;</a></h5>
 <p>You may optionally mount an <em>import</em> folder from which files can be transferred to the <em>originals</em> folder
 in a structured way that avoids duplicates. Imported files receive a canonical filename and will be
 organized by year and month.</p>
 <div class="admonition tldr">
 <p>You can safely skip this. Adding files via <a href="../../user-guide/library/upload/">Web Upload</a>
-and <a href="../../user-guide/sync/webdav/">WebDAV</a> remains possible, unless <a href="../config-options/">read-only mode</a>
+and <a href="../../user-guide/sync/webdav/">WebDAV</a> remains possible, unless <a href="../config-options/"><abbr title="write protected">read-only</abbr> mode</a>
 is enabled or the <a href="../../user-guide/settings/general/">features have been disabled</a>.</p>
 </div>
 <h3 id="step-2-start-the-server">Step 2: Start the server<a class="headerlink" href="#step-2-start-the-server" title="Permanent link">&para;</a></h3>
@@ -3303,7 +3307,7 @@ Enabling <a href="../config-options/">public mode</a> will disable authenticatio
 <div class="admonition info">
 <p>It can be helpful to <a href="../troubleshooting/docker/#viewing-logs">keep Docker running in the foreground while debugging</a> so that log messages are displayed directly. To do this, omit the <code>-d</code> parameter when restarting.</p>
 <p>Should the server already be running, or you see no errors, you may have started it
-on a different <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> and/or port. There could also be an <a href="../troubleshooting/#connection-fails">issue with your browser,
+on a different <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> and/or port. There could also be an <a href="../troubleshooting/#connection-fails">issue with your browser,
 ad blocker, or firewall settings</a>.</p>
 </div>
 <div class="admonition tldr">

@@ -3182,7 +3182,7 @@ the folder containing your pictures:</p>
 </div>
 </div>
 <p>The server port and other <a href="../config-options/">config options</a> can be changed as needed.
-If you provide no database server credentials, a SQLite database file will be created in the
+If you provide no database server credentials, <abbr title="self-contained, serverless SQL database">SQLite</abbr> database files will be created in the
 <em>storage</em> folder.</p>
 <div class="admonition danger">
 <p>Always change <code>PHOTOPRISM_ADMIN_PASSWORD</code> so that the app starts with a <strong>secure initial password</strong>.
@@ -3201,7 +3201,7 @@ Enabling <a href="../config-options/">public mode</a> will disable authenticatio
 <p>It can be helpful to keep Docker running in the foreground while debugging
 so that log messages are displayed directly. To do this, omit the <code>-d</code> parameter when restarting.</p>
 <p>Should the server already be running, or you see no errors, you may have started it
-on a different <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> and/or port. There could also be an <a href="../troubleshooting/#connection-fails">issue with your browser,
+on a different <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> and/or port. There could also be an <a href="../troubleshooting/#connection-fails">issue with your browser,
 ad blocker, or firewall settings</a>.</p>
 </div>
 <div class="admonition tldr">
@@ -3210,34 +3210,38 @@ started for the first time. You may run <code>docker exec -ti photoprism photopr
 in a terminal to change an existing password. You can also reset your database for a clean start. </p>
 </div>
 <h4 id="volumes">Volumes<a class="headerlink" href="#volumes" title="Permanent link">&para;</a></h4>
-<p>Since the app is running inside a container, you have to explicitly mount the <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> folders you want to use.
+<p>Since the app is running inside a container, you have to explicitly mount the <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> folders you want to use.
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.</p>
 <h5 id="photoprismoriginals">/photoprism/originals<a class="headerlink" href="#photoprismoriginals" title="Permanent link">&para;</a></h5>
 <p>The <em>originals</em> folder contains your original photo and video files.
 They are mounted from <code>~/Pictures</code> in the example above, where <code>~</code> is a shortcut for 
-your <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr>. Other folders accessible from the <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> may be <a href="https://docs.docker.com/storage/bind-mounts/">mounted</a> instead, 
+your <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr>. Other folders accessible from the <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> may be <a href="https://docs.docker.com/storage/bind-mounts/">mounted</a> instead, 
 including network drives. </p>
 <p>Multiple folders can be made accessible by mounting them as subfolders:</p>
 <div class="highlight"><pre><span></span><code>-v ~/Example:/photoprism/originals/Example
 </code></pre></div>
 <div class="admonition tldr">
-<p>When you enable <em>read-only mode</em>, all features that require write permission to the <em>originals</em> folder
+<p>When you enable <em><abbr title="write protected">read-only</abbr> mode</em>, all features that require write permission to the <em>originals</em> folder
 are disabled, in particular import, upload, and delete. Run the app with <code>-e PHOTOPRISM_READONLY="true"</code> 
-for this. You can mount a folder with the <code>:ro</code> flag to make Docker block write operations as well.</p>
+for this. You can <a href="https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount">mount a folder with the <code>:ro</code> flag</a> to make Docker block write operations as well.</p>
 </div>
 <h5 id="photoprismstorage">/photoprism/storage<a class="headerlink" href="#photoprismstorage" title="Permanent link">&para;</a></h5>
-<p>Cache, session, thumbnail, and sidecar files will be created the <em>storage</em> folder, which is mounted as 
-an <a href="https://docs.docker.com/storage/bind-mounts/">anonymous volume</a> in our example. You may want to 
-mount a specific <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> folder instead. Never remove the volume completely so that you don't lose 
-these files after restarting or upgrading the container. We recommend placing the <em>storage</em> folder 
-on a <a href="../troubleshooting/performance/#storage">local SSD drive</a> for best performance.</p>
+<p><abbr title="self-contained, serverless SQL database">SQLite</abbr>, cache, session, thumbnail, and sidecar files will be created in the <em>storage</em> folder, which is mounted as
+an <a href="https://docs.docker.com/storage/bind-mounts/">anonymous volume</a> in our example:</p>
+<ul>
+<li>You can mount a specific <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> folder instead like for <em>originals</em>, which is better for production environments</li>
+<li>Never remove the <em>storage</em> volume mount so that you don't lose these files after restarting or upgrading PhotoPrism</li>
+<li>We recommend placing the <em>storage</em> folder on a <a href="../troubleshooting/performance/#storage">local SSD drive</a> for best performance</li>
+<li>When moving your installation to another <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> or drive, move the <em>storage</em> folder along with it</li>
+<li>Never use <a href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a> for or within the <em>storage</em> folder</li>
+</ul>
 <h5 id="photoprismimport">/photoprism/import<a class="headerlink" href="#photoprismimport" title="Permanent link">&para;</a></h5>
 <p>You may optionally mount an <em>import</em> folder from which files can be transferred to the <em>originals</em> folder
 in a structured way that avoids duplicates. Imported files receive a canonical filename and will be
 organized by year and month.</p>
 <div class="admonition tldr">
 <p>You can safely skip this. Adding files via <a href="../../user-guide/library/upload/">Web Upload</a>
-and <a href="../../user-guide/sync/webdav/">WebDAV</a> remains possible, unless <a href="../config-options/">read-only mode</a>
+and <a href="../../user-guide/sync/webdav/">WebDAV</a> remains possible, unless <a href="../config-options/"><abbr title="write protected">read-only</abbr> mode</a>
 is enabled or the <a href="../../user-guide/settings/general/">features have been disabled</a>.</p>
 </div>
 <h3 id="step-2-index-your-library">Step 2: Index your library<a class="headerlink" href="#step-2-index-your-library" title="Permanent link">&para;</a></h3>
