@@ -3213,11 +3213,11 @@ in a terminal to change an existing password. You can also reset your database f
 <p>Since the app is running inside a container, you have to explicitly <a href="https://docs.docker.com/storage/bind-mounts/">mount the <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> folders</a> you want to use.
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.</p>
 <h5 id="photoprismoriginals">/photoprism/originals<a class="headerlink" href="#photoprismoriginals" title="Permanent link">&para;</a></h5>
-<p>The <em>originals</em> folder contains your original photo and video files.
-They are mounted from <code>~/Pictures</code> in the example above, where <code>~</code> is a shortcut for 
-your <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr>. Other folders accessible from the <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> <a href="https://docs.docker.com/storage/bind-mounts/">may be mounted</a> instead, 
-including network drives. </p>
-<p>Multiple folders can be made accessible by mounting them as subfolders:</p>
+<p>The <em>originals</em> folder contains your original photo and video files. They are mounted from <code>~/Pictures</code> in the example
+above, where <code>~</code> is a shortcut for your <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr>.</p>
+<p>You may <a href="https://docs.docker.com/storage/bind-mounts/">mount any folder accessible from the <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr></a> instead,
+including <a href="../faq/#how-can-i-mount-network-shares-with-docker">network drives</a>. Additional directories can
+be mounted as subfolders of <code>/photoprism/originals</code>:</p>
 <div class="highlight"><pre><span></span><code>-v ~/Example:/photoprism/originals/Example
 </code></pre></div>
 <div class="admonition tldr">
