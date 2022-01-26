@@ -3221,20 +3221,22 @@ be mounted as subfolders of <code>/photoprism/originals</code>:</p>
 <div class="highlight"><pre><span></span><code>-v ~/Example:/photoprism/originals/Example
 </code></pre></div>
 <div class="admonition tldr">
-<p>When you enable <em><abbr title="write protected">read-only</abbr> mode</em>, all features that require write permission to the <em>originals</em> folder
+<p>If <em><abbr title="write protected">read-only</abbr> mode</em> is enabled, all features that require write permission to the <em>originals</em> folder
 are disabled, in particular import, upload, and delete. Run the app with <code>-e PHOTOPRISM_READONLY="true"</code> 
 for this. You can <a href="https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount">mount a folder with the <code>:ro</code> flag</a> to make Docker block write operations as well.</p>
 </div>
 <h5 id="photoprismstorage">/photoprism/storage<a class="headerlink" href="#photoprismstorage" title="Permanent link">&para;</a></h5>
 <p><abbr title="self-contained, serverless SQL database">SQLite</abbr>, cache, session, thumbnail, and sidecar files will be created in the <em>storage</em> folder, which is mounted as
-an <a href="https://docs.docker.com/storage/bind-mounts/">anonymous volume</a> in our example:</p>
+an <a href="https://docs.docker.com/storage/bind-mounts/">anonymous volume</a> in our example. You may instead mount a specific
+<abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> folder as for <em>originals</em>, which is better for production environments.</p>
 <ul>
-<li>You can instead mount a specific <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> folder like for <em>originals</em>, which is better for production environments</li>
 <li>Never remove the <em>storage</em> volume mount so that you don't lose these files after restarting or upgrading PhotoPrism</li>
 <li>We recommend placing the <em>storage</em> folder on a <a href="../troubleshooting/performance/#storage">local SSD drive</a> for best performance</li>
-<li>When moving your installation to another <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> or drive, move the <em>storage</em> folder along with it</li>
-<li>Never use <a href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a> for or within the <em>storage</em> folder</li>
+<li>Don't mount <a href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a> and do not use them inside the <em>storage</em> folder</li>
 </ul>
+<div class="admonition tldr">
+<p>When moving your installation to another <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr>, move the complete <em>storage</em> folder along with it.</p>
+</div>
 <h5 id="photoprismimport">/photoprism/import<a class="headerlink" href="#photoprismimport" title="Permanent link">&para;</a></h5>
 <p>You may optionally mount an <em>import</em> folder from which files can be transferred to the <em>originals</em> folder
 in a structured way that avoids duplicates. Imported files receive a canonical filename and will be

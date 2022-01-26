@@ -3273,7 +3273,7 @@ be mounted as subfolders of <code>/photoprism/originals</code>:</p>
   <span class="p p-Indicator">-</span> <span class="s">&quot;D:/Example/Pictures:/photoprism/originals&quot;</span>
 </code></pre></div>
 <div class="admonition tldr">
-<p>When you enable <em><abbr title="write protected">read-only</abbr> mode</em>, all features that require write permission to the <em>originals</em> folder 
+<p>If <em><abbr title="write protected">read-only</abbr> mode</em> is enabled, all features that require write permission to the <em>originals</em> folder 
 are disabled, in particular import, upload, and delete. Set <code>PHOTOPRISM_READONLY</code> to <code>"true"</code>
 in <code>docker-compose.yml</code> for this. You can <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3">mount a folder with the <code>:ro</code> flag</a> to make Docker block 
 write operations as well.</p>
@@ -3283,9 +3283,11 @@ write operations as well.</p>
 <ul>
 <li>Never remove the volume from your <code>docker-compose.yml</code> file so that you don't lose these files after restarting or upgrading PhotoPrism</li>
 <li>We recommend placing the <em>storage</em> folder on a <a href="../troubleshooting/performance/#storage">local <abbr title="Solid-State Drive">SSD</abbr> drive</a> for best performance</li>
-<li>When moving your installation to another <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> or drive, move the <em>storage</em> folder along with it</li>
-<li>Never use <a href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a> for or within the <em>storage</em> folder</li>
+<li>Don't mount <a href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a> and do not use them inside the <em>storage</em> folder </li>
 </ul>
+<div class="admonition tldr">
+<p>When moving your installation to another <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr>, move the complete <em>storage</em> folder along with it.</p>
+</div>
 <h5 id="photoprismimport">/photoprism/import<a class="headerlink" href="#photoprismimport" title="Permanent link">&para;</a></h5>
 <p>You may optionally mount an <em>import</em> folder from which files can be transferred to the <em>originals</em> folder
 in a structured way that avoids duplicates. Imported files receive a canonical filename and will be
