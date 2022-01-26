@@ -3077,6 +3077,7 @@ powerful server may help.</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Try <a href="../../config-options/#index-workers">reducing the number of workers</a> by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance of the server)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Ensure that <a href="../docker/#adding-swap">your server has at least 4 GB of swap configured</a> so that indexing doesn't cause restarts when there are memory usage spikes (especially the conversion of RAW images and the
 transcoding of videos are very demanding)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If you are using <abbr title="self-contained, serverless SQL database">SQLite</abbr>, switch to MariaDB, which is <a href="../../faq/#should-i-use-sqlite-mariadb-or-mysql">better optimized for high concurrency</a></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> As a measure of last resort, you may <a href="../../config-options/#feature-flags">disable using TensorFlow</a> for image classification and facial recognition</li>
 </ul>
 </div>

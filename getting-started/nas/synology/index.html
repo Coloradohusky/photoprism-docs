@@ -3120,6 +3120,7 @@ images and the transcoding of videos are very demanding.</p>
 <p>If your device runs out of memory, the index is frequently locked, or other system resources are running low:</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Try <a href="../../config-options/#index-workers">reducing the number of workers</a> by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance of the server)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If you are using SQLite, switch to MariaDB, which is <a href="../../faq/#should-i-use-sqlite-mariadb-or-mysql">better optimized for high concurrency</a></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> As a measure of last resort, you may <a href="../../config-options/#feature-flags">disable using TensorFlow</a> for image classification and facial recognition</li>
 </ul>
 </div>
