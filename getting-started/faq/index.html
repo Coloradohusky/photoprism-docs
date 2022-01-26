@@ -3658,7 +3658,7 @@ updated and inline documentation has been added to simplify installation.</p>
 <h3 id="what-exactly-does-the-read-only-mode">What exactly does the read-only mode?<a class="headerlink" href="#what-exactly-does-the-read-only-mode" title="Permanent link">&para;</a></h3>
 <p>When you enable <em>read-only mode</em>, all features that require write permission to the <em>originals</em> folder
 are disabled, in particular import, upload, and delete. Set <code>PHOTOPRISM_READONLY</code> to <code>"true"</code>
-in <code>docker-compose.yml</code> for this. You can mount a folder with the <code>:ro</code> flag to make Docker block
+in <code>docker-compose.yml</code> for this. You can <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax">mount a folder with the <code>:ro</code> flag</a> to make Docker block
 write operations as well.</p>
 <h3 id="how-can-i-uninstall-photoprism">How can I uninstall PhotoPrism?<a class="headerlink" href="#how-can-i-uninstall-photoprism" title="Permanent link">&para;</a></h3>
 <p>This depends on how you installed it. If you're running PhotoPrism with <a href="../docker-compose/">Docker Compose</a>, 

@@ -3251,7 +3251,7 @@ an SD card, or a shared network folder.</p>
 for the first time. Choosing a secure password is not essential if you don't <a href="../troubleshooting/mariadb/#cannot-connect">expose the database to other apps and hosts</a>.</p>
 </div>
 <h4 id="volumes">Volumes<a class="headerlink" href="#volumes" title="Permanent link">&para;</a></h4>
-<p>Since the app is running inside a container, you have to explicitly mount the <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> folders you want to use.
+<p>Since the app is running inside a container, you have to explicitly <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes">mount the <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> folders</a> you want to use.
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.</p>
 <h5 id="photoprismoriginals">/photoprism/originals<a class="headerlink" href="#photoprismoriginals" title="Permanent link">&para;</a></h5>
 <p>The <em>originals</em> folder contains your original photo and video files. </p>
@@ -3260,7 +3260,7 @@ PhotoPrism won't be able to see folders that have not been mounted. That's an im
   <span class="c1"># &quot;/host/folder:/photoprism/folder&quot;  # example</span>
   <span class="p p-Indicator">-</span> <span class="s">&quot;~/Pictures:/photoprism/originals&quot;</span>
 </code></pre></div>
-<p>You can <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes">mount any folder</a> accessible from the
+<p>You can <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax">mount any folder</a> accessible from the
 <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr> instead, including <a href="../faq/#how-can-i-mount-network-shares-with-docker">network drives</a>. Additional directories may
 be mounted as subfolders of <code>/photoprism/originals</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
@@ -3275,7 +3275,7 @@ be mounted as subfolders of <code>/photoprism/originals</code>:</p>
 <div class="admonition tldr">
 <p>When you enable <em><abbr title="write protected">read-only</abbr> mode</em>, all features that require write permission to the <em>originals</em> folder 
 are disabled, in particular import, upload, and delete. Set <code>PHOTOPRISM_READONLY</code> to <code>"true"</code>
-in <code>docker-compose.yml</code> for this. You can <a href="https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount">mount a folder with the <code>:ro</code> flag</a> to make Docker block 
+in <code>docker-compose.yml</code> for this. You can <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax">mount a folder with the <code>:ro</code> flag</a> to make Docker block 
 write operations as well.</p>
 </div>
 <h5 id="photoprismstorage">/photoprism/storage<a class="headerlink" href="#photoprismstorage" title="Permanent link">&para;</a></h5>
