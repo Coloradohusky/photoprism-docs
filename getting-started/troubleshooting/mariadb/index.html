@@ -3130,7 +3130,7 @@ Internet in this way, for example, if it is running on a cloud server.</p>
 <h4 id="server-migration">Server Migration<a class="headerlink" href="#server-migration" title="Permanent link">&para;</a></h4>
 <p>When moving MariaDB to another computer, cloud server, or virtual machine:</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Move the complete <em>storage</em> folder along with it and preserve the file permissions</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Move the complete <em>storage</em> folder along with it and preserve the <a href="../docker/#file-permissions">file permissions</a></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <strong>or</strong> restore your index <a href="https://mariadb.com/kb/en/mysqldump/">from an SQL dump</a> (backup file)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Perform a <a href="#version-upgrade">version upgrade</a> if necessary</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Make sure that PhotoPrism can access the database on the new host</li>
