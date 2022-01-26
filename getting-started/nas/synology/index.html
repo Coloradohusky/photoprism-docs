@@ -3107,22 +3107,21 @@
                 <h1 id="running-photoprism-on-a-synology-nas">Running PhotoPrism on a Synology NAS<a class="headerlink" href="#running-photoprism-on-a-synology-nas" title="Permanent link">&para;</a></h1>
 <p>Visit the <a href="https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have">Synology Knowledge Base</a>
 to learn what <a href="../../troubleshooting/performance/#server-cpu">kind of CPU</a> and how much memory your device has.
-We <a href="../../#system-requirements">recommend</a> hosting PhotoPrism on a 64-bit system with <strong>at least 2 cores</strong> and <strong>3 GB of physical memory</strong>.</p>
-<p>RAW file conversion and TensorFlow are disabled on devices with 1 GB or less of physical memory. We take no responsibility for instability or performance issues if your NAS does not meet the minimum requirements.</p>
+We <a href="../../#system-requirements">recommend</a> hosting PhotoPrism on a 64-bit system with <strong>at least 2 cores</strong> and <strong>3 GB of physical memory</strong>. Indexing large photo and video collections also benefits from <a href="../../troubleshooting/performance/#storage">SSD storage</a>
+instead of traditional hard drives commonly used in NAS devices.</p>
+<p>We take no responsibility for instability or performance issues if your NAS does not meet the minimum requirements.
+RAW file conversion and TensorFlow are disabled on devices with 1 GB or less of physical memory.</p>
 <p>You will have to resort to <a href="../../raspberry-pi/#older-armv7-based-devices">32-bit Docker images</a> to run 
 PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS218j.</p>
-<div class="admonition note">
-<p>Indexing large photo and video collections significantly benefits from <a href="../../troubleshooting/performance/#storage">local SSD storage</a>
-instead of traditional hard drives commonly used in NAS devices. Especially the conversion of RAW 
-images and the transcoding of videos are very demanding.</p>
-</div>
-<div class="admonition info">
+<div class="admonition tip">
+<p class="admonition-title">Troubleshooting</p>
 <p>If your device runs out of memory, the index is frequently locked, or other system resources are running low:</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Try <a href="../../config-options/#index-workers">reducing the number of workers</a> by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance of the server)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If you are using SQLite, switch to MariaDB, which is <a href="../../faq/#should-i-use-sqlite-mariadb-or-mysql">better optimized for high concurrency</a></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> As a measure of last resort, you may <a href="../../config-options/#feature-flags">disable using TensorFlow</a> for image classification and facial recognition</li>
 </ul>
+<p>Other issues? Our <a href="../../troubleshooting/">troubleshooting checklists</a> help you quickly diagnose and solve them.</p>
 </div>
 <h2 id="will-my-device-be-fast-enough">Will my device be fast enough?<a class="headerlink" href="#will-my-device-be-fast-enough" title="Permanent link">&para;</a></h2>
 <p>This largely depends on your expectations and the number of files you have. Most users report that

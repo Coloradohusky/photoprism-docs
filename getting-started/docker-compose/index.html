@@ -3339,7 +3339,8 @@ Open the <em>Logs</em> tab in <em>Library</em> to watch the indexer working.</p>
 or importing new shots. Go to <em>Library</em> and click <em>Start</em> to update the index after files have been 
 changed, added, or removed. This can also be automated using <abbr title="Command-Line Interface">CLI</abbr> commands and a <a href="https://dl.photoprism.app/docker/scheduler/">scheduler</a>.</p>
 <p>Easy, isn't it?</p>
-<div class="admonition info">
+<div class="admonition tip">
+<p class="admonition-title">Troubleshooting</p>
 <p>If your server runs out of memory, the index is frequently locked, or other system resources are running low:</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Try <a href="../config-options/#index-workers">reducing the number of workers</a> by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance of the server)</li>
@@ -3348,6 +3349,7 @@ transcoding of videos are very demanding)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If you are using <abbr title="self-contained, serverless SQL database">SQLite</abbr>, switch to MariaDB, which is <a href="../faq/#should-i-use-sqlite-mariadb-or-mysql">better optimized for high concurrency</a></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> As a measure of last resort, you may <a href="../config-options/#feature-flags">disable using TensorFlow</a> for image classification and facial recognition</li>
 </ul>
+<p>Other issues? Our <a href="../troubleshooting/">troubleshooting checklists</a> help you quickly diagnose and solve them.</p>
 </div>
 <div class="admonition example">
 <p><strong>Back us on <a href="https://www.patreon.com/photoprism">Patreon</a> or <a href="https://github.com/sponsors/photoprism">GitHub Sponsors</a>.</strong>
