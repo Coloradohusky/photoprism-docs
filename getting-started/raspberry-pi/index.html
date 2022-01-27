@@ -3163,9 +3163,13 @@
 enjoy the exact same functionality, and can follow the regular <a href="../docker-compose/">Installation Instructions</a> 
 after going through a short list of <a href="#system-requirements">System Requirements</a> and
 <a href="#architecture-specific-notes">Architecture Specific Notes</a>.</p>
-<div class="admonition tldr">
 <p>Existing users are advised to keep their <code>docker-compose.yml</code> config updated based on the examples
 available at <a href="https://dl.photoprism.app/docker/">dl.photoprism.app/docker</a>.</p>
+<div class="admonition note">
+<p>Indexing large photo and video collections significantly benefits from <a href="../troubleshooting/performance/#storage">local SSD storage</a>,
+and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of videos are very demanding.
+We take no responsibility for instability or <a href="../troubleshooting/performance/">performance</a> problems if your device
+does not meet the minimum requirements.</p>
 </div>
 <h3 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3185,11 +3189,6 @@ available at <a href="https://dl.photoprism.app/docker/">dl.photoprism.app/docke
   Your files and passwords will otherwise be transmitted in clear text and can be intercepted by anyone, 
   including your provider, hackers, and governments.</li>
 </ul>
-<div class="admonition note">
-<p>Indexing large photo and video collections significantly benefits from <a href="../troubleshooting/performance/#storage">local SSD storage</a>
-and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of
-videos are very demanding.</p>
-</div>
 <h3 id="architecture-specific-notes">Architecture Specific Notes<a class="headerlink" href="#architecture-specific-notes" title="Permanent link">&para;</a></h3>
 <h4 id="modern-arm64-based-devices">Modern ARM64-based Devices<a class="headerlink" href="#modern-arm64-based-devices" title="Permanent link">&para;</a></h4>
 <table>

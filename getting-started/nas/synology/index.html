@@ -3051,13 +3051,16 @@
                 <h1 id="running-photoprism-on-a-synology-nas">Running PhotoPrism on a Synology NAS<a class="headerlink" href="#running-photoprism-on-a-synology-nas" title="Permanent link">&para;</a></h1>
 <p>Visit the <a href="https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have">Synology Knowledge Base</a>
 to learn what <a href="../../troubleshooting/performance/#server-cpu">kind of CPU</a> and how much memory your device has.
-We <a href="../../#system-requirements">recommend</a> hosting PhotoPrism on a 64-bit system with <strong>at least 2 cores</strong> and <strong>3 GB of physical memory</strong>. Indexing large photo and video collections benefits from <a href="../../troubleshooting/performance/#storage">SSD storage</a>
-instead of traditional hard drives commonly used in NAS devices.</p>
-<p>You will have to resort to <a href="../../raspberry-pi/#older-armv7-based-devices">32-bit Docker images</a> to run 
+We <a href="../../#system-requirements">recommend</a> hosting PhotoPrism on a 64-bit system with <strong>at least 2 cores</strong> and
+<strong>3 GB of physical memory</strong>.</p>
+<p>RAW image conversion and TensorFlow are disabled on devices with 1 GB or less memory.
+You will have to resort to <a href="../../raspberry-pi/#older-armv7-based-devices">32-bit Docker images</a> to run 
 PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS218j.</p>
-<div class="admonition tldr">
-<p>We take no responsibility for instability or performance problems if your NAS does not meet the minimum requirements.
-RAW image conversion and TensorFlow are disabled on devices with 1 GB or less memory.</p>
+<div class="admonition note">
+<p>Indexing large photo and video collections significantly benefits from <a href="../../troubleshooting/performance/#storage">local SSD storage</a>,
+and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of videos are very demanding.
+We take no responsibility for instability or <a href="../../troubleshooting/performance/">performance</a> problems if your
+device does not meet the minimum requirements.</p>
 </div>
 <h2 id="setup-using-docker">Setup using Docker<a class="headerlink" href="#setup-using-docker" title="Permanent link">&para;</a></h2>
 <p>We recommend following these instructions to install PhotoPrism on your Synology NAS:</p>
