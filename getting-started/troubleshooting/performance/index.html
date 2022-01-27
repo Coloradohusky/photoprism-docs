@@ -760,6 +760,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3019,6 +3026,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3071,18 +3085,15 @@ get faster with each generation, their hardware is optimized for minimal power c
 <p><a href="https://www.google.com/search?q=cpu+benchmarks">Benchmarks</a> prove that even 8-year-old standard desktop
 CPUs are often many times faster. If you've tried everything else, then only moving your instance to a more
 powerful server may help.</p>
-<div class="admonition tip">
-<p class="admonition-title">Troubleshooting</p>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <p>If your server runs out of memory, the index is frequently locked, or other system resources are running low:</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Try <a href="../../config-options/#index-workers">reducing the number of workers</a> by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance of the server)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Ensure that <a href="../docker/#adding-swap">your server has at least 4 GB of swap configured</a> so that indexing doesn't cause restarts when there are memory usage spikes (especially the conversion of RAW images and the
-transcoding of videos are very demanding)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Try <a href="../../config-options/#index-workers">reducing the number of workers</a> by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code>, depending on the performance of your device or cloud server</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Make sure <a href="../docker/#adding-swap">your server has at least 4 GB of swap space</a> so that indexing doesn't cause restarts when memory usage spikes; RAW image conversion and video transcoding are especially demanding </li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If you are using <abbr title="self-contained, serverless SQL database">SQLite</abbr>, switch to MariaDB, which is <a href="../../faq/#should-i-use-sqlite-mariadb-or-mysql">better optimized for high concurrency</a></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> As a measure of last resort, you may <a href="../../config-options/#feature-flags">disable using TensorFlow</a> for image classification and facial recognition</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> As a last measure, you can <a href="../../config-options/#feature-flags">disable the use of TensorFlow</a> for image classification and facial recognition</li>
 </ul>
 <p>Other issues? Our <a href="../">troubleshooting checklists</a> help you quickly diagnose and solve them.</p>
-</div>
                 
               
               

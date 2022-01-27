@@ -3107,19 +3107,20 @@
                 <h1 id="running-photoprism-on-a-synology-nas">Running PhotoPrism on a Synology NAS<a class="headerlink" href="#running-photoprism-on-a-synology-nas" title="Permanent link">&para;</a></h1>
 <p>Visit the <a href="https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have">Synology Knowledge Base</a>
 to learn what <a href="../../troubleshooting/performance/#server-cpu">kind of CPU</a> and how much memory your device has.
-We <a href="../../#system-requirements">recommend</a> hosting PhotoPrism on a 64-bit system with <strong>at least 2 cores</strong> and <strong>3 GB of physical memory</strong>. Indexing large photo and video collections also benefits from <a href="../../troubleshooting/performance/#storage">SSD storage</a>
+We <a href="../../#system-requirements">recommend</a> hosting PhotoPrism on a 64-bit system with <strong>at least 2 cores</strong> and <strong>3 GB of physical memory</strong>. Indexing large photo and video collections benefits from <a href="../../troubleshooting/performance/#storage">SSD storage</a>
 instead of traditional hard drives commonly used in NAS devices.</p>
 <p>We take no responsibility for instability or performance issues if your NAS does not meet the minimum requirements.
-RAW file conversion and TensorFlow are disabled on devices with 1 GB or less of physical memory.</p>
+RAW image conversion and TensorFlow are disabled on devices with 1 GB or less of physical memory.</p>
 <p>You will have to resort to <a href="../../raspberry-pi/#older-armv7-based-devices">32-bit Docker images</a> to run 
 PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS218j.</p>
-<div class="admonition tip">
+<div class="admonition tldr">
 <p class="admonition-title">Troubleshooting</p>
 <p>If your device runs out of memory, the index is frequently locked, or other system resources are running low:</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Try <a href="../../config-options/#index-workers">reducing the number of workers</a> by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance of the server)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Try <a href="../../config-options/#index-workers">reducing the number of workers</a> by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code>, depending on the performance of your device</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Make sure <a href="docker.md#adding-swap">your server has at least 4 GB of swap space</a> so that indexing doesn't cause restarts when memory usage spikes; RAW image conversion and video transcoding are especially demanding</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If you are using SQLite, switch to MariaDB, which is <a href="../../faq/#should-i-use-sqlite-mariadb-or-mysql">better optimized for high concurrency</a></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> As a measure of last resort, you may <a href="../../config-options/#feature-flags">disable using TensorFlow</a> for image classification and facial recognition</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> As a last measure, you can <a href="../../config-options/#feature-flags">disable the use of TensorFlow</a> for image classification and facial recognition</li>
 </ul>
 <p>Other issues? Our <a href="../../troubleshooting/">troubleshooting checklists</a> help you quickly diagnose and solve them.</p>
 </div>
@@ -3129,14 +3130,14 @@ PhotoPrism runs well on their Synology NAS. However, initial indexing may take m
 than on standard desktop computers.</p>
 <p>Also keep in mind that the hardware has no video transcoding support and software transcoding
 is generally slow.</p>
+<h2 id="setup-using-docker">Setup using Docker<a class="headerlink" href="#setup-using-docker" title="Permanent link">&para;</a></h2>
+<p>We recommend following these instructions to install PhotoPrism on your Synology NAS:</p>
+<p><a href="https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas">https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas</a></p>
 <div class="admonition info">
 <p>You are welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
 <a href="../../../funding/">Sponsors</a> receive direct <a href="https://photoprism.app/contact">technical support</a> via email.
 Before submitting a support request, try to <a href="../../troubleshooting/">determine the cause of your problem</a>.</p>
 </div>
-<h2 id="setup-using-docker">Setup using Docker<a class="headerlink" href="#setup-using-docker" title="Permanent link">&para;</a></h2>
-<p>We recommend following these instructions to install PhotoPrism on your Synology NAS:</p>
-<p><a href="https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas">https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas</a></p>
 <h2 id="setup-using-portainer">Setup using Portainer<a class="headerlink" href="#setup-using-portainer" title="Permanent link">&para;</a></h2>
 <div class="admonition missing">
 <p>This community-maintained guide is currently out of date. Updating it to work with the latest Portainer 

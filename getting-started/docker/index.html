@@ -3235,7 +3235,7 @@ an <a href="https://docs.docker.com/storage/bind-mounts/">anonymous volume</a> i
 <li>Don't mount <a href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a> and do not use them inside the <em>storage</em> folder</li>
 </ul>
 <div class="admonition tldr">
-<p>When moving your installation to another <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr>, move the complete <em>storage</em> folder along with it and preserve the <a href="../troubleshooting/docker/#file-permissions">file permissions</a>.</p>
+<p>When moving your installation to another <abbr title="Computer, Cloud Server, or VM that runs Docker">host</abbr>, move the complete <em>storage</em> folder along with it.</p>
 </div>
 <h5 id="photoprismimport">/photoprism/import<a class="headerlink" href="#photoprismimport" title="Permanent link">&para;</a></h5>
 <p>You may optionally mount an <em>import</em> folder from which files can be transferred to the <em>originals</em> folder
@@ -3263,15 +3263,14 @@ Open the <em>Logs</em> tab in <em>Library</em> to watch the indexer working.</p>
 or importing new shots. Go to <em>Library</em> and click <em>Start</em> to update the index after files have been
 changed, added, or removed. This can also be automated using <abbr title="Command-Line Interface">CLI</abbr> commands and a <a href="https://dl.photoprism.app/docker/scheduler/">scheduler</a>.</p>
 <p>Easy, isn't it?</p>
-<div class="admonition tip">
+<div class="admonition tldr">
 <p class="admonition-title">Troubleshooting</p>
 <p>If your server runs out of memory, the index is frequently locked, or other system resources are running low:</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Try <a href="../config-options/#index-workers">reducing the number of workers</a> by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value (depending on the performance of the server)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Ensure that <a href="../troubleshooting/docker/#adding-swap">your server has at least 4 GB of swap configured</a> so that indexing doesn't cause restarts when there are memory usage spikes (especially the conversion of <abbr title="image format that contains unprocessed sensor data">RAW</abbr> images and the
-transcoding of videos are very demanding)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Try <a href="../config-options/#index-workers">reducing the number of workers</a> by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value, depending on the performance of your device or cloud server</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Make sure <a href="../troubleshooting/docker/#adding-swap">your server has at least 4 GB of swap space</a> so that indexing doesn't cause restarts when memory usage spikes; <abbr title="image format that contains unprocessed sensor data">RAW</abbr> image conversion and video transcoding are especially demanding</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If you are using <abbr title="self-contained, serverless SQL database">SQLite</abbr>, switch to MariaDB, which is <a href="../faq/#should-i-use-sqlite-mariadb-or-mysql">better optimized for high concurrency</a></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> As a measure of last resort, you may <a href="../config-options/#feature-flags">disable using TensorFlow</a> for image classification and facial recognition</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> As a last measure, you can <a href="../config-options/#feature-flags">disable the use of TensorFlow</a> for image classification and facial recognition</li>
 </ul>
 <p>Other issues? Our <a href="../troubleshooting/">troubleshooting checklists</a> help you quickly diagnose and solve them.</p>
 </div>
