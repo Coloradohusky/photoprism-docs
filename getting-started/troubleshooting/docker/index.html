@@ -3288,10 +3288,8 @@ at least 4 GB of <abbr title="substitute for physical memory">swap</abbr> space.
 <h3 id="kernel-security">Kernel Security<a class="headerlink" href="#kernel-security" title="Permanent link">&para;</a></h3>
 <p>We recommend disabling Linux kernel security on private servers, especially if you do not have experience with the
 configuration.</p>
-<div class="admonition info">
 <p>If you have working configuration rules for a particular Linux distribution, feel free to share instructions
 with the community so that less experienced users can harden their installation without running into issues.</p>
-</div>
 <h3 id="file-permissions">File Permissions<a class="headerlink" href="#file-permissions" title="Permanent link">&para;</a></h3>
 <p>Errors such as "<abbr title="write protected">read-only</abbr> file system", "error creating path", or "wrong permissions" indicate a <abbr title="contains your files and folders">filesystem</abbr> permission problem:</p>
 <ul class="task-list">
@@ -3301,7 +3299,14 @@ with the community so that less experienced users can harden their installation 
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If <a href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a> are mounted or used within <em>storage</em> folders, replace them with actual paths</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> When mounting folders that only root has access to, you may have to prefix the <code>docker</code> and <code>docker-compose</code> commands with <code>sudo</code> on Linux if you are not already logged in as root</li>
 </ul>
-<p><em>Start a full rescan if necessary, for example, if it looks like <a href="../#broken-thumbnails">thumbnails</a> or <a href="../#missing-pictures">pictures are missing</a>.</em></p>
+<p>An easy way to test for missing permissions is to (temporarily) remove restrictions and make the entire folder accessible to everyone:</p>
+<p><div class="highlight"><pre><span></span><code>sudo chmod -R a+rwx <span class="o">[</span>folder<span class="o">]</span>
+</code></pre></div>
+<em>Start a full rescan once all issues have been resolved, especially if it looks like <a href="../#broken-thumbnails">thumbnails</a> or <a href="../#missing-pictures">pictures are missing</a>.</em></p>
+<div class="admonition danger">
+<p><strong>Be very careful when changing permissions in shared hosting environments.</strong> If you are using PhotoPrism on corporate
+or university servers, we recommend that you ask your IT help desk for advice.</p>
+</div>
 <h3 id="disk-space">Disk Space<a class="headerlink" href="#disk-space" title="Permanent link">&para;</a></h3>
 <p>In case the logs show "disk full", "quota exceeded", or "no space left" errors, either the disk containing the
 <em>storage</em> folder is full (get a new one or use a different disk) or a disk usage limit is configured, for example
