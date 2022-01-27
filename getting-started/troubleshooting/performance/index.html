@@ -3094,12 +3094,15 @@ of any kind:</p>
 big enough or can't be used.</p>
 <p>Never store database files on an unreliable device such as a USB flash drive, an SD card, or a shared network folder.</p>
 <h2 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h2>
-<p>Indexing large photo and video collections benefits from plenty of memory for caching and processing large media files.
-Especially the conversion of RAW images and the transcoding of videos are very demanding.</p>
-<p>Ideally, the amount of RAM should match the number of physical CPU cores. If not, reduce the number of workers 
+<p>Indexing large photo and video collections benefits from plenty of memory for <a href="#mariadb">caching</a> and processing large media files.
+Ideally, the amount of RAM should match the number of physical CPU cores. If not, reduce the number of workers 
 as <a href="#troubleshooting">explained below</a>.</p>
-<p>RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.
-We take no responsibility for instability or performance problems if your device does not meet the minimum requirements.</p>
+<p>Especially the conversion of RAW images and the transcoding of videos are very demanding. High-resolution panoramic
+images may require <a href="../docker/#adding-swap">additional swap space</a> and/or physical memory above the recommended minimum.</p>
+<div class="admonition note">
+<p>RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory. We take no responsibility
+for instability or performance problems if your device does not meet the requirements.</p>
+</div>
 <h2 id="server-cpu">Server CPU<a class="headerlink" href="#server-cpu" title="Permanent link">&para;</a></h2>
 <p>Last but not least, performance can be limited by your server CPU. While <a href="https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have">NAS devices</a>
 get faster with each generation, their hardware is optimized for minimal power consumption and low production costs.</p>

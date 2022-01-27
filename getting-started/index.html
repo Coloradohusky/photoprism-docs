@@ -3125,16 +3125,16 @@ This comes at a price, as we can't give exact deadlines for new features.</p>
 <p>Having said that, funding really has the highest impact. So users can do their part and
 <a href="../funding/">become a sponsor</a> to get their favorite features as soon as possible.</p>
 <h2 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h2>
-<p>We recommend hosting PhotoPrism on a server with <strong>at least 2 cores</strong>, <strong>3 GB of physical memory</strong>, and
-a 64-bit operating system. Beyond these minimum requirements, the amount of RAM should <a href="troubleshooting/performance/#memory">match the number of CPU cores</a>.
-RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.</p>
+<p>We recommend hosting PhotoPrism on a server with <strong>at least 2 cores</strong>, <strong>3 GB of physical memory</strong>,<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> and
+a 64-bit operating system. Beyond these minimum requirements, the amount of RAM should <a href="troubleshooting/performance/#memory">match the number of CPU cores</a>.</p>
 <p>If your server has <a href="troubleshooting/docker/#adding-swap">less than 4 GB of swap space</a> or a manual
 memory/swap limit is set, this can cause unexpected restarts, for example, when the indexer temporarily
-needs more memory to process large files.</p>
+needs more memory to process large files. High-resolution panoramic images may require additional swap space
+and/or physical memory above the recommended minimum.</p>
 <div class="admonition note">
 <p>Indexing large photo and video collections significantly benefits from <a href="troubleshooting/performance/#storage">local SSD storage</a>
 and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of videos are very demanding.
-We take no responsibility for instability or performance problems if your device does not meet the minimum requirements.</p>
+We take no responsibility for instability or performance problems if your device does not meet the requirements.</p>
 </div>
 <h4 id="browsers">Browsers<a class="headerlink" href="#browsers" title="Permanent link">&para;</a></h4>
 <p>Our <a href="../user-guide/pwa/">Progressive Web App</a> (PWA) works with most modern browsers, and runs best on <a href="https://www.google.com/chrome/">Chrome</a>, <a href="https://www.chromium.org/getting-involved/download-chromium">Chromium</a>, <a href="https://www.apple.com/safari/">Safari</a>, <a href="https://www.mozilla.org/en-US/firefox/all/#product-desktop-release">Firefox</a>, and <a href="https://www.microsoft.com/en-us/edge">Edge</a>.
@@ -3164,6 +3164,14 @@ Think of "free software" as in "free speech," not as in "free beer". Thank you! 
 <p><strong>We kindly ask you not to report bugs via GitHub Issues unless you are certain to have found a new issue that must be fixed directly in the app.</strong>
 <a href="https://photoprism.app/contact">Contact us</a> or <a href="https://github.com/photoprism/photoprism/discussions">a community member</a>
 if you need help, it could be a local configuration problem, or a misunderstanding in how the software works.</p>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
                 
               
