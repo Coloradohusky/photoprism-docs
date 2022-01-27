@@ -3125,33 +3125,27 @@ This comes at a price, as we can't give exact deadlines for new features.</p>
 <p>Having said that, funding really has the highest impact. So users can do their part and
 <a href="../funding/">become a sponsor</a> to get their favorite features as soon as possible.</p>
 <h2 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h2>
-<p>We recommend hosting PhotoPrism on a server with <strong>at least 2 cores</strong> and <strong>3 GB of physical memory</strong>.
-Beyond these minimum requirements, the amount of RAM should match the number of cores.</p>
-<p>If less than <a href="troubleshooting/docker/#adding-swap">4 GB of swap space</a> is configured or a manual
-memory/swap limit is set, this can cause unexpected restarts, especially if the indexer temporarily
+<p>We recommend hosting PhotoPrism on a server with <strong>at least 2 cores</strong>, <strong>3 GB of physical memory</strong>, and
+a 64-bit operating system. Beyond these minimum requirements, the amount of RAM should match the
+number of cores. RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.</p>
+<p>If your server has <a href="troubleshooting/docker/#adding-swap">less than 4 GB of swap space</a> or a manual
+memory/swap limit is set, this can cause unexpected restarts, for example, when the indexer temporarily
 needs more memory to process large files.</p>
 <div class="admonition note">
 <p>Indexing large photo and video collections significantly benefits from <a href="troubleshooting/performance/#storage">local SSD storage</a>,
-and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of
-videos are very demanding.</p>
-</div>
-<div class="admonition info">
-<p>RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.
-If you're running out of memory - or other system resources - while indexing, try reducing the
-<a href="https://docs.photoprism.app/getting-started/config-options/">number of workers</a>
-to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance of the server).
-As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.</p>
+and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of videos are very demanding.
+We take no responsibility for instability or performance issues if your device does not meet the minimum requirements.</p>
 </div>
 <h4 id="browsers">Browsers<a class="headerlink" href="#browsers" title="Permanent link">&para;</a></h4>
-<p>Our <abbr title="A Progressive Web App that can be installed on your home screen and provides a native app-like experience">Web UI</abbr> works with most modern browsers, and runs best on <a href="https://www.google.com/chrome/">Chrome</a>, <a href="https://www.chromium.org/getting-involved/download-chromium">Chromium</a>, <a href="https://www.apple.com/safari/">Safari</a>, <a href="https://www.mozilla.org/en-US/firefox/all/#product-desktop-release">Firefox</a>, and <a href="https://www.microsoft.com/en-us/edge">Edge</a>.
-Opera and Samsung Internet have been reported to be compatible as well.
-Note that not <a href="https://caniuse.com/?search=video%20format">all video formats</a> can be <a href="https://github.com/photoprism/photoprism/issues/707">played with every browser</a>.</p>
+<p>Our <a href="../user-guide/pwa/">Progressive Web App</a> (PWA) works with most modern browsers, and runs best on <a href="https://www.google.com/chrome/">Chrome</a>, <a href="https://www.chromium.org/getting-involved/download-chromium">Chromium</a>, <a href="https://www.apple.com/safari/">Safari</a>, <a href="https://www.mozilla.org/en-US/firefox/all/#product-desktop-release">Firefox</a>, and <a href="https://www.microsoft.com/en-us/edge">Edge</a>.
+You can conveniently install it on the home screen of all major operating systems and mobile devices.</p>
+<p>Opera and Samsung Internet have been reported to be compatible as well.
+Note that not <a href="https://caniuse.com/?search=video%20format">all video formats</a> can be <a href="troubleshooting/browsers/">played with every browser</a>.</p>
 <h4 id="databases">Databases<a class="headerlink" href="#databases" title="Permanent link">&para;</a></h4>
 <p>The backend is compatible with <a href="https://www.sqlite.org/">SQLite 3</a> and <a href="https://mariadb.org/">MariaDB 10.5.12+</a>.
-Official support for MySQL is discontinued as Oracle seems to have stopped shipping <a href="https://github.com/photoprism/photoprism/issues/1764">new features and improvements</a>. As a result, the testing effort required before each release is no longer feasible.</p>
+Official support for MySQL 8 is discontinued as Oracle seems to have stopped shipping <a href="https://github.com/photoprism/photoprism/issues/1764">new features and improvements</a>. As a result, the testing effort required before each release is no longer feasible.</p>
 <h4 id="https">HTTPS<a class="headerlink" href="#https" title="Permanent link">&para;</a></h4>
-<p>If you install PhotoPrism on a public server outside your home network, please always run it behind 
-a secure HTTPS reverse proxy such as <a href="proxies/traefik/">Traefik</a> or <a href="proxies/caddy-2/">Caddy</a>.
+<p>If you install PhotoPrism on a public server outside your home network, please <strong>always run it behind a secure HTTPS reverse proxy</strong> such as <a href="proxies/traefik/">Traefik</a> or <a href="proxies/caddy-2/">Caddy</a>.
 Your files and passwords will otherwise be transmitted in clear text and can be intercepted by anyone, 
 including your provider, hackers, and governments. Backup tools and file sync apps like <a href="https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why">FolderSync</a> 
 may refuse to connect as well.</p>

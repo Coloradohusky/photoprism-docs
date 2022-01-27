@@ -3169,7 +3169,7 @@ available at <a href="https://dl.photoprism.app/docker/">dl.photoprism.app/docke
 <ul>
 <li>Your device should have at least 3 GB of physical memory and a 64-bit operating system.</li>
 <li>While PhotoPrism has been reported to work on devices with less memory, we take no responsibility for instability or performance issues. RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.</li>
-<li>If less than <a href="../troubleshooting/docker/#adding-swap">4 GB of swap space</a> is configured or a manual memory/swap limit is set, this can cause unexpected restarts, especially if the indexer temporarily needs more memory to process large files.</li>
+<li>If less than <a href="../troubleshooting/docker/#adding-swap">4 GB of swap space</a> is configured or a manual memory/swap limit is set, this can cause unexpected restarts, for example, when the indexer temporarily needs more memory to process large files.</li>
 <li>We recommend disabling <a href="../troubleshooting/docker/#kernel-security">kernel security</a> in your 
   <a href="https://dl.photoprism.app/docker/arm64/docker-compose.yml">docker-compose.yml</a>, especially if you do 
   not have experience with the configuration:
@@ -3187,12 +3187,6 @@ available at <a href="https://dl.photoprism.app/docker/">dl.photoprism.app/docke
 <p>Indexing large photo and video collections significantly benefits from <a href="../troubleshooting/performance/#storage">local SSD storage</a>
 and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of
 videos are very demanding.</p>
-</div>
-<div class="admonition info">
-<p>If your server runs out of memory, the index is frequently locked, or other system resources are running low
-while indexing, you should <a href="../config-options/#index-workers">try reducing the number of workers</a>
-by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance
-of the server). As a measure of last resort, you may <a href="../config-options/#feature-flags">disable using TensorFlow</a> for image classification and facial recognition.</p>
 </div>
 <h3 id="architecture-specific-notes">Architecture Specific Notes<a class="headerlink" href="#architecture-specific-notes" title="Permanent link">&para;</a></h3>
 <h4 id="modern-arm64-based-devices">Modern ARM64-based Devices<a class="headerlink" href="#modern-arm64-based-devices" title="Permanent link">&para;</a></h4>

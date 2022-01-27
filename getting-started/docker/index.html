@@ -3306,7 +3306,7 @@ Before submitting a support request, try to <a href="../troubleshooting/">determ
 <p>Use the <code>--help</code> flag to see a detailed command description, for example:</p>
 <div class="highlight"><pre><span></span><code>docker <span class="nb">exec</span> -ti photoprism photoprism backup --help
 </code></pre></div>
-<div class="admonition info">
+<div class="admonition tip">
 <p>Prefixing commands with <code>docker exec -ti [container name]</code> runs them inside an app container.
 If this fails with <em>no container found</em>, make sure the app has been started and 
 its container has the same name.</p>
@@ -3323,15 +3323,15 @@ its container has the same name.</p>
 </thead>
 <tbody>
 <tr>
-<td><em>Start App</em></td>
+<td><em>Start PhotoPrism</em></td>
 <td><code>docker start photoprism</code></td>
 </tr>
 <tr>
-<td><em>Stop App</em></td>
+<td><em>Stop PhotoPrism</em></td>
 <td><code>docker stop photoprism</code></td>
 </tr>
 <tr>
-<td><em>Update Container Image</em></td>
+<td><em>Download Updates</em></td>
 <td><code>docker pull photoprism/photoprism:latest</code></td>
 </tr>
 <tr>
