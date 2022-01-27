@@ -3126,8 +3126,8 @@ This comes at a price, as we can't give exact deadlines for new features.</p>
 <a href="../funding/">become a sponsor</a> to get their favorite features as soon as possible.</p>
 <h2 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h2>
 <p>We recommend hosting PhotoPrism on a server with <strong>at least 2 cores</strong>, <strong>3 GB of physical memory</strong>, and
-a 64-bit operating system. Beyond these minimum requirements, the amount of RAM should match the
-number of cores. RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.</p>
+a 64-bit operating system. Beyond these minimum requirements, the amount of RAM should <a href="troubleshooting/performance/#memory">match the number of CPU cores</a>.
+RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.</p>
 <p>If your server has <a href="troubleshooting/docker/#adding-swap">less than 4 GB of swap space</a> or a manual
 memory/swap limit is set, this can cause unexpected restarts, for example, when the indexer temporarily
 needs more memory to process large files.</p>
