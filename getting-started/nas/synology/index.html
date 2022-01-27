@@ -581,57 +581,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#will-my-device-be-fast-enough" class="md-nav__link">
-    Will my device be fast enough?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#setup-using-docker" class="md-nav__link">
     Setup using Docker
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setup-using-portainer" class="md-nav__link">
-    Setup using Portainer
-  </a>
-  
-    <nav class="md-nav" aria-label="Setup using Portainer">
+    <nav class="md-nav" aria-label="Setup using Docker">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-install-portainer-in-your-synology-nas-using-task-manager" class="md-nav__link">
-    Step 1: Install Portainer in your Synology NAS using Task Manager
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-configure-portainer-to-use-your-synologys-docker-endpoint" class="md-nav__link">
-    Step 2: Configure Portainer to use your Synology's docker endpoint
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-install-photoprism-in-your-synology-nas-using-portainer-accessible-over-http-direct-ip" class="md-nav__link">
-    Step 3: Install PhotoPrism in your Synology NAS using Portainer, accessible over http / direct IP
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4-configure-a-reverse-proxy-in-your-synology-nas-to-access-photoprism-over-https-custom-domain-name" class="md-nav__link">
-    Step 4: Configure a reverse proxy in your Synology NAS to access PhotoPrism over https / custom domain name
+  <a href="#will-my-device-be-fast-enough" class="md-nav__link">
+    Will my device be fast enough?
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
   
 </li>
       
@@ -3033,57 +3005,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#will-my-device-be-fast-enough" class="md-nav__link">
-    Will my device be fast enough?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#setup-using-docker" class="md-nav__link">
     Setup using Docker
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setup-using-portainer" class="md-nav__link">
-    Setup using Portainer
-  </a>
-  
-    <nav class="md-nav" aria-label="Setup using Portainer">
+    <nav class="md-nav" aria-label="Setup using Docker">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-install-portainer-in-your-synology-nas-using-task-manager" class="md-nav__link">
-    Step 1: Install Portainer in your Synology NAS using Task Manager
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-configure-portainer-to-use-your-synologys-docker-endpoint" class="md-nav__link">
-    Step 2: Configure Portainer to use your Synology's docker endpoint
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-install-photoprism-in-your-synology-nas-using-portainer-accessible-over-http-direct-ip" class="md-nav__link">
-    Step 3: Install PhotoPrism in your Synology NAS using Portainer, accessible over http / direct IP
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4-configure-a-reverse-proxy-in-your-synology-nas-to-access-photoprism-over-https-custom-domain-name" class="md-nav__link">
-    Step 4: Configure a reverse proxy in your Synology NAS to access PhotoPrism over https / custom domain name
+  <a href="#will-my-device-be-fast-enough" class="md-nav__link">
+    Will my device be fast enough?
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
   
 </li>
       
@@ -3109,12 +3053,22 @@
 to learn what <a href="../../troubleshooting/performance/#server-cpu">kind of CPU</a> and how much memory your device has.
 We <a href="../../#system-requirements">recommend</a> hosting PhotoPrism on a 64-bit system with <strong>at least 2 cores</strong> and <strong>3 GB of physical memory</strong>. Indexing large photo and video collections benefits from <a href="../../troubleshooting/performance/#storage">SSD storage</a>
 instead of traditional hard drives commonly used in NAS devices.</p>
-<p>We take no responsibility for instability or performance issues if your NAS does not meet the minimum requirements.
-RAW image conversion and TensorFlow are disabled on devices with 1 GB or less of physical memory.</p>
 <p>You will have to resort to <a href="../../raspberry-pi/#older-armv7-based-devices">32-bit Docker images</a> to run 
 PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS218j.</p>
 <div class="admonition tldr">
-<p class="admonition-title">Troubleshooting</p>
+<p>We take no responsibility for instability or performance issues if your NAS does not meet the minimum requirements.
+RAW image conversion and TensorFlow are disabled on devices with 1 GB or less memory.</p>
+</div>
+<h2 id="setup-using-docker">Setup using Docker<a class="headerlink" href="#setup-using-docker" title="Permanent link">&para;</a></h2>
+<p>We recommend following these instructions to install PhotoPrism on your Synology NAS:</p>
+<p><a href="https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas">https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas</a></p>
+<h3 id="will-my-device-be-fast-enough">Will my device be fast enough?<a class="headerlink" href="#will-my-device-be-fast-enough" title="Permanent link">&para;</a></h3>
+<p>This largely depends on your expectations and the number of files you have. Most users report that
+PhotoPrism runs well on their Synology NAS. However, initial indexing may take much longer
+than on standard desktop computers.</p>
+<p>Also keep in mind that the hardware has no video transcoding support and software transcoding
+is generally slow.</p>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <p>If your device runs out of memory, the index is frequently locked, or other system resources are running low:</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Try <a href="../../config-options/#index-workers">reducing the number of workers</a> by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code>, depending on the performance of your device</li>
@@ -3123,96 +3077,100 @@ PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS21
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> As a last measure, you can <a href="../../config-options/#feature-flags">disable the use of TensorFlow</a> for image classification and facial recognition</li>
 </ul>
 <p>Other issues? Our <a href="../../troubleshooting/">troubleshooting checklists</a> help you quickly diagnose and solve them.</p>
-</div>
-<h2 id="will-my-device-be-fast-enough">Will my device be fast enough?<a class="headerlink" href="#will-my-device-be-fast-enough" title="Permanent link">&para;</a></h2>
-<p>This largely depends on your expectations and the number of files you have. Most users report that
-PhotoPrism runs well on their Synology NAS. However, initial indexing may take much longer
-than on standard desktop computers.</p>
-<p>Also keep in mind that the hardware has no video transcoding support and software transcoding
-is generally slow.</p>
-<h2 id="setup-using-docker">Setup using Docker<a class="headerlink" href="#setup-using-docker" title="Permanent link">&para;</a></h2>
-<p>We recommend following these instructions to install PhotoPrism on your Synology NAS:</p>
-<p><a href="https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas">https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas</a></p>
 <div class="admonition info">
 <p>You are welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
 <a href="../../../funding/">Sponsors</a> receive direct <a href="https://photoprism.app/contact">technical support</a> via email.
 Before submitting a support request, try to <a href="../../troubleshooting/">determine the cause of your problem</a>.</p>
 </div>
-<h2 id="setup-using-portainer">Setup using Portainer<a class="headerlink" href="#setup-using-portainer" title="Permanent link">&para;</a></h2>
-<div class="admonition missing">
-<p>This community-maintained guide is currently out of date. Updating it to work with the latest Portainer 
-version is a great way to contribute! 🌷</p>
-<p>Click the <a href="https://github.com/photoprism/photoprism-docs/tree/master/docs/getting-started/nas/synology.md">edit link</a>
-to perform changes and send a pull request.</p>
-</div>
-<p>This guide will help you install PhotoPrism in your Synology NAS using <a href="https://www.portainer.io/">Portainer</a>,
-an open-source container manager system. The guide will cover the following steps:</p>
-<ul>
-<li>install Portainer in your Synology NAS using Task Manager;</li>
-<li>configure Portainer to use your Synology's docker endpoint;</li>
-<li>install PhotoPrism in your Synology NAS using Portainer, accessible over http / direct IP;</li>
-<li>(TO-DO) configure a reverse proxy in your Synology NAS to access PhotoPrism over https / custom domain name.</li>
-</ul>
-<h4 id="step-1-install-portainer-in-your-synology-nas-using-task-manager">Step 1: Install Portainer in your Synology NAS using Task Manager<a class="headerlink" href="#step-1-install-portainer-in-your-synology-nas-using-task-manager" title="Permanent link">&para;</a></h4>
-<p>Synology's official docker app is quite limited in terms of functionality and that is the reason why we will install Portainer first. It will make managing docker containers inside Synology much more easier and functional while sharing the same local docker endpoint (i.e. the same docker images / containers / volumes / etc. will be manageable in both Synology's app and Portainer). We could install it using the terminal / SSH connection to the NAS but in this way everything can be done using Synology's Diskstation Manager UI.</p>
-<p>To install Portainer:</p>
-<ol>
-<li>install Synology's Docker app from the official package center;</li>
-<li>open Synology's File Station app and browse to the newly created <em>docker</em> shared folder;</li>
-<li>create a folder named <em>portainer</em> inside <em>docker</em>, which will persist relevant Portainer's data in our local filesystem.</li>
-<li>
-<p>open Synology's Control Panel &gt; Task Scheduler and create a new Scheduled Task &gt; User-defined script; you'll then need to fill in some details in the <em>General</em>, <em>Schedule</em> and <em>Task Settings</em> sections.</p>
-<p>4.1. in <em>General</em> fill in:</p>
-<p>4.1.1. Task: use a meaningful name, for e.g. <em>Install Portainer</em>;</p>
-<p>4.1.2. User: keep this as <em>root</em>.</p>
-<p>4.2. in <em>Schedule</em> fill in:</p>
-<p>4.2.1. Date: set the task to run on a specific date (for eg. today) and choose <em>Do not repeat</em>. This task will be used just once to install Portainer, we don't want to run it afterwards;</p>
-<p>4.2.2. Time: leave the default settings, they have no relevance;</p>
-<p>4.3. in <em>Task Settings</em> fill in:</p>
-<p>4.3.1. Run command: copy/paste the user defined script below. Check if the ports are available on your NAS and that the path to the volume is correct (it should point to the folder created in step 3 above):
-  <div class="highlight"><pre><span></span><code>docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /volume1/docker/portainer:/data portainer/portainer-ce
-</code></pre></div></p>
-</li>
-<li>
-<p>click <em>OK</em>; then, on the list of scheduled tasks, select the newly created task and hit <em>Run</em>; follow the prompts to install Portainer; in the end you can delete the task or keep it – just uncheck the <em>enabled</em> checkbox to disable the task.</p>
-</li>
-<li>
-<p>Portainer should now be acessible in your local network in http://[YOUR-LOCAL-IP]:9000/.</p>
-</li>
-</ol>
-<h4 id="step-2-configure-portainer-to-use-your-synologys-docker-endpoint">Step 2: Configure Portainer to use your Synology's docker endpoint<a class="headerlink" href="#step-2-configure-portainer-to-use-your-synologys-docker-endpoint" title="Permanent link">&para;</a></h4>
-<ol>
-<li>Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;</li>
-<li>Choose and confirm a strong password; you will manage Portainer using this password and the <em>admin</em> username;</li>
-<li>Select <em>Docker - Manage the local Docker environment</em> to link Portainer to your Synology's local docker endpoint and hit <em>Connect</em>; Portainer's admin page should open;</li>
-<li>Click <em>Environment</em> in the left menu, then <em>local</em> and under <em>Public IP</em> place your local NAS IP (it should be the same [YOUR-LOCAL-IP] of step 6.</li>
-</ol>
-<h4 id="step-3-install-photoprism-in-your-synology-nas-using-portainer-accessible-over-http-direct-ip">Step 3: Install PhotoPrism in your Synology NAS using Portainer, accessible over http / direct IP<a class="headerlink" href="#step-3-install-photoprism-in-your-synology-nas-using-portainer-accessible-over-http-direct-ip" title="Permanent link">&para;</a></h4>
-<p>With Portainer installed we can use a docker-compose file to deploy a stack composed by PhotoPrism and MariaDB to quickly get PhotoPrism running in our NAS. We can use <a href="https://dl.photoprism.app/docker/docker-compose.yml">PhotoPrism's default docker-compose yml file</a>.</p>
-<ol>
-<li>open Synology's File Station app and browse to the <em>docker</em> shared folder;</li>
-<li>create a folder named <em>photoprism</em> inside <em>docker</em>, which will persist relevant Photoprism's data in our local filesystem;</li>
-<li>inside <em>photoprism</em> folder, create three more folders: <em>storage</em>, <em>originals</em> and <em>database</em>.</li>
-<li>Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;</li>
-<li>Click <em>Stacks</em> in the left menu, then <em>Add stack</em>, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the content of <a href="https://dl.photoprism.app/docker/docker-compose.yml">PhotoPrism's default docker-compose yml file</a>.</li>
-</ol>
-<p><strong>BE SURE TO USE YOUR OWN PHOTOPRISM_ADMIN_PASSWORD, PHOTOPRISM_DATABASE_PASSWORD, MYSQL_ROOT_PASSWORD, AND MYSQL_PASSWORD BY CHANGING THE VALUES ACCORDINGLY, AND CHECK THE LOCAL VOLUMES PATHS TO MATCH THOSE DEFINED IN STEP 13</strong>.</p>
-<ol>
-<li>Click <em>Deploy the stack</em>. Give it a few minutes and PhotoPrism should be accessible in http://[YOUR-LOCAL-IP]:[LOCAL-PORT]/.</li>
-</ol>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Synology automatically creates thumbnail files inside a special <code>@eaDir</code> folder when uploading 
-media files such as images.
-PhotoPrism now ignores folders starting with <code>@</code> so that you don't need to manually exclude
-them in a <code>.ppignore</code> file anymore.</p>
-</div>
-<h4 id="step-4-configure-a-reverse-proxy-in-your-synology-nas-to-access-photoprism-over-https-custom-domain-name">Step 4: Configure a reverse proxy in your Synology NAS to access PhotoPrism over https / custom domain name<a class="headerlink" href="#step-4-configure-a-reverse-proxy-in-your-synology-nas-to-access-photoprism-over-https-custom-domain-name" title="Permanent link">&para;</a></h4>
-<p>Synology allows you to configure a nginx reverse proxy to serve your applications over HTTPS. Configurations can be made in Diskstation manager <em>Control Panel</em>, <em>Application Portal</em>, <em>Reverse proxy</em>.:
+<!---
+
+## Setup using Portainer ##
+
+!!! missing ""
+    This community-maintained guide is currently out of date. Updating it to work with the latest Portainer 
+    version is a great way to contribute! 🌷
+
+    Click the [edit link](https://github.com/photoprism/photoprism-docs/tree/master/docs/getting-started/nas/synology.md)
+    to perform changes and send a pull request.
+
+This guide will help you install PhotoPrism in your Synology NAS using [Portainer](https://www.portainer.io/),
+an open-source container manager system. The guide will cover the following steps:
+
+- install Portainer in your Synology NAS using Task Manager;
+- configure Portainer to use your Synology's docker endpoint;
+- install PhotoPrism in your Synology NAS using Portainer, accessible over http / direct IP;
+- (TO-DO) configure a reverse proxy in your Synology NAS to access PhotoPrism over https / custom domain name.
+
+#### Step 1: Install Portainer in your Synology NAS using Task Manager ####
+
+Synology's official docker app is quite limited in terms of functionality and that is the reason why we will install Portainer first. It will make managing docker containers inside Synology much more easier and functional while sharing the same local docker endpoint (i.e. the same docker images / containers / volumes / etc. will be manageable in both Synology's app and Portainer). We could install it using the terminal / SSH connection to the NAS but in this way everything can be done using Synology's Diskstation Manager UI.
+
+To install Portainer:
+
+1. install Synology's Docker app from the official package center;
+2. open Synology's File Station app and browse to the newly created _docker_ shared folder;
+3. create a folder named _portainer_ inside _docker_, which will persist relevant Portainer's data in our local filesystem.
+4. open Synology's Control Panel > Task Scheduler and create a new Scheduled Task > User-defined script; you'll then need to fill in some details in the _General_, _Schedule_ and _Task Settings_ sections.
+
+    4.1. in _General_ fill in:
+
+      4.1.1. Task: use a meaningful name, for e.g. _Install Portainer_;
+
+      4.1.2. User: keep this as _root_.
+
+    4.2. in _Schedule_ fill in:
+
+      4.2.1. Date: set the task to run on a specific date (for eg. today) and choose _Do not repeat_. This task will be used just once to install Portainer, we don't want to run it afterwards;
+
+      4.2.2. Time: leave the default settings, they have no relevance;
+
+    4.3. in _Task Settings_ fill in:
+
+      4.3.1. Run command: copy/paste the user defined script below. Check if the ports are available on your NAS and that the path to the volume is correct (it should point to the folder created in step 3 above):
+      <div class="highlight"><pre><span></span><code>docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /volume1/docker/portainer:/data portainer/portainer-ce
+</code></pre></div>
+
+5. click _OK_; then, on the list of scheduled tasks, select the newly created task and hit _Run_; follow the prompts to install Portainer; in the end you can delete the task or keep it – just uncheck the _enabled_ checkbox to disable the task.
+
+6. Portainer should now be acessible in your local network in http://[YOUR-LOCAL-IP]:9000/.
+
+#### Step 2: Configure Portainer to use your Synology's docker endpoint ####
+
+7. Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;
+8. Choose and confirm a strong password; you will manage Portainer using this password and the _admin_ username;
+9. Select _Docker - Manage the local Docker environment_ to link Portainer to your Synology's local docker endpoint and hit _Connect_; Portainer's admin page should open;
+10. Click _Environment_ in the left menu, then _local_ and under _Public IP_ place your local NAS IP (it should be the same [YOUR-LOCAL-IP] of step 6.
+
+#### Step 3: Install PhotoPrism in your Synology NAS using Portainer, accessible over http / direct IP ####
+
+With Portainer installed we can use a docker-compose file to deploy a stack composed by PhotoPrism and MariaDB to quickly get PhotoPrism running in our NAS. We can use [PhotoPrism's default docker-compose yml file](https://dl.photoprism.app/docker/docker-compose.yml).
+
+11. open Synology's File Station app and browse to the _docker_ shared folder;
+12. create a folder named _photoprism_ inside _docker_, which will persist relevant Photoprism's data in our local filesystem;
+13. inside _photoprism_ folder, create three more folders: _storage_, _originals_ and _database_.
+14. Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;
+15. Click _Stacks_ in the left menu, then _Add stack_, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the content of [PhotoPrism's default docker-compose yml file](https://dl.photoprism.app/docker/docker-compose.yml).
+
+**BE SURE TO USE YOUR OWN PHOTOPRISM_ADMIN_PASSWORD, PHOTOPRISM_DATABASE_PASSWORD, MYSQL_ROOT_PASSWORD, AND MYSQL_PASSWORD BY CHANGING THE VALUES ACCORDINGLY, AND CHECK THE LOCAL VOLUMES PATHS TO MATCH THOSE DEFINED IN STEP 13**.
+
+16. Click _Deploy the stack_. Give it a few minutes and PhotoPrism should be accessible in http://[YOUR-LOCAL-IP]:[LOCAL-PORT]/.
+
+!!! info
+    Synology automatically creates thumbnail files inside a special `@eaDir` folder when uploading 
+    media files such as images.
+    PhotoPrism now ignores folders starting with `@` so that you don't need to manually exclude
+    them in a `.ppignore` file anymore.
+
+#### Step 4: Configure a reverse proxy in your Synology NAS to access PhotoPrism over https / custom domain name ####
+
+Synology allows you to configure a nginx reverse proxy to serve your applications over HTTPS. Configurations can be made in Diskstation manager _Control Panel_, _Application Portal_, _Reverse proxy_.:
 Click create. [Description] give it a meaningful name (for eg. PhotoPrism) [Protocol]=HTTPS [Hostname]=[YOUR-HOSTNAME] [Port]=[YOUR-PORT] (for eg. 2343) check Enable HSTS and HTTP/2 . under Destination [Protocol]=HTTP [Hostname]=[YOUR-LOCAL-IP][PORT]=[YOUR-PORT] (default is 2342)
-Last step under <em>Custom Header</em>.:
-Click create [Websocket] and hit OK (this step makes that your browser receive photo counts, log messages, or metadata updates).</p>
-<p><strong>IMPORTANT: make sure that you have forwarded the selected port (for eg. 2343) in your router:</strong></p>
+Last step under _Custom Header_.:
+Click create [Websocket] and hit OK (this step makes that your browser receive photo counts, log messages, or metadata updates).
+
+**IMPORTANT: make sure that you have forwarded the selected port (for eg. 2343) in your router:**
+
+-->
                 
               
               

@@ -546,6 +546,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#credits" class="md-nav__link">
     Credits
   </a>
@@ -3119,6 +3126,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#credits" class="md-nav__link">
     Credits
   </a>
@@ -3151,15 +3165,10 @@ after going through a short list of <a href="#system-requirements">System Requir
 <a href="#architecture-specific-notes">Architecture Specific Notes</a>.</p>
 <p>Existing users are advised to keep their <code>docker-compose.yml</code> config updated based on the examples
 available at <a href="https://dl.photoprism.app/docker/">dl.photoprism.app/docker</a>.</p>
-<div class="admonition info">
-<p>You are welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
-<a href="../../funding/">Sponsors</a> receive direct <a href="https://photoprism.app/contact">technical support</a> via email.
-Before submitting a support request, try to <a href="../troubleshooting/">determine the cause of your problem</a>.</p>
-</div>
 <h3 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Your device should have at least 3 GB of physical memory and a 64-bit operating system.</li>
-<li>While PhotoPrism has been reported to work on devices with less memory, we take no responsibility for instability or performance issues. RAW image conversion and TensorFlow are disabled on systems with 1 GB or less of physical memory.</li>
+<li>While PhotoPrism has been reported to work on devices with less memory, we take no responsibility for instability or performance issues. RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.</li>
 <li>If less than <a href="../troubleshooting/docker/#adding-swap">4 GB of swap space</a> is configured or a manual memory/swap limit is set, this can cause unexpected restarts, especially if the indexer temporarily needs more memory to process large files.</li>
 <li>We recommend disabling <a href="../troubleshooting/docker/#kernel-security">kernel security</a> in your 
   <a href="https://dl.photoprism.app/docker/arm64/docker-compose.yml">docker-compose.yml</a>, especially if you do 
@@ -3274,8 +3283,22 @@ docker-compose up -d
 <p>Advanced users can add this to a <code>Makefile</code> so that they only have to type a single
 command like <code>make update</code>. See <a href="../docker-compose/#command-line-interface">Command-Line Interface</a> 
 to learn more about terminal commands.</p>
-<div class="admonition info">
+<div class="admonition tldr">
 <p>Running an image with <code>:latest</code> tag does not cause Docker to automatically download new images.</p>
+</div>
+<h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
+<p>If your device runs out of memory, the index is frequently locked, or other system resources are running low:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Try <a href="../config-options/#index-workers">reducing the number of workers</a> by setting <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code>, depending on the performance of your device</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Make sure <a href="../troubleshooting/docker/#adding-swap">your device has at least 4 GB of swap space</a> so that indexing doesn't cause restarts when memory usage spikes; RAW image conversion and video transcoding are especially demanding</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> If you are using SQLite, switch to MariaDB, which is <a href="../faq/#should-i-use-sqlite-mariadb-or-mysql">better optimized for high concurrency</a></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> As a last measure, you can <a href="../config-options/#feature-flags">disable the use of TensorFlow</a> for image classification and facial recognition</li>
+</ul>
+<p>Other issues? Our <a href="../troubleshooting/">troubleshooting checklists</a> help you quickly diagnose and solve them.</p>
+<div class="admonition info">
+<p>You are welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
+<a href="../../funding/">Sponsors</a> receive direct <a href="https://photoprism.app/contact">technical support</a> via email.
+Before submitting a support request, try to <a href="../troubleshooting/">determine the cause of your problem</a>.</p>
 </div>
 <h3 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">&para;</a></h3>
 <p>A big thank you to <a href="https://github.com/guysoft">Guy Sheffer</a> for helping us <a href="https://github.com/photoprism/photoprism/issues/109">build</a>
