@@ -3023,27 +3023,22 @@
                 
                 
                 <h1 id="diagnosing-frontend-issues">Diagnosing Frontend Issues<a class="headerlink" href="#diagnosing-frontend-issues" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p>You are welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
-<a href="../../../funding/">Sponsors</a> receive direct <a href="https://photoprism.app/contact">technical support</a> via email.
-Before <a href="../../../user-guide/#getting-support">submitting a support request</a>, try to determine the cause of your problem.</p>
-</div>
 <p>Problems with the user interface can be caused by a bug or an incompatible browser:</p>
 <ul>
-<li>Some <a href="https://caniuse.com/">features may not be supported</a> by non-standard browsers, as well as nightly, test, and unofficial versions</li>
-<li>In particular, not <a href="https://caniuse.com/?search=video%20format">all video formats</a> can be <a href="https://github.com/photoprism/photoprism/issues/707">played with every browser</a></li>
+<li>some <a href="https://caniuse.com/">features may not be supported</a> by non-standard browsers, as well as nightly, test, and unofficial versions</li>
+<li>in particular, not <a href="https://caniuse.com/?search=video%20format">all video formats</a> can be <a href="https://github.com/photoprism/photoprism/issues/707">played with every browser</a></li>
 </ul>
-<div class="admonition tldr">
-<p>We recommend going through our related <a href="../#app-not-loading">Troubleshooting Checklist</a> in case the app doesn't load at all.</p>
+<div class="admonition note">
+<p>If the user interface doesn't load at all, our <a href="../#app-not-loading"><em>App Not Loading</em></a> checklist helps you identify and resolve the cause.</p>
 </div>
 <h4 id="try-another-browser">Try Another Browser<a class="headerlink" href="#try-another-browser" title="Permanent link">&para;</a></h4>
 <p>To test if you have a general problem that is not browser-specific, <a href="../../docker-compose/#step-2-start-the-server">open the Web <abbr title="User Interface">UI</abbr></a> in other browsers:</p>
 <ul>
-<li>If you are using <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/">Firefox Nightly</a>, try the <a href="https://www.mozilla.org/en-US/firefox/all/#product-desktop-release">stable version</a> and <a href="https://www.google.com/chrome/">Chrome</a> or <a href="https://www.chromium.org/getting-involved/download-chromium">Chromium</a></li>
-<li>If you have browser plugins installed, try disabling them to see if this makes a difference</li>
-<li>When the problem disappears, you know that the issue is browser-dependent or caused by a plugin</li>
-<li>Otherwise, the issue may not be specific to the browser version</li>
-<li>Make a note in which browsers the problem occurs, as this will be helpful when submitting a support request</li>
+<li>if you are using <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/">Firefox Nightly</a>, try the <a href="https://www.mozilla.org/en-US/firefox/all/#product-desktop-release">stable version</a> and <a href="https://www.google.com/chrome/">Chrome</a> or <a href="https://www.chromium.org/getting-involved/download-chromium">Chromium</a></li>
+<li>if you have browser plugins installed, try disabling them to see if this makes a difference</li>
+<li>when the problem disappears, you know that the issue is browser-dependent or caused by a plugin</li>
+<li>otherwise, the issue may not be specific to the browser version</li>
+<li>make a note in which browsers the problem occurs, as this will be helpful when submitting a support request</li>
 </ul>
 <div class="admonition tldr">
 <p>The user interface works with most modern browsers, and runs best on <a href="https://www.google.com/chrome/">Chrome</a>, <a href="https://www.chromium.org/getting-involved/download-chromium">Chromium</a>, <a href="https://www.apple.com/safari/">Safari</a>, <a href="https://www.mozilla.org/en-US/firefox/all/#product-desktop-release">Firefox</a>, and <a href="https://www.microsoft.com/en-us/edge">Edge</a>.
@@ -3057,14 +3052,14 @@ browser console for warnings and errors as described below. It is perfectly fine
 instead of writing down the details.</p>
 <div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Chrome, Chromium, and Edge</label><div class="tabbed-content">
 <ul>
-<li>Press ⌘+Option+J (Mac) or Ctrl+Shift+J (Windows, Linux, Chrome OS) to go directly to the Developer Tools</li>
-<li>Or, navigate to <em>More tools</em> &gt; <em>Developer tools</em> in the browser menu and open the <em>Console</em> tab</li>
+<li>press ⌘+Option+J (Mac) or Ctrl+Shift+J (Windows, Linux, Chrome OS) to go directly to the Developer Tools</li>
+<li>or, navigate to <em>More tools</em> &gt; <em>Developer tools</em> in the browser menu and open the <em>Console</em> tab</li>
 </ul>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Firefox</label><div class="tabbed-content">
 <ul>
-<li>Press ⌘+Option+K (Mac) or Ctrl+Shift+K (Windows) to go directly to the Firefox Web Console panel</li>
-<li>Or, navigate to <em>Web Development</em> &gt; <em>Web Console</em> in the menu and open the <em>Console</em> panel</li>
+<li>press ⌘+Option+K (Mac) or Ctrl+Shift+K (Windows) to go directly to the Firefox Web Console panel</li>
+<li>or, navigate to <em>Web Development</em> &gt; <em>Web Console</em> in the menu and open the <em>Console</em> panel</li>
 </ul>
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Safari</label><div class="tabbed-content">
@@ -3075,8 +3070,8 @@ instead of writing down the details.</p>
 </ol>
 <p>Once the <em>Develop</em> menu is enabled:</p>
 <ul>
-<li>Press Option+⌘+C to go directly to the <em>Javascript Console</em></li>
-<li>Or, navigate to <em>Develop</em> &gt; <em>Show Javascript Console</em> in the browser menu</li>
+<li>press Option+⌘+C to go directly to the <em>Javascript Console</em></li>
+<li>or, navigate to <em>Develop</em> &gt; <em>Show Javascript Console</em> in the browser menu</li>
 </ul>
 </div>
 </div>
