@@ -3065,22 +3065,23 @@
                 
                 
                 <h1 id="performance-tips">Performance Tips<a class="headerlink" href="#performance-tips" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p>You are welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
-<a href="../../../funding/">Sponsors</a> receive direct <a href="https://photoprism.app/contact">technical support</a> via email.
-Before <a href="../../../user-guide/#getting-support">submitting a support request</a>, try to determine the cause of your problem.</p>
-</div>
 <h2 id="mariadb">MariaDB<a class="headerlink" href="#mariadb" title="Permanent link">&para;</a></h2>
 <p>The <a href="https://mariadb.com/kb/en/innodb-buffer-pool/">InnoDB buffer pool</a> serves as a cache for data and indexes.
 It is a key component for optimizing MariaDB performance. Its size should be as large as possible to keep frequently
 used data in memory and reduce disk I/O - typically the biggest bottleneck.</p>
-<p>Our <a href="https://dl.photoprism.app/docker/">docker-compose.yml examples</a> have a default buffer pool size of 128 MB. 
-You can change it using the <code>--innodb-buffer-pool-size</code> parameter (<code>M</code> means Megabyte, <code>G</code> stands for Gigabyte).
-If your server has enough memory, we recommend increasing the size to 1 GB:</p>
+<p>By default, the size of the buffer pool is only 128 MB. You can change it using the <code>--innodb-buffer-pool-size</code>
+parameter in the database service config of your <code>docker-compose.yml</code>. <code>M</code> stands for Megabyte, <code>G</code> for Gigabyte.
+Do not use spaces.</p>
+<p>If your server has plenty of physical memory, we recommend increasing the size to 1 or 2 GB:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
   <span class="nt">mariadb</span><span class="p">:</span>
     <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysqld --innodb-buffer-pool-size=1G ...</span>
 </code></pre></div>
+<div class="admonition note">
+<p>Remember to also <a href="../../img/docker-resources-advanced.jpg">increase the memory available to services</a> in case you are
+using <em>Docker Desktop</em> on Windows or macOS. If PhotoPrism and MariaDB are running in a virtual machine, the available
+memory must be increased as well. For details, refer to the corresponding documentation.</p>
+</div>
 <h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h2>
 <p>Local Solid-State Drives (SSDs) are <a href="https://mariadb.com/de/resources/blog/how-to-tune-mariadb-write-performance/">best for databases</a>
 of any kind:</p>
@@ -3092,7 +3093,9 @@ of any kind:</p>
 </ul>
 <p>Switching to SSDs makes a big difference, especially for write operations and when the read cache is not
 big enough or can't be used.</p>
+<div class="admonition note">
 <p>Never store database files on an unreliable device such as a USB flash drive, an SD card, or a shared network folder.</p>
+</div>
 <h2 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h2>
 <p>Indexing large photo and video collections benefits from plenty of memory for <a href="#mariadb">caching</a> and processing large media files.
 Ideally, the amount of RAM should match the number of physical CPU cores. If not, reduce the number of workers 
@@ -3106,9 +3109,9 @@ for instability or performance problems if your device does not meet the require
 <h2 id="server-cpu">Server CPU<a class="headerlink" href="#server-cpu" title="Permanent link">&para;</a></h2>
 <p>Last but not least, performance can be limited by your server CPU. While <a href="https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have">NAS devices</a>
 get faster with each generation, their hardware is optimized for minimal power consumption and low production costs.</p>
-<p><a href="https://www.google.com/search?q=cpu+benchmarks">Benchmarks</a> prove that even 8-year-old standard desktop
-CPUs are often many times faster. If you've tried everything else, then only moving your instance to a more
-powerful server may help.</p>
+<p><a href="https://www.google.com/search?q=cpu+benchmarks">Benchmarks</a> show that even 8-year-old standard desktop CPUs are often many times faster.
+If you've tried everything else, then only moving your instance to a more powerful server may help.</p>
+<p><img alt="CPU Benchmark" src="../img/passmark-cpu.svg" /></p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <p>If your server runs out of memory, the index is frequently locked, or other system resources are running low:</p>
 <ul class="task-list">
@@ -3118,6 +3121,11 @@ powerful server may help.</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> As a last measure, you can <a href="../../config-options/#feature-flags">disable the use of TensorFlow</a> for image classification and facial recognition</li>
 </ul>
 <p>Other issues? Our <a href="../">troubleshooting checklists</a> help you quickly diagnose and solve them.</p>
+<div class="admonition info">
+<p>You are welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
+<a href="../../../funding/">Sponsors</a> receive direct <a href="https://photoprism.app/contact">technical support</a> via email.
+Before <a href="../../#getting-support">submitting a support request</a>, try to <a href="../">determine the cause of your problem</a>.</p>
+</div>
                 
               
               
