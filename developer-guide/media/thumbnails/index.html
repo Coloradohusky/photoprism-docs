@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#thumbnail-rendering-settings" class="md-skip">
+        <a href="#thumbnail-images" class="md-skip">
           Skip to content
         </a>
       
@@ -2408,6 +2408,40 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#api-design" class="md-nav__link">
+    API Design
+  </a>
+  
+    <nav class="md-nav" aria-label="API Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-use-a-cookie-free-domain" class="md-nav__link">
+    Why use a cookie-free domain?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-uris" class="md-nav__link">
+    Image URIs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-uris" class="md-nav__link">
+    Video URIs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#preview-sizes" class="md-nav__link">
     Preview Sizes
   </a>
@@ -2992,6 +3026,40 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#api-design" class="md-nav__link">
+    API Design
+  </a>
+  
+    <nav class="md-nav" aria-label="API Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-use-a-cookie-free-domain" class="md-nav__link">
+    Why use a cookie-free domain?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-uris" class="md-nav__link">
+    Image URIs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-uris" class="md-nav__link">
+    Video URIs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#preview-sizes" class="md-nav__link">
     Preview Sizes
   </a>
@@ -3022,10 +3090,47 @@
                   </a>
                 
                 
-                <h1 id="thumbnail-rendering-settings">Thumbnail Rendering Settings<a class="headerlink" href="#thumbnail-rendering-settings" title="Permanent link">&para;</a></h1>
-<p>The <a href="/user-guide/settings/advanced/">advanced settings user guide</a> explains the
-usage of downscaling filter options and examples of images generated with each.</p>
-<p>We use the <a href="https://github.com/disintegration/imaging">disintegration/imaging</a> package to create thumbnails.</p>
+                <h1 id="thumbnail-images">Thumbnail Images<a class="headerlink" href="#thumbnail-images" title="Permanent link">&para;</a></h1>
+<p>PhotoPrism uses the <a href="https://github.com/disintegration/imaging">disintegration/imaging</a> package to generate thumbnail
+images that are displayed in search results and in the full-screen viewer.</p>
+<p>The smallest configurable size is 720 pixels for use by the indexer to perform color detection, face detection,
+and image classification. For more details, see the <a href="../../../user-guide/settings/advanced/">Advanced Settings</a>
+documentation in the <a href="../../../user-guide/">User Guide</a>.</p>
+<h2 id="api-design">API Design<a class="headerlink" href="#api-design" title="Permanent link">&para;</a></h2>
+<h3 id="why-use-a-cookie-free-domain">Why use a cookie-free domain?<a class="headerlink" href="#why-use-a-cookie-free-domain" title="Permanent link">&para;</a></h3>
+<p>Avoiding cookies helps minimize request latency by eliminating network traffic:</p>
+<ul>
+<li>when a browser requests static files such as images from a server via HTTPS, it is generally unnecessary to send a
+cookie along with each request if the URLs cannot be guessed realistically - that is, for most practical use cases</li>
+<li>one potential use of cookies might be to prevent the user from intentionally or accidentally sharing cryptic thumbnail URLs with others</li>
+<li>however, this is possible with most real-world image hosting services and could also be considered a feature if you only want to share specific thumbnails without overhead</li>
+</ul>
+<p>An additional advantage of this approach is that users can easily integrate a content delivery network (CDN),
+as there are no secrets to share and no cookies to check.</p>
+<p>Because most users have only one domain/host name and modern Web apps can store authentication tokens in <em>localStorage</em>
+instead, we have decided not use any cookies by default.</p>
+<p><strong>See also:</strong></p>
+<ul>
+<li><a href="https://www.keycdn.com/support/how-to-use-cookie-free-domains">https://www.keycdn.com/support/how-to-use-cookie-free-domains</a></li>
+<li><a href="https://ourcodeworld.com/articles/read/1341/why-you-should-use-a-cookie-less-domain-for-serving-your-static-content-cdn">https://ourcodeworld.com/articles/read/1341/why-you-should-use-a-cookie-less-domain-for-serving-your-static-content-cdn</a></li>
+<li><a href="https://pragmaticwebsecurity.com/articles/oauthoidc/localstorage-xss.html">https://pragmaticwebsecurity.com/articles/oauthoidc/localstorage-xss.html</a></li>
+</ul>
+<h3 id="image-uris">Image URIs<a class="headerlink" href="#image-uris" title="Permanent link">&para;</a></h3>
+<p>Authenticated with SHA1 hash and additional security token:</p>
+<div class="highlight"><pre><span></span><code>/api/v1/t/a2195b6840f46b555719d8e22e9b080e61a7317c/10d68214/tile_500
+</code></pre></div>
+<p>In public mode without security token:</p>
+<div class="highlight"><pre><span></span><code>/api/v1/t/a2195b6840f46b555719d8e22e9b080e61a7317c/public/tile_500
+</code></pre></div>
+<p>The thumbnail size and aspect ratio are specified at the end, in this case <code>tile_500</code>, which means 500x500 pixels.</p>
+<h3 id="video-uris">Video URIs<a class="headerlink" href="#video-uris" title="Permanent link">&para;</a></h3>
+<p>Authenticated with SHA1 hash and additional security token:</p>
+<div class="highlight"><pre><span></span><code>/api/v1/videos/51843134d75f4cbde534270cdd5954067f887ee6/10d68214/avc
+</code></pre></div>
+<p>In public mode without security token:</p>
+<div class="highlight"><pre><span></span><code>/api/v1/videos/51843134d75f4cbde534270cdd5954067f887ee6/public/avc
+</code></pre></div>
+<p>Videos can be streamed if the browser supports it. The format is specified at the end, in this case MPEG-4 AVC.</p>
 <h2 id="preview-sizes">Preview Sizes<a class="headerlink" href="#preview-sizes" title="Permanent link">&para;</a></h2>
 <p>These are configured in <a href="https://github.com/photoprism/photoprism/blob/master/internal/thumb/types.go"><code>internal/thumb/types.go</code></a>. A <code>TypeMap</code> defines;</p>
 <ul>
