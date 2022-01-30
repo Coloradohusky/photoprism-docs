@@ -3016,9 +3016,11 @@ natively by most modern browsers, see <a href="https://caniuse.com/mpeg4">https:
 <p>For a list of codecs <em>ffmpeg</em> supports, run this command in a terminal:</p>
 <div class="highlight"><pre><span></span><code>ffmpeg -decoders
 </code></pre></div>
-<p>Note that Firefox may only play the corresponding AAC audio codec if the 
-operating system supports it, see <a href="https://caniuse.com/aac">https://caniuse.com/aac</a>.</p>
-<p>All other browsers shouldn't have any issues.</p>
+<p>Firefox may only play the corresponding AAC audio codec if the operating system supports it, see <a href="https://caniuse.com/aac">https://caniuse.com/aac</a>.
+All other browsers shouldn't have any issues.</p>
+<p>HEVC video files can have a <code>.mp4</code> file extension too, which is typically associated with AVC. This is because MP4 is
+a <em>container</em> format or wrapper - the content could be compressed with H.264, H.265, or something else. The file
+extension doesn't really tell you anything other than that it's probably a video file.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>While the QuickTime <code>.mov</code> container format served as the basis for MPEG-4,

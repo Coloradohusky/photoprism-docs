@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#videos" class="md-skip">
+        <a href="#browsing-and-playing-videos" class="md-skip">
           Skip to content
         </a>
       
@@ -1414,6 +1414,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Videos
@@ -1431,6 +1433,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1439,15 +1443,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#videos" class="md-nav__link">
-    Videos
+  <a href="#live-photos" class="md-nav__link">
+    Live Photos
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#live-photos" class="md-nav__link">
-    Live Photos
+  <a href="#transcoding" class="md-nav__link">
+    Transcoding
   </a>
   
 </li>
@@ -2964,6 +2968,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2972,15 +2978,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#videos" class="md-nav__link">
-    Videos
+  <a href="#live-photos" class="md-nav__link">
+    Live Photos
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#live-photos" class="md-nav__link">
-    Live Photos
+  <a href="#transcoding" class="md-nav__link">
+    Transcoding
   </a>
   
 </li>
@@ -3002,28 +3008,31 @@
                   </a>
                 
                 
-                  <h1>Videos</h1>
-                
-                <h3 id="videos">Videos<a class="headerlink" href="#videos" title="Permanent link">&para;</a></h3>
-<p>Videos with the MPEG-4 AVC format can be played natively by most modern browsers.
-PhotoPrism uses <a href="https://www.ffmpeg.org/documentation.html"><em>ffmpeg</em></a> to transcode
-other common video formats to <a href="https://en.wikipedia.org/wiki/MPEG-4">MPEG-4 AVC</a>.
-All video formats, that can be transcoded by ffmpeg are supported.</p>
-<div class="admonition info">
-<p>In case you have problems with a specific format, let us know!</p>
-</div>
-<div class="admonition info">
-<p>By default PhotoPrism transcodes videos, when they are first played. This may lead to long loading times for very long or high resolution videos.
-You can use <code>docker-compose exec photoprism photoprism convert</code> to convert videos upfront.</p>
-</div>
-<p>In <em>Videos</em> you find all your videos. To play a video click <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7z"/></svg></span>.</p>
+                <h1 id="browsing-and-playing-videos">Browsing and Playing Videos<a class="headerlink" href="#browsing-and-playing-videos" title="Permanent link">&para;</a></h1>
+<p>Navigate to <em>Videos</em> to browse all your videos. To play a video, click <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7z"/></svg></span>.</p>
+<p>Videos in MPEG-4 AVC format can be played natively by virtually all modern browsers.</p>
+<p>Other video formats are <a href="#video-transcoding">automatically transcoded</a> in the background with <a href="https://www.ffmpeg.org/documentation.html">FFmpeg</a>
+so that they can be played without causing any problems, even if your browser might support the format as well.</p>
 <p><img alt="Screenshot" src="../img/video-1.png" /></p>
-<h3 id="live-photos">Live Photos<a class="headerlink" href="#live-photos" title="Permanent link">&para;</a></h3>
-<p>Live photos are treated as photos.
-They are marked with <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m3-8a3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3z"/></svg></span> in the upper left corner.</p>
-<p>You can filter for them using <code>type:live</code>.</p>
+<h2 id="live-photos">Live Photos<a class="headerlink" href="#live-photos" title="Permanent link">&para;</a></h2>
+<p>Short videos up to 3 seconds are displayed as live photos, independent of your phone's brand and model.</p>
+<p>In this case, the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m3-8a3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3z"/></svg></span> icon appears in the upper left corner.
+Move the mouse cursor over the thumbnail to play the video without changing the view.</p>
+<p>You can limit the search to live photos by using the <code>type:live</code> filter or the keyword <code>live</code>.</p>
 <p><img alt="Screenshot" src="../img/live-photo.png" /></p>
-<p>To play a live photo just hover over it.</p>
+<h2 id="transcoding">Transcoding<a class="headerlink" href="#transcoding" title="Permanent link">&para;</a></h2>
+<p>Videos in formats other than AVC are transcoded on demand. This can cause unacceptable delays when large video files
+are played for the first time. In this case, we recommend running this command in a terminal to pre-transcode videos:</p>
+<div class="highlight"><pre><span></span><code>docker-compose exec photoprism photoprism convert
+</code></pre></div>
+<div class="admonition note">
+<p>Make sure you have enough disk space before you start transcoding all your video files.</p>
+</div>
+<div class="admonition tldr">
+<p>Note that HEVC video files can have a <code>.mp4</code> file extension too, which is typically associated with AVC. This is because
+MP4 is a <em>container</em> format or wrapper - the content could be compressed with H.264, H.265, or something else. The file
+extension doesn't really tell you anything other than that it's probably a video file.</p>
+</div>
                 
               
               
