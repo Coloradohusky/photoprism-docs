@@ -2067,15 +2067,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#caching-is-hard" class="md-nav__link">
-    Caching Is Hard
+  <a href="#keep-it-simple" class="md-nav__link">
+    Keep It Simple
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#keep-it-simple" class="md-nav__link">
-    Keep It Simple
+  <a href="#caching-is-hard" class="md-nav__link">
+    Caching Is Hard
   </a>
   
 </li>
@@ -2088,15 +2088,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#opportunistic-refactoring" class="md-nav__link">
-    Opportunistic Refactoring
+  <a href="#avoid-unnecessary-abstractions-and-optimizations" class="md-nav__link">
+    Avoid Unnecessary Abstractions and Optimizations
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#avoid-unnecessary-abstractions-and-optimizations" class="md-nav__link">
-    Avoid Unnecessary Abstractions and Optimizations
+  <a href="#opportunistic-refactoring" class="md-nav__link">
+    Opportunistic Refactoring
   </a>
   
 </li>
@@ -3018,15 +3018,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#caching-is-hard" class="md-nav__link">
-    Caching Is Hard
+  <a href="#keep-it-simple" class="md-nav__link">
+    Keep It Simple
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#keep-it-simple" class="md-nav__link">
-    Keep It Simple
+  <a href="#caching-is-hard" class="md-nav__link">
+    Caching Is Hard
   </a>
   
 </li>
@@ -3039,15 +3039,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#opportunistic-refactoring" class="md-nav__link">
-    Opportunistic Refactoring
+  <a href="#avoid-unnecessary-abstractions-and-optimizations" class="md-nav__link">
+    Avoid Unnecessary Abstractions and Optimizations
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#avoid-unnecessary-abstractions-and-optimizations" class="md-nav__link">
-    Avoid Unnecessary Abstractions and Optimizations
+  <a href="#opportunistic-refactoring" class="md-nav__link">
+    Opportunistic Refactoring
   </a>
   
 </li>
@@ -3093,15 +3093,15 @@
                 <h1 id="code-quality">Code Quality<a class="headerlink" href="#code-quality" title="Permanent link">&para;</a></h1>
 <p>The quality of code has a practical impact on both your agility and the cost of development:<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
 <p>You can't change buggy code fast enough to be truly agile. Existing bugs can easily increase development costs (and time) by 10x. You can't afford not to fix them.</p>
-<h2 id="caching-is-hard">Caching Is Hard<a class="headerlink" href="#caching-is-hard" title="Permanent link">&para;</a></h2>
-<p>There are only two hard things in Computer Science: <a href="https://msol.io/blog/tech/youre-probably-wrong-about-caching/">cache invalidation</a> and naming things.</p>
-<div class="admonition example">
-<p>A cache is just a memory leak you haven't met yet. — <cite>Dave Cheney</cite></p>
-</div>
 <h2 id="keep-it-simple">Keep It Simple<a class="headerlink" href="#keep-it-simple" title="Permanent link">&para;</a></h2>
 <div class="admonition example">
 <p>Simple, elegant solutions are <a href="../issues/#effectiveness-efficiency">more effective</a>, but they are harder to find than complex ones, and they require more
 time, which we too often believe to be unaffordable. — <cite>Niklaus Wirth, Feb 1985</cite></p>
+</div>
+<h2 id="caching-is-hard">Caching Is Hard<a class="headerlink" href="#caching-is-hard" title="Permanent link">&para;</a></h2>
+<p>There are only two hard things in Computer Science: <a href="https://msol.io/blog/tech/youre-probably-wrong-about-caching/">cache invalidation</a> and naming things.</p>
+<div class="admonition example">
+<p>A cache is just a memory leak you haven't met yet. — <cite>Dave Cheney</cite></p>
 </div>
 <h2 id="bottom-up-development">Bottom-Up Development<a class="headerlink" href="#bottom-up-development" title="Permanent link">&para;</a></h2>
 <p>Breaking a problem down into small, coherent fragments lends itself to organization. Start with the basic low-level
@@ -3114,6 +3114,13 @@ of the final system - which in practice may never really happen as requirements 
 That was because the “top-down” method of program design hadn't been invented yet, and Mel wouldn't have used it anyway. 
 He wrote the innermost parts of his program loops first. — <cite><a href="http://www.catb.org/jargon/html/story-of-mel.html">The Story of Mel</a></cite></p>
 </div>
+<h2 id="avoid-unnecessary-abstractions-and-optimizations">Avoid Unnecessary Abstractions and Optimizations<a class="headerlink" href="#avoid-unnecessary-abstractions-and-optimizations" title="Permanent link">&para;</a></h2>
+<p>Don't abstract if you don't have to. Premature optimization causes unnecessary pain and leads to bloated code that fewer developers understand.</p>
+<p>Instead, perform test-driven <a href="#bottom-up-development">bottom-up development</a>, so you can <a href="https://martinfowler.com/bliki/DefinitionOfRefactoring.html">safely refactor</a>
+if and when it makes sense. Maintaining small amounts of duplicate code is much easier and less burdensome than choosing the wrong abstraction.</p>
+<div class="admonition example">
+<p>Premature optimization is the root of all evil. — <cite>Donald Knuth</cite></p>
+</div>
 <h2 id="opportunistic-refactoring">Opportunistic Refactoring<a class="headerlink" href="#opportunistic-refactoring" title="Permanent link">&para;</a></h2>
 <p>While we know this is difficult when working with a distributed team, branches, and pull requests, we encourage all
 contributors to refactor when they see a specific problem.</p>
@@ -3122,13 +3129,6 @@ that the changes are helpful in practice.</p>
 <div class="admonition example">
 <p>Ugly code is not a problem as long as there are tests, there are no <a href="https://photoprism.app/security-policy">security issues</a>,
 and it can be easily refactored later. Nobody needs beautiful code that doesn't work.</p>
-</div>
-<h2 id="avoid-unnecessary-abstractions-and-optimizations">Avoid Unnecessary Abstractions and Optimizations<a class="headerlink" href="#avoid-unnecessary-abstractions-and-optimizations" title="Permanent link">&para;</a></h2>
-<p>Don't abstract if you don't have to. Premature optimization causes unnecessary pain and leads to bloated code that fewer developers understand.</p>
-<p>Instead, perform test-driven <a href="#bottom-up-development">bottom-up development</a>, so you can <a href="https://martinfowler.com/bliki/DefinitionOfRefactoring.html">safely refactor</a>
-if and when it makes sense. Maintaining small amounts of duplicate code is much easier and less burdensome than choosing the wrong abstraction.</p>
-<div class="admonition example">
-<p>Premature optimization is the root of all evil. — <cite>Donald Knuth</cite></p>
 </div>
 <h2 id="go-slow-before-you-go-fast">Go Slow Before You Go Fast 🐰<a class="headerlink" href="#go-slow-before-you-go-fast" title="Permanent link">&para;</a></h2>
 <p>You have to go slow before you can go fast. Keep it simple. Done is better than perfect. Be pragmatic. Stay focused.</p>
