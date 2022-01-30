@@ -1083,6 +1083,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#lxc-images" class="md-nav__link">
+    LXC Images
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1203,13 +1210,6 @@
         <li class="md-nav__item">
   <a href="#do-you-support-podman" class="md-nav__link">
     Do you support Podman?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#do-you-provide-lxc-images" class="md-nav__link">
-    Do you provide LXC images?
   </a>
   
 </li>
@@ -3260,6 +3260,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#lxc-images" class="md-nav__link">
+    LXC Images
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3380,13 +3387,6 @@
         <li class="md-nav__item">
   <a href="#do-you-support-podman" class="md-nav__link">
     Do you support Podman?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#do-you-provide-lxc-images" class="md-nav__link">
-    Do you provide LXC images?
   </a>
   
 </li>
@@ -3522,6 +3522,8 @@ testing, and deploying complex applications like PhotoPrism. It also effectively
 Developers are invited to contribute by <a href="https://docs.photoprism.app/developer-guide/">building and testing standalone packages</a>
 for Linux distributions and other operating systems. </p>
 <p>Updates are <a href="https://docs.photoprism.app/release-notes/">released several times a month</a>, so maintaining the long list of dependencies for additional environments would currently consume too many of <a href="https://docs.photoprism.app/funding/">our resources</a>.</p>
+<h4 id="lxc-images">LXC Images<a class="headerlink" href="#lxc-images" title="Permanent link">&para;</a></h4>
+<p>There is no official <a href="https://linuxcontainers.org/">LXC image</a> available yet, see <a href="https://github.com/photoprism/photoprism/issues/147">related GitHub issue</a> for details.</p>
 <h3 id="why-are-you-using-docker">Why are you using Docker?<a class="headerlink" href="#why-are-you-using-docker" title="Permanent link">&para;</a></h3>
 <p>Containers are nothing new; <a href="https://en.wikipedia.org/wiki/Solaris_Containers">Solaris Zones</a> have been around for
 about 15 years, first released publicly in 2004. The chroot system call was introduced during
@@ -3654,9 +3656,11 @@ this command will stop and remove the Docker container:</p>
 <p>Please refer to the official Docker <a href="https://docs.docker.com/compose/reference/rm/">documentation</a> 
 for further details.</p>
 <h3 id="how-can-i-mount-network-shares-with-docker">How can I mount network shares with Docker?<a class="headerlink" href="#how-can-i-mount-network-shares-with-docker" title="Permanent link">&para;</a></h3>
-<p>There are multiple ways of using network storage. One of the easiest might be to directly mount NFS shares with Docker.</p>
-<p>You can mount any number of NFS shares as folders. Follow this <code>docker-compose.yml</code> example 
-if you want to mount the <em>originals</em> folder as a share:</p>
+<p>You can mount remote folders that you can access on your host if they have already been mounted there,
+using your operating system's standard tools and methods. This requires no changes compared to specifying
+any other path or drive on your host.</p>
+<p>Alternatively, you can <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts">mount network storage using Docker Compose</a>. 
+Follow this <code>docker-compose.yml</code> example for NFS (Linux, Unix) shares:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
   <span class="nt">photoprism</span><span class="p">:</span>
     <span class="c1"># ...</span>
@@ -3674,7 +3678,7 @@ if you want to mount the <em>originals</em> folder as a share:</p>
       <span class="c1"># Share path on your NAS:</span>
       <span class="nt">device</span><span class="p">:</span> <span class="s">&quot;:/mnt/photos&quot;</span> 
 </code></pre></div>
-<p>For Windows / CIFS shares:</p>
+<p>For mounting CIFS (Windows, Samba, SMB) network shares:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
   <span class="nt">photoprism-originals</span><span class="p">:</span>
     <span class="nt">driver</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">local</span>
@@ -3683,16 +3687,11 @@ if you want to mount the <em>originals</em> folder as a share:</p>
       <span class="nt">o</span><span class="p">:</span> <span class="s">&quot;username=user,password=secret,rw&quot;</span>
       <span class="nt">device</span><span class="p">:</span> <span class="s">&quot;//host/folder&quot;</span>
 </code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>This was tested with TrueNAS and NFS, but other (network) file systems may be mounted with Docker as well.</p>
-</div>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Mounting the <em>import</em> folder to a share which is also accessible via other ways (e.g. CIFS)
-is especially handy, as you can dump all data from a SD card / camera directly into that folder 
-and trigger the index in the GUI afterwards. So you can skip the upload dialog in the 
-GUI and it's a little faster.</p>
+<p>Mounting the import folder from a network drive that can also be accessed via other ways (e.g. CIFS) is handy 
+because you can dump all data from an SD card/camera directly to this folder and then start the import process
+under <a href="../../user-guide/library/import/"><em>Library</em> &gt; <em>Import</em></a>. PhotoPrism also <a href="../../user-guide/sync/webdav/">has WebDAV support</a>
+for remote file management and uploading, for example, through <a href="https://photoprism.app/partners">PhotoSync</a>.</p>
 </div>
 <h3 id="do-you-support-podman">Do you support Podman?<a class="headerlink" href="#do-you-support-podman" title="Permanent link">&para;</a></h3>
 <p>Podman works just fine both in rootless and under root. Mind the SELinux which is enabled on 
@@ -3700,9 +3699,6 @@ Red Hat compatible systems, you may hit permission error problems. </p>
 <p>More details on on how to run PhotoPrism with <a href="https://podman.io/">Podman</a> on CentOS in 
 <a href="https://lukas.zapletalovi.com/2020/01/deploy-photoprism-in-centos-80.html">this blog post</a>, 
 it includes all the details including root and rootless modes, user mapping and SELinux.</p>
-<h3 id="do-you-provide-lxc-images">Do you provide LXC images?<a class="headerlink" href="#do-you-provide-lxc-images" title="Permanent link">&para;</a></h3>
-<p>There is currently no <a href="https://linuxcontainers.org/">LXC</a> build for
-PhotoPrism, see <a href="https://github.com/photoprism/photoprism/issues/147">issue #147</a> for details.</p>
 <h3 id="any-plans-to-add-support-for-active-directory-ldap-or-other-centralized-account-management-options">Any plans to add support for Active Directory, LDAP or other centralized account management options?<a class="headerlink" href="#any-plans-to-add-support-for-active-directory-ldap-or-other-centralized-account-management-options" title="Permanent link">&para;</a></h3>
 <p>There is no single sign-on support yet as we didn't consider it essential for our initial release.
 Our team is currently working on <a href="https://github.com/photoprism/photoprism/issues/782">OpenID Connect</a>,
@@ -3711,11 +3707,9 @@ which will be available in a future release.</p>
 <p>If you are <a href="https://photoprism.app/code-of-conduct">having a bad day</a> and want to offend someone,
 please go somewhere else.</p>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Our development and testing efforts are focused on small servers and home users. Adding functionality
-that is primarily useful for business environments, or that only benefits few private 
-users with special needs, diverts resources away from features that benefit everyone.
-Professional users are welcome to <a href="../../contact/">reach out</a> to us for a custom solution.</p>
+<p class="admonition-title">Professional Users</p>
+<p>Our Community Edition is designed primarily for small servers and home users. Professional users are welcome
+to <a href="https://photoprism.app/contact">contact us for a commercial solution</a>.</p>
 </div>
                 
               
