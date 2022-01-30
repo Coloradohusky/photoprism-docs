@@ -3022,16 +3022,19 @@ Move the mouse cursor over the thumbnail to play the video without changing the 
 <p><img alt="Screenshot" src="../img/live-photo.png" /></p>
 <h2 id="transcoding">Transcoding<a class="headerlink" href="#transcoding" title="Permanent link">&para;</a></h2>
 <p>Videos in formats other than AVC are transcoded on demand. This can cause unacceptable delays when large video files
-are played for the first time. In this case, we recommend running this command in a terminal to pre-transcode videos:</p>
+are played for the first time.</p>
+<p>In this case, you may <a href="../../../getting-started/docker-compose/#command-line-interface">run this command in a terminal</a>
+to pre-transcode all videos in other formats:</p>
 <div class="highlight"><pre><span></span><code>docker-compose exec photoprism photoprism convert
 </code></pre></div>
 <div class="admonition note">
-<p>Make sure you have enough disk space before you start transcoding all your video files.</p>
+<p>Make sure that there is enough disk space available on your server before transcoding all video files, as this may
+require a significant amount of extra storage.</p>
 </div>
 <div class="admonition tldr">
-<p>Note that HEVC video files can have a <code>.mp4</code> file extension too, which is typically associated with AVC. This is because
-MP4 is a <em>container</em> format or wrapper - the content could be compressed with H.264, H.265, or something else. The file
-extension doesn't really tell you anything other than that it's probably a video file.</p>
+<p>HEVC video files can have a <code>.mp4</code> file extension too, which is typically associated with AVC. This is because
+MP4 is a <em>container</em> format or wrapper - the content could be compressed with H.264, H.265, or something else.
+The file extension doesn't really tell you anything other than that it's probably a video file.</p>
 </div>
                 
               
