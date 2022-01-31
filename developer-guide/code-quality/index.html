@@ -3091,8 +3091,17 @@
                 
                 
                 <h1 id="code-quality">Code Quality<a class="headerlink" href="#code-quality" title="Permanent link">&para;</a></h1>
-<p>The quality of code has a practical impact on both your agility and the cost of development:<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<p>You can't change buggy code fast enough to be truly agile. Existing bugs can easily increase development costs (and time) by 10x. You can't afford not to fix them.</p>
+<p><strong>The quality of code has a practical impact on both your agility and the cost of development:</strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<ul>
+<li>you can't change buggy and/or bloated code fast enough to be truly agile</li>
+<li>existing bugs can easily increase development costs (and time) by 10x</li>
+<li>the mess eventually becomes so big and so deep that you cannot clean it up anymore<sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+</ul>
+<figure>
+<p><img alt="Productivity vs Time" src="../img/productivity-vs-time.jpg" width="500" />
+  </p>
+<figcaption>Productivity vs Time</figcaption>
+</figure>
 <h2 id="keep-it-simple">Keep It Simple<a class="headerlink" href="#keep-it-simple" title="Permanent link">&para;</a></h2>
 <div class="admonition example">
 <p>Simple, elegant solutions are <a href="../issues/#effectiveness-efficiency">more effective</a>, but they are harder to find than complex ones, and they require more
@@ -3126,20 +3135,33 @@ if and when it makes sense. Maintaining small amounts of duplicate code is much 
 contributors to refactor when they see a specific problem.</p>
 <p>Ideally, when you are working on the same code anyway to implement a feature or improvement. This helps to verify
 that the changes are helpful in practice.</p>
+<p>Ugly code is not a big problem as long as there are tests and it can be easily refactored later. No one needs beautiful
+code that doesn't work. Pretty much all software projects start like this.</p>
+<p>There is one important exception: If you discover a security vulnerability, please <a href="https://photoprism.app/security-policy">report it to us immediately</a>
+and, if possible, offer a solution.</p>
 <div class="admonition example">
-<p>Ugly code is not a problem as long as there are tests, there are no <a href="https://photoprism.app/security-policy">security issues</a>,
-and it can be easily refactored later. Nobody needs beautiful code that doesn't work.</p>
+<p>Feel free to think ahead, just don't code ahead. But also, don't feel the need to decide so many
+details ahead. Learn enough to get started and build only what you need.
+— <cite><a href="https://twitter.com/jbrains/status/1064212803542818816">J. B. Rainsberger</a></cite></p>
 </div>
 <h2 id="go-slow-before-you-go-fast">Go Slow Before You Go Fast 🐰<a class="headerlink" href="#go-slow-before-you-go-fast" title="Permanent link">&para;</a></h2>
 <p>You have to go slow before you can go fast. Keep it simple. Done is better than perfect. Be pragmatic. Stay focused.</p>
 <div class="admonition example">
-<p>Feel free to think ahead, just don't code ahead. But also, don't feel the need to decide so many 
-details ahead. Learn enough to get started and build only what you need.
-— <cite><a href="https://twitter.com/jbrains/status/1064212803542818816">J. B. Rainsberger</a></cite></p>
+<p>All developers with more than a few years experience know that previous messes slow them down. And yet all
+developers feel the pressure to make messes in order to meet deadlines. In short, they don’t take the time
+to go fast! You will not make the deadline by making a mess. Indeed, the mess will slow you down instantly, and
+will force you to miss the deadline. — <cite>Robert C. Martin<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup></cite></p>
 </div>
 <h2 id="code-that-cannot-be-tested-is-flawed">Code That Cannot Be Tested Is Flawed<a class="headerlink" href="#code-that-cannot-be-tested-is-flawed" title="Permanent link">&para;</a></h2>
 <p>We strive for <a href="https://martinfowler.com/bliki/TestCoverage.html">complete test coverage</a> as it is a useful tool for finding 
 untested parts of our code base. Test coverage is of limited use as a numerical statement of how good our tests are.</p>
+<p>The <em>F.I.R.S.T.</em> principle includes five rules that good tests should follow:<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p><strong>Fast:</strong> If tests are slow, you won't run them frequently, which makes them much less useful and increases the cost of development.<br>
+<strong>Independent:</strong> You should be able to run each test independently and run the tests in any order you like. When tests depend on each other, then the first one to fail causes a cascade of downstream failures, making diagnosis difficult and hiding downstream defects.<br>
+<strong>Repeatable:</strong> If your tests aren’t repeatable in any environment, then you’ll always have an excuse for why they fail. You’ll also find yourself unable to run the tests when the environment isn’t available.<br>
+<strong>Self-Validating:</strong> You should not have to read through a log file to tell whether the tests pass. If the tests aren’t
+self-validating, then failure can become subjective and running the tests can require a long manual evaluation.<br>
+<strong>Timely:</strong> If you write tests after the production code, then you may find the production code to be hard to test. You may decide that some production code is too hard to test. You may not design the production code to be testable.</p>
 <!--
 ### Codecov [![Test Coverage](https://codecov.io/gh/photoprism/photoprism/branch/develop/graph/badge.svg)][codecov] ###
 
@@ -3160,6 +3182,9 @@ inspiration when you need some.</p>
 <ol>
 <li id="fn:1">
 <p><a href="https://twitter.com/allenholub/status/1073738216140791808">https://twitter.com/allenholub/status/1073738216140791808</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Martin, Robert C. <a href="https://enos.itcollege.ee/~jpoial/oop/naited/Clean%20Code.pdf"><em>Clean Code: A Handbook of Agile Software Craftsmanship</em></a>. Upper Saddle River, NJ: Prentice Hall, 2009.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
