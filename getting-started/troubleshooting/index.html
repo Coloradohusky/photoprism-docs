@@ -3305,9 +3305,11 @@ memory problem</li>
 </ul>
 <p>We recommend that you check your <a href="docker/#viewing-logs">Docker Logs</a> and <a href="browsers/#getting-error-details">the browser console</a>
 for messages related to <em><abbr title="Hypertext Transfer Protocol">HTTP</abbr> requests</em>, <em>permissions</em>, <em>security</em>, <em><abbr title="transcodes video files">FFmpeg</abbr></em>, <em>videos</em>, and <em>file conversion</em>.</p>
-<p><abbr title="H.265 / High Efficiency Video Coding">HEVC</abbr> video files can have a <code>.mp4</code> file extension too, which is typically associated with <abbr title="MPEG-4 / H.264">AVC</abbr>. This is because MP4 is a
-<em>container</em> format, meaning that the actual video content may be compressed with H.264, H.265, or something else. The file
-extension doesn't really tell you anything other than that it's probably a video file.</p>
+<p>Please note:</p>
+<ol>
+<li>Not <a href="https://caniuse.com/?search=video%20format">all video and audio formats</a> can be <a href="browsers/">played with every browser</a>. For example, <a href="https://caniuse.com/aac" title="Advanced Audio Coding">AAC</a> - the default audio codec for <a href="https://caniuse.com/avc" title="Advanced Video Coding">MPEG-4 <abbr title="MPEG-4 / H.264">AVC</abbr> / H.264</a> - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.</li>
+<li><abbr title="High Efficiency Video Coding / H.265">HEVC</abbr>/H.265 video files can have a <code>.mp4</code> file extension too, which is often associated with <abbr title="MPEG-4 / H.264">AVC</abbr> only. This is because MP4 is a <em>container</em> format, meaning that the actual video content may be compressed with H.264, H.265, or something else. The file extension doesn't really tell you anything other than that it's probably a video file.</li>
+</ol>
 <div class="admonition info">
 <p><strong>We kindly ask you not to report bugs via <em>GitHub Issues</em> unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.</strong>
 <a href="../../user-guide/#getting-support">Ask for technical support</a> if you need help, it could be a local
