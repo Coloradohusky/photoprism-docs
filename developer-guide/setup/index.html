@@ -2086,23 +2086,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#multi-arch-builds" class="md-nav__link">
-    Multi-Arch Builds
+  <a href="#multi-arch-docker-builds" class="md-nav__link">
+    Multi-Arch Docker Builds
   </a>
   
-    <nav class="md-nav" aria-label="Multi-Arch Builds">
+    <nav class="md-nav" aria-label="Multi-Arch Docker Builds">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#qemu-quick-start" class="md-nav__link">
     QEMU Quick Start
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alternate-development-environments" class="md-nav__link">
-    Alternate Development Environments
   </a>
   
 </li>
@@ -3061,23 +3054,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#multi-arch-builds" class="md-nav__link">
-    Multi-Arch Builds
+  <a href="#multi-arch-docker-builds" class="md-nav__link">
+    Multi-Arch Docker Builds
   </a>
   
-    <nav class="md-nav" aria-label="Multi-Arch Builds">
+    <nav class="md-nav" aria-label="Multi-Arch Docker Builds">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#qemu-quick-start" class="md-nav__link">
     QEMU Quick Start
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alternate-development-environments" class="md-nav__link">
-    Alternate Development Environments
   </a>
   
 </li>
@@ -3162,19 +3148,20 @@ npm run watch
 </code></pre></div>
 <p>Questions?</p>
 <ul>
-<li>Radomir Sohlich wrote a <a href="https://sohlich.github.io/post/go_makefile/">pragmatic introduction to Makefiles</a> for Go developers.</li>
-<li>we are using <a href="https://github.com/golang/go/wiki/Modules">Go Modules</a> for managing our dependencies (new in 1.11).</li>
-<li>if you never used Go before and would like to learn it, you are welcome to <a href="mailto:hello@photoprism.app">reach out</a>. We might start organizing regular learning sessions for beginners in Berlin.</li>
-<li>this guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths.</li>
+<li>Radomir Sohlich wrote a <a href="https://sohlich.github.io/post/go_makefile/">pragmatic introduction to Makefiles</a> for Go developers</li>
+<li>we are using <a href="https://github.com/golang/go/wiki/Modules">Go Modules</a> for managing our dependencies (new in 1.11)</li>
+<li>this guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths</li>
 </ul>
 <h2 id="apple-silicon-raspberry-pi-and-arm64">Apple Silicon, Raspberry Pi, and ARM64<a class="headerlink" href="#apple-silicon-raspberry-pi-and-arm64" title="Permanent link">&para;</a></h2>
-<p>Our development environment has been built into a single <a href="https://hub.docker.com/r/photoprism/development">multi-arch image</a> for 64-bit AMD, Intel, and ARM processors.
-That means, Apple Silicon, <a href="../../getting-started/raspberry-pi/">Raspberry Pi</a> 3 / 4, and other ARM64-based devices can 
-pull from the same repository.</p>
-<h2 id="multi-arch-builds">Multi-Arch Builds<a class="headerlink" href="#multi-arch-builds" title="Permanent link">&para;</a></h2>
-<p>This works out of the box with <em>Docker Desktop</em>. Just run <code>make docker-development-multiarch</code>. If you want to build those images for different architectures on Linux, 
-you need to set up <code>docker buildx</code> builder instances or setup QEMU on your machine which shall run your builds. 
-More info can be found in the docker docs: <a href="https://docs.docker.com/buildx/working-with-buildx/">Docker Buildx</a>, <a href="https://docs.docker.com/desktop/multi-arch/">Leverage multi-CPU architecture support</a></p>
+<p>Our development environment has been built into a single <a href="https://hub.docker.com/r/photoprism/development">multi-arch image</a>
+for 64-bit AMD, Intel, and ARM processors. That means, Apple Silicon, <a href="../../getting-started/raspberry-pi/">Raspberry Pi</a>
+3 / 4, and other ARM64-based devices can pull from the same repository.</p>
+<h2 id="multi-arch-docker-builds">Multi-Arch Docker Builds<a class="headerlink" href="#multi-arch-docker-builds" title="Permanent link">&para;</a></h2>
+<p>For information about multi-architecture Docker builds, see the following documentation:</p>
+<ul>
+<li><a href="https://docs.docker.com/buildx/working-with-buildx/">Docker Buildx</a></li>
+<li><a href="https://docs.docker.com/desktop/multi-arch/">Leverage multi-CPU architecture support</a></li>
+</ul>
 <h3 id="qemu-quick-start">QEMU Quick Start<a class="headerlink" href="#qemu-quick-start" title="Permanent link">&para;</a></h3>
 <ol>
 <li>install qemu-user-static from docker hub: <code>docker run --rm --privileged multiarch/qemu-user-static --reset -p yes</code> <a href="https://github.com/multiarch/qemu-user-static">https://github.com/multiarch/qemu-user-static</a></li>
@@ -3182,11 +3169,14 @@ More info can be found in the docker docs: <a href="https://docs.docker.com/buil
 <li>create buildx builder: <code>docker buildx create --name multiarch-builder &amp;&amp; docker buildx inspect --builder multiarch-builder --bootstrap</code></li>
 <li>start building: <code>make docker-development-multiarch</code> or <code>make docker-photoprism-multiarch</code></li>
 </ol>
-<h3 id="alternate-development-environments">Alternate Development Environments<a class="headerlink" href="#alternate-development-environments" title="Permanent link">&para;</a></h3>
-<p>The following are setup instructions for development and testing and should be avoided unless Docker is either not supported or not allowed in your environment:</p>
-<ul>
-<li><a href="../setup-fedora/">Fedora 32</a></li>
-</ul>
+<!--
+### Alternate Development Environments ###
+
+The following are setup instructions for development and testing and should be avoided unless Docker is either
+not supported or not allowed in your environment:
+
+* [Fedora 32](setup-fedora.md)
+-->
 
               
             </article>
