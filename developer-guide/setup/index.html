@@ -3112,37 +3112,42 @@ Instead of using Docker, you can create your own development environment based o
 You'll need <a href="https://golang.org/dl/">Go</a> &gt;= 1.17, <a href="https://www.tensorflow.org/install/lang_c">TensorFlow for C</a>, 
 <a href="http://www.gnu.org/software/make//make.html">Make</a>, <a href="https://nodejs.org/en/download/">NPM</a>, and <a href="https://mariadb.com/">MariaDB</a>.
 Without Docker, test results will be less reliable and you also won't be able to use our other Dockerfiles (e.g. for TensorFlow).</p>
-<p><strong>Step 1:</strong> Run <a href="https://git-scm.com/downloads">Git</a> to clone this project:</p>
+<p><strong>Step 1:</strong> Run <a href="https://git-scm.com/downloads">Git</a> to clone (download) the source code</p>
 <div class="highlight"><pre><span></span><code>git clone git@github.com:photoprism/photoprism.git
 </code></pre></div>
 <div class="admonition example">
 <p>If you're on windows, make sure to disable auto CR LF. Otherwise, the build won't work.
 <code>git config --global core.autocrlf false</code></p>
 </div>
-<p><strong>Step 2:</strong> Start <a href="https://www.docker.com/">Docker</a> containers:</p>
+<p><strong>Step 2:</strong> Start the <a href="https://www.docker.com/">Docker</a> services</p>
 <div class="highlight"><pre><span></span><code>cd photoprism
 docker-compose up
 </code></pre></div>
 <p><em>Note: This docker-compose configuration is for testing and development purposes only.</em></p>
-<p><strong>Step 3:</strong> Open a terminal to run commands directly in the build and test environment:</p>
+<p><strong>Step 3:</strong> Open a terminal to run commands directly in the build and test environment</p>
 <div class="highlight"><pre><span></span><code>make terminal
 </code></pre></div>
 <p>Before you proceed, make sure that all dependencies, such as NPM packages for the frontend, are installed:</p>
 <div class="highlight"><pre><span></span><code>make all
 </code></pre></div>
-<p>Congratulations! You can now compile and start PhotoPrism in your local development environment:</p>
-<p><div class="highlight"><pre><span></span><code>make build-go
+<p>Congratulations! You can now compile and run PhotoPrism in your local development environment:</p>
+<div class="highlight"><pre><span></span><code>make build
 ./photoprism start
 </code></pre></div>
-You can find a list of all <code>make</code> targets in the <a href="https://github.com/photoprism/photoprism/blob/develop/Makefile">Makefile</a>.
-For example, <code>make test</code> will run frontend and backend unit tests.</p>
-<p><strong>Step 4:</strong> Build the frontend in watch mode:</p>
+<p>Open the user interface by navigating to <a href="http://localhost:2342/">localhost:2342</a> (HTTP) or 
+<a href="https://photoprism.localssl.dev/">https://photoprism.localssl.dev</a> (HTTPS). Authentication is disabled by default
+in development environments. Use the <code>--public=false</code> parameter to enable it.</p>
+<div class="admonition example">
+<p>You can find a list of all <code>make</code> targets in the <a href="https://github.com/photoprism/photoprism/blob/develop/Makefile">Makefile</a>.
+For example, <code>make test</code> will run frontend and backend unit tests. Bad filesystem permissions can be fixed by
+running <code>make fix-permissions</code> in a container terminal.</p>
+</div>
+<p><strong>Optional:</strong> Build the frontend in watch mode</p>
 <p>The Go webserver will serve static assets in addition to providing the backend API. The static assets can be automatically
 built whenever you change a file. In a new terminal window, outside the Docker container, run:</p>
 <div class="highlight"><pre><span></span><code>make dep-js
 make watch-js
 </code></pre></div>
-<p>PhotoPrism will now be available at <a href="http://localhost:2342/">localhost:2342</a>. This is set in the <a href="https://github.com/photoprism/photoprism/blob/develop/docker-compose.yml">docker-compose.yml</a>.</p>
 <p>Questions?</p>
 <ul>
 <li>Radomir Sohlich wrote a <a href="https://sohlich.github.io/post/go_makefile/">pragmatic introduction to Makefiles</a> for Go developers.</li>
