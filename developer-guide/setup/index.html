@@ -3092,12 +3092,11 @@
 
 
 <h1 id="setting-up-your-development-environment">Setting Up Your Development Environment<a class="headerlink" href="#setting-up-your-development-environment" title="Permanent link">&para;</a></h1>
-<p>Before you start, make sure you have <a href="https://git-scm.com/downloads">Git</a> and <a href="https://store.docker.com/search?q=docker&amp;type=edition&amp;offering=community">Docker</a> installed on your system.
-Instead of using Docker, you can create your own development environment based on our
-<a href="https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile">Dockerfile</a> (not recommended).
-You'll need <a href="https://golang.org/dl/">Go</a> &gt;= 1.17, <a href="https://www.tensorflow.org/install/lang_c">TensorFlow for C</a>, 
-<a href="http://www.gnu.org/software/make//make.html">Make</a>, <a href="https://nodejs.org/en/download/">NPM</a>, and <a href="https://mariadb.com/">MariaDB</a>.
-Without Docker, test results will be less reliable and you also won't be able to use our other Dockerfiles (e.g. for TensorFlow).</p>
+<p>Before you start, make sure you have <a href="https://git-scm.com/downloads">Git</a> and <a href="https://store.docker.com/search?q=docker&amp;type=edition&amp;offering=community">Docker</a>
+installed on your system.</p>
+<p>Instead of using Docker, you can create your own development environment based on our <a href="https://github.com/photoprism/photoprism/tree/develop/docker">Dockerfiles</a>
+(not recommended). At a minimum, you need Go &gt;= 1.17, TensorFlow for C, Make, NPM, and MariaDB. Note that test results
+are unreliable without Docker, so this method is not suitable for contributors.</p>
 <p><strong>Step 1:</strong> Run <a href="https://git-scm.com/downloads">Git</a> to clone (download) the source code</p>
 <div class="highlight"><pre><span></span><code>git clone git@github.com:photoprism/photoprism.git
 </code></pre></div>
