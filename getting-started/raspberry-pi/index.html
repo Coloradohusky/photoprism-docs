@@ -3196,8 +3196,6 @@ after going through a short list of <a href="#system-requirements">System Requir
 <p>Note that Raspberry Pi OS (Raspbian) is a 32-bit user-space Linux with a 64-bit kernel to remain compatible with older
 Raspberry software. This requires <a href="#raspberry-pi-os">special configuration</a> to run modern 64-bit applications and Docker
 images, see <a href="#architecture-specific-notes">Architecture Specific Notes</a>.</p>
-<p>Existing users are advised to check their <code>docker-compose.yml</code> against our examples at <a href="https://dl.photoprism.app/docker/">dl.photoprism.app/docker</a>
-from time to time in case there are new config options or other improvements.</p>
 <h3 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Your device should have at least 3 GB of physical memory and a 64-bit operating system</li>
@@ -3241,7 +3239,7 @@ from time to time in case there are new config options or other improvements.</p
 </tbody>
 </table>
 <p>Raspberry Pi OS (Raspbian) requires <a href="#raspberry-pi-os">special configuration</a> to run modern 64-bit applications and
-Docker images. If you do not have legacy software, we recommend choosing a standard 64-bit Linux distribution as it
+Docker images. If you do not have legacy software, we recommend choosing a standard 64-bit Linux distribution as this
 requires less experience:</p>
 <ul>
 <li><a href="https://raspi.debian.net/">Raspberry Pi Debian</a></li>
@@ -3313,7 +3311,8 @@ docker-compose up -d
 command like <code>make update</code>. See <a href="../docker-compose/#command-line-interface">Command-Line Interface</a> 
 to learn more about terminal commands.</p>
 <div class="admonition tldr">
-<p>Running an image with <code>:latest</code> tag does not cause Docker to automatically download new images.</p>
+<p>Running an image with <code>:latest</code> tag does not cause Docker to automatically download new images.
+We recommend that you compare your <code>docker-compose.yml</code> with our examples at <a href="https://dl.photoprism.app/docker/">dl.photoprism.app/docker</a> from time to time in case there are new configuration options or other improvements.</p>
 </div>
 <h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
 <p>If your device runs out of memory, the index is frequently locked, or other system resources are running low:</p>

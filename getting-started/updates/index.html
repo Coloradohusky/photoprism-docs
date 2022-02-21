@@ -630,26 +630,39 @@
     Docker Compose
   </a>
   
+    <nav class="md-nav" aria-label="Docker Compose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#development-preview" class="md-nav__link">
+    Development Preview
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#raspberry-pi" class="md-nav__link">
     Raspberry Pi
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#facial-recognition" class="md-nav__link">
     Facial Recognition
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#watchtower" class="md-nav__link">
     Watchtower
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3059,26 +3072,39 @@
     Docker Compose
   </a>
   
+    <nav class="md-nav" aria-label="Docker Compose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#development-preview" class="md-nav__link">
+    Development Preview
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#raspberry-pi" class="md-nav__link">
     Raspberry Pi
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#facial-recognition" class="md-nav__link">
     Facial Recognition
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#watchtower" class="md-nav__link">
     Watchtower
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3125,16 +3151,15 @@ docker-compose up -d
 <p>Advanced users can add this to a <code>Makefile</code> so that they only have to type a single 
 command like <code>make update</code>. See <a href="../docker-compose/#command-line-interface">Command-Line Interface</a>
 to learn more about terminal commands.</p>
-<div class="admonition info">
-<p>Running an image with <code>:latest</code> tag does not cause Docker to automatically download new images.</p>
+<div class="admonition note">
+<p>Running an image with <code>:latest</code> tag does not cause Docker to automatically download new images.
+We recommend that you compare your <code>docker-compose.yml</code> with our examples at <a href="https://dl.photoprism.app/docker/">dl.photoprism.app/docker</a> from time to time in case there are new configuration options or other improvements.</p>
 </div>
-<div class="admonition tldr">
+<h4 id="development-preview">Development Preview<a class="headerlink" href="#development-preview" title="Permanent link">&para;</a></h4>
 <p>You can test upcoming features and improvements by changing the image from <code>photoprism/photoprism:latest</code>
 to <code>photoprism/photoprism:preview</code> in your <a href="https://dl.photoprism.app/docker/"><code>docker-compose.yml</code></a>.
-Then pull the most recent image and restart your instance as shown above.
-There is no preview available for 32-bit operating systems.</p>
-</div>
-<h3 id="raspberry-pi">Raspberry Pi<a class="headerlink" href="#raspberry-pi" title="Permanent link">&para;</a></h3>
+Then pull the most recent image and restart your instance as shown above.</p>
+<h4 id="raspberry-pi">Raspberry Pi<a class="headerlink" href="#raspberry-pi" title="Permanent link">&para;</a></h4>
 <p>Our <a href="../../release-notes/">stable version and development preview</a> have been built into a single
 <a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch Docker image</a> for 64-bit AMD, Intel, and ARM processors.</p>
 <p>That means, Raspberry Pi 3 / 4, Apple Silicon, and other ARM64-based devices can pull from the same repository,
@@ -3145,14 +3170,12 @@ after going through a short list of <a href="../raspberry-pi/#system-requirement
 and you see the "no matching manifest" error on <a href="../raspberry-pi/#raspberry-pi-os">Raspberry Pi OS</a> (Raspbian):</p>
 <div class="highlight"><pre><span></span><code>docker pull --platform<span class="o">=</span>arm64 photoprism/photoprism:latest
 </code></pre></div>
-<p>We recommend choosing a <a href="../raspberry-pi/#raspbian-alternatives">standard 64-bit Linux distribution</a> instead 
-of Raspbian to run modern server applications.</p>
-<p>Alternative Docker images are provided for <a href="../raspberry-pi/#older-armv7-based-devices">ARMv7-based devices</a>
-and those with a 32-bit operating system.</p>
+<p>If you do not have legacy software, we recommend <a href="../raspberry-pi/#modern-arm64-based-devices">choosing a standard 64-bit Linux distribution</a>
+as this requires less experience. Alternative 32-bit Docker images are provided for <a href="../raspberry-pi/#older-armv7-based-devices">ARMv7-based devices</a>.</p>
 <div class="admonition tldr">
 <p>Darktable is not included in the ARMv7 version because it is not 32-bit compatible.</p>
 </div>
-<h3 id="facial-recognition">Facial Recognition<a class="headerlink" href="#facial-recognition" title="Permanent link">&para;</a></h3>
+<h4 id="facial-recognition">Facial Recognition<a class="headerlink" href="#facial-recognition" title="Permanent link">&para;</a></h4>
 <p>Existing users may index faces without performing a complete rescan:</p>
 <div class="highlight"><pre><span></span><code>docker-compose exec photoprism photoprism faces index
 </code></pre></div>
@@ -3160,7 +3183,7 @@ and those with a 32-bit operating system.</p>
 <a href="https://docs.photoprism.app/release-notes/#development-preview">development preview</a>:</p>
 <div class="highlight"><pre><span></span><code>docker-compose exec photoprism photoprism faces reset -f
 </code></pre></div>
-<h3 id="watchtower">Watchtower<a class="headerlink" href="#watchtower" title="Permanent link">&para;</a></h3>
+<h4 id="watchtower">Watchtower<a class="headerlink" href="#watchtower" title="Permanent link">&para;</a></h4>
 <p>Adding <a href="https://github.com/containrrr/watchtower">Watchtower</a> as a service to your <code>docker-compose.yml</code> will
 automatically keep images up-to-date:</p>
 <div class="highlight"><pre><span></span><code>services:
