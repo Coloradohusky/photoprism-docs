@@ -3148,14 +3148,17 @@ For example, <code>make test</code> will run frontend and backend unit tests. Ba
 running <code>make fix-permissions</code> in a container terminal.</p>
 </div>
 <p><strong>Optional:</strong> Build the frontend in watch mode</p>
-<p>In addition to providing the backend API the built-in webserver also serves static assets. These can automatically be
-re-built (updated) whenever you change a file. To do this, run the following command in a terminal, either inside
-or outside the container:</p>
+<p>The integrated web server not only provides the backend API, but is also used to serve static assets. These can be
+automatically rebuilt (updated) when you change a file. To do this, run the following command in a terminal, either
+inside or outside the container (outside is faster if your host is not running Linux):</p>
 <div class="highlight"><pre><span></span><code>make watch-js
 </code></pre></div>
-<p>Alternatively, you can use NPM directly to watch the frontend code and rebuild assets whenever changes are made:</p>
+<p>Alternatively, you can change to the <code>frontend</code> directory and run NPM directly:</p>
 <div class="highlight"><pre><span></span><code>cd fronend
 npm run watch
+</code></pre></div>
+<p>To update the frontend dependencies, also change to the <code>frontend</code> directory and run:</p>
+<div class="highlight"><pre><span></span><code>npm update
 </code></pre></div>
 <p>Questions?</p>
 <ul>
