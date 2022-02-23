@@ -3572,17 +3572,17 @@ always <strong>requires a restart</strong> to take effect. Open a terminal, run 
 <tr>
 <td align="left"><code>PHOTOPRISM_DATABASE_DRIVER</code></td>
 <td align="left">--database-driver NAME</td>
-<td align="left">database DRIVER (sqlite or mysql) (default: "sqlite")</td>
+<td align="left">database DRIVER (sqlite, mysql) (default: "sqlite")</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_DATABASE_DSN</code></td>
 <td align="left">--database-dsn DSN</td>
-<td align="left">sqlite file name, providing a DSN is optional for other drivers</td>
+<td align="left">database connection DSN (sqlite filename, optional for mysql)</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_DATABASE_SERVER</code></td>
 <td align="left">--database-server HOST</td>
-<td align="left">database server HOST with optional port e.g. mysql:3306</td>
+<td align="left">database HOST incl. port e.g. "mariadb:3306" (or socket path)</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_DATABASE_NAME</code></td>
