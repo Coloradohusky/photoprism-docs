@@ -3577,12 +3577,12 @@ always <strong>requires a restart</strong> to take effect. Open a terminal, run 
 <tr>
 <td align="left"><code>PHOTOPRISM_DATABASE_DSN</code></td>
 <td align="left">--database-dsn DSN</td>
-<td align="left">database connection DSN (sqlite filename, optional for mysql)</td>
+<td align="left">database connection DSN (<a href="https://pkg.go.dev/github.com/mattn/go-sqlite3#readme-connection-string">sqlite filename</a>, optional for <a href="https://github.com/go-sql-driver/mysql#dsn-data-source-name">mysql</a>)</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_DATABASE_SERVER</code></td>
 <td align="left">--database-server HOST</td>
-<td align="left">database HOST incl. port e.g. "mariadb:3306" (or socket path)</td>
+<td align="left">database HOST incl. port e.g. "mariadb:3306" (or <a href="https://github.com/go-sql-driver/mysql#address">socket path</a>)</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_DATABASE_NAME</code></td>
