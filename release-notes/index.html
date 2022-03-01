@@ -3552,17 +3552,19 @@ Your continued support <a href="../funding/">helps us</a> provide regular update
 to <code>photoprism/photoprism:preview</code> in your <a href="https://dl.photoprism.app/docker/"><code>docker-compose.yml</code></a>. 
 Then <a href="../getting-started/updates/">pull the most recent image</a> and restart your instance.</p>
 </div>
-<p>The Docker image of our <a href="https://hub.docker.com/r/photoprism/photoprism/tags?page=1&amp;name=preview">upcoming release</a> is based on Debian 11 "Bullseye" instead of Ubuntu Server. It is smaller and comes with many updated dependencies like <a href="https://www.darktable.org/2022/02/darktable-3.8.1-released/">Darktable 3.8.1</a>. The new build process also makes it easier to provide standalone packages in the near future.</p>
+<p>The Docker image of our <a href="https://hub.docker.com/r/photoprism/photoprism/tags?page=1&amp;name=preview">upcoming release</a>
+is based on Debian 11 "Bullseye" and includes many updated dependencies such as <a href="https://www.darktable.org/2022/02/darktable-3.8.1-released/">Darktable 3.8</a>.
+The new build process also makes it easier to provide standalone packages in the future.</p>
 <ul>
-<li>Auth: <a href="https://github.com/photoprism/photoprism/issues/782">New login page with space for additional buttons, links, and legal information</a></li>
+<li>Auth: <a href="https://github.com/photoprism/photoprism/issues/782">New login screen with more space for buttons, links, and legal information</a></li>
+<li>Metadata: <a href="https://github.com/photoprism/photoprism/issues/2017">Redesigned file details tab in edit dialog</a></li>
+<li>Metadata: <a href="https://github.com/photoprism/photoprism/issues/2082">Support for Zulu formatted timestamps in Exiftool JSON and XMP</a></li>
 <li>Sharing: <a href="https://github.com/photoprism/photoprism/issues/1376">Fixed uploading complete albums via WebDAV</a></li>
-<li>iOS: <a href="https://github.com/photoprism/photoprism/issues/2074">Improved touch responsiveness when selecting multiple items</a></li>
-<li>UX: <a href="https://github.com/photoprism/photoprism/issues/2017">Redesigned metadata details in the files tab of the edit dialog</a></li>
+<li>iOS: <a href="https://github.com/photoprism/photoprism/issues/2074">Fixed multi-select via long touch in Safari PWA mode</a></li>
 <li>API: <a href="https://github.com/photoprism/photoprism/issues/822#issuecomment-1046276315">Added cache control header for faster thumbnail loading</a></li>
 <li>Config: <a href="https://github.com/photoprism/photoprism/commit/9c1325f38ec38bc4ca01df4ca8bc723841cc7cc7">Simplified configuration of Unix domain socket database connections</a></li>
 <li>Config: <a href="https://github.com/photoprism/photoprism/issues/1990">Added <code>--imprint</code> and <code>--imprint-url</code> to display legal information in the footer</a></li>
-<li>Docker: <a href="https://github.com/photoprism/photoprism/issues/1337">Automatic detection of compatible CPU and GPU drivers</a></li>
-<li>...as well as many other improvements!</li>
+<li>Docker: <a href="https://github.com/photoprism/photoprism/issues/2076">Automatic installation of compatible CPU and GPU drivers</a></li>
 </ul>
 <h3 id="january-21-2022">January 21, 2022<a class="headerlink" href="#january-21-2022" title="Permanent link">&para;</a></h3>
 <p><span class="build">Build 220121-2b4c8e1f</span></p>
