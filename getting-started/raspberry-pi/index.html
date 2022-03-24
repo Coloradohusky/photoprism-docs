@@ -3258,8 +3258,8 @@ and you see the "no matching manifest" error on Raspberry Pi OS (Raspbian):</p>
 <div class="highlight"><pre><span></span><code>docker pull --platform<span class="o">=</span>arm64 photoprism/photoprism:latest
 </code></pre></div>
 <p>It may also help to set the <code>DOCKER_DEFAULT_PLATFORM</code> environment variable to <code>linux/arm64</code>.</p>
-<p>In case you see Docker errors related to "cgroups", try adding the following parameters 
-to <code>/boot/firmware/cmdline.txt</code>:</p>
+<p>In case you see Docker errors related to "cgroups", try adding the following parameters to 
+<code>/boot/firmware/cmdline.txt</code> or <code>/boot/cmdline.txt</code> (file location depends on the OS in use):</p>
 <div class="highlight"><pre><span></span><code>cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
 </code></pre></div>
 <h4 id="older-armv7-based-devices">Older ARMv7-based Devices<a class="headerlink" href="#older-armv7-based-devices" title="Permanent link">&para;</a></h4>
