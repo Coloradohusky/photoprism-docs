@@ -3461,8 +3461,12 @@ file has been saved.</p>
 <td><code>docker-compose logs --tail=100 -f</code></td>
 </tr>
 <tr>
-<td><em>List Config Values</em></td>
+<td><em>Display Config Values</em></td>
 <td><code>docker-compose exec photoprism photoprism config</code></td>
+</tr>
+<tr>
+<td><em>Repeat Failed Migrations</em></td>
+<td><code>docker-compose exec photoprism photoprism migrations run --failed</code></td>
 </tr>
 <tr>
 <td><em>Reset Database</em></td>

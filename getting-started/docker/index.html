@@ -3392,8 +3392,12 @@ its container has the same name.</p>
 <td><code>docker logs --tail=100 -f photoprism</code></td>
 </tr>
 <tr>
-<td><em>List Config Values</em></td>
+<td><em>Display Config Values</em></td>
 <td><code>docker exec -ti photoprism photoprism config</code></td>
+</tr>
+<tr>
+<td><em>Repeat Failed Migrations</em></td>
+<td><code>docker exec -ti photoprism photoprism migrations run --failed</code></td>
 </tr>
 <tr>
 <td><em>Reset Database</em></td>
