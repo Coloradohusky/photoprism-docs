@@ -99,7 +99,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#supported-metadata-tags" class="md-skip">
+        <a href="#extraction" class="md-skip">
           Skip to content
         </a>
       
@@ -1869,8 +1869,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#supported-metadata-tags" class="md-nav__link">
-    Supported Metadata Tags
+  <a href="#extraction" class="md-nav__link">
+    Extraction
+  </a>
+  
+    <nav class="md-nav" aria-label="Extraction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-exiftool-xmp-tags" class="md-nav__link">
+    Supported Exiftool &amp; XMP Tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrate-from-other-tools" class="md-nav__link">
+    Migrate from other Tools
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enrichment" class="md-nav__link">
+    Enrichment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export" class="md-nav__link">
+    Export
   </a>
   
 </li>
@@ -3024,8 +3058,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#supported-metadata-tags" class="md-nav__link">
-    Supported Metadata Tags
+  <a href="#extraction" class="md-nav__link">
+    Extraction
+  </a>
+  
+    <nav class="md-nav" aria-label="Extraction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-exiftool-xmp-tags" class="md-nav__link">
+    Supported Exiftool &amp; XMP Tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrate-from-other-tools" class="md-nav__link">
+    Migrate from other Tools
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enrichment" class="md-nav__link">
+    Enrichment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export" class="md-nav__link">
+    Export
   </a>
   
 </li>
@@ -3050,15 +3118,16 @@
 
   <h1>Metadata</h1>
 
+<h2 id="extraction">Extraction<a class="headerlink" href="#extraction" title="Permanent link">&para;</a></h2>
 <p>PhotoPrism aims to extract as much metadata from your original files as possible.</p>
 <p>This is an ongoing task. If you are using certain standard exif or xmp fields that are not supported yet, feel free to open an <a href="https://github.com/photoprism/photoprism/issues">issue</a> or pull request.</p>
-<p>PhotoPrism does not yet write back changes to EXIF or XMP (see <a href="https://github.com/photoprism/photoprism/discussions/1092">discussion</a>). </p>
-<p>We want you to have access to your metadata independent from PhotoPrism or its database,
-that's why we create human-readable <a href="../export/">YAML backups</a> with metadata you add to your files using PhotoPrism.</p>
-<h2 id="supported-metadata-tags">Supported Metadata Tags<a class="headerlink" href="#supported-metadata-tags" title="Permanent link">&para;</a></h2>
-<p>PhotoPrism uses <a href="https://exiftool.org/">exiftool</a> to extract metadata from different file formats like EXIF, XMP, IPTC and more.
-We additionally parse XMP.</p>
+<h3 id="supported-exiftool-xmp-tags">Supported Exiftool &amp; XMP Tags<a class="headerlink" href="#supported-exiftool-xmp-tags" title="Permanent link">&para;</a></h3>
+<p>PhotoPrism uses <a href="https://exiftool.org/">exiftool</a> to extract metadata from different file formats like EXIF, XMP, IPTC and more.</p>
+<p>We additionally parse XMP.</p>
 <p>This table gives an overview what tags from exiftool or XMP are mapped to which fields in PhotoPrism.</p>
+<div class="admonition tldr">
+<p>If you update one of those tags using another tool such as Exiftool or Digikam, PhotoPrism will read the changes during the next indexing. Provided the files modifyDate has been updated.</p>
+</div>
 <div class="admonition attention">
 <p>In case a field is populated with data from xmp, the data from xmp is the single source for this field.
 Meaning e.g keywords from xmp overwrite other keywords coming from PhotoPrism such as colors or keywords derived from folder names. </p>
@@ -3219,6 +3288,24 @@ Meaning e.g keywords from xmp overwrite other keywords coming from PhotoPrism su
 </tr>
 </tbody>
 </table>
+<h3 id="migrate-from-other-tools">Migrate from other Tools<a class="headerlink" href="#migrate-from-other-tools" title="Permanent link">&para;</a></h3>
+<p>PhotoPrism also reads metadata from Google Photo's json files or Apple's xmp files.</p>
+<ul>
+<li><a href="../../use-cases/google/">Google Photos</a></li>
+<li><a href="../../use-cases/apple/">Apple Photos</a></li>
+</ul>
+<h2 id="enrichment">Enrichment<a class="headerlink" href="#enrichment" title="Permanent link">&para;</a></h2>
+<p>In addition to reading metadata from your original and sidecar files, PhotoPrism enriches the metadata of your photos with additional information:</p>
+<ul>
+<li>dates or keywords from folder or filenames</li>
+<li>keywords derived from image classification, color detection and facial recognition</li>
+<li>GPS information from location estimates </li>
+<li>keywords derived from location details</li>
+</ul>
+<h2 id="export">Export<a class="headerlink" href="#export" title="Permanent link">&para;</a></h2>
+<p>PhotoPrism does not yet write back changes to EXIF or XMP (see <a href="https://github.com/photoprism/photoprism/discussions/1092">discussion</a>).</p>
+<p>We want you to have access to your metadata independent from PhotoPrism or its database,
+that's why we create human-readable <a href="../export/">YAML files</a> with metadata you add to your files using PhotoPrism.</p>
 
               
             </article>
