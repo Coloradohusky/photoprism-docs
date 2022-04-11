@@ -3256,7 +3256,7 @@ like geodata. Pictures with matching keywords automatically show up in related <
 <h2 id="search">Search<a class="headerlink" href="#search" title="Permanent link">&para;</a></h2>
 <details class="question">
 <summary>Why can't I play live photos when I search for the filename of an image?</summary>
-<p>Our search API and the user interface provide file search. This is intentional because a "stack" may contain files of different types and properties, such as color.</p>
+<p>Our search API and user interface perform a file search. This is intentional because a "stack" may contain files of different types and properties, such as color.</p>
 <p>For example, there may be color and monochrome versions of images. Now, when you search for them or sort them by color, the user interface must display individual files. Otherwise, the results showing a color image when you filter by monochrome would make no sense.</p>
 <p>Likewise, if you search for <code>filename.mp4.*</code>, you are expected to find only related JPEGs - without video - because the video file extension is not .mp4.jpg, but .mp4 (without an extra dot at the end).</p>
 <p>We recommend using the <code>path:</code> and/or <code>name:</code> filters with wildcards if searching for individual files limits the search results too much. Most users will want to find all related files so that they can be displayed together, e.g. as live photos consisting of a video and an image.</p>
