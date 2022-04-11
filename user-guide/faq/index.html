@@ -3279,7 +3279,7 @@ like geodata. Pictures with matching keywords automatically show up in related <
 <h2 id="library-counts-files">Library, Counts &amp; Files<a class="headerlink" href="#library-counts-files" title="Permanent link">&para;</a></h2>
 <details class="question">
 <summary>What media file types are supported?</summary>
-<p>The primary image format is JPEG. Support for JPEG XL is planned but not available yet.
+<p>The primary <a href="../../developer-guide/media/">image format</a> is JPEG. Support for JPEG XL is planned but not available yet.
 When indexing, a JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files.
 It is needed for generating thumbnails, image classification, and facial recognition.</p>
 <p>Due to the patent situation and its complexity, <a href="https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+">TIFF is only partially supported</a> at the moment.</p>
@@ -3292,7 +3292,7 @@ otherwise you may need to install them on your system):</p>
 <p>If you're running PhotoPrism directly on a Mac, RAW files will be converted with <a href="https://ss64.com/osx/sips.html">Sips</a> (<a href="https://support.apple.com/en-us/HT211241">supported cameras</a>) by default.
 Our goal is to provide top-notch support for all RAW formats, regardless of camera make and model.
 Please let us know when there are any issues with a particular camera or file format.</p>
-<p>Video formats supported by <a href="https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats">FFmpeg</a> can be transcoded to
+<p><a href="../../developer-guide/media/">Video formats</a> supported by <a href="https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats">FFmpeg</a> can be transcoded to
 <a href="https://en.wikipedia.org/wiki/Advanced_Video_Coding">MPEG-4 AVC</a>. Still images for generating thumbnails can be extracted from
 most videos as well.</p>
 <p>If you have videos, always enable JSON <abbr title="additional files that sit next to a main file">sidecar files</abbr> so that video metadata such as date, location, codec,
@@ -3300,7 +3300,7 @@ and duration can be indexed and searched.</p>
 </details>
 <details class="question">
 <summary>What metadata sidecar file types are supported?</summary>
-<p>Currently, three types of file formats are supported:</p>
+<p>Currently, three types of <a href="../../developer-guide/media/">file formats</a> are supported:</p>
 <h4 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">&para;</a></h4>
 <p>If not disabled via <code>PHOTOPRISM_DISABLE_EXIFTOOL</code> or <code>--disable-exiftool</code>, <a href="https://exiftool.org/">Exiftool</a> is used
 to automatically create a JSON sidecar for each media file. <strong>In this way, embedded XMP and video metadata can also be indexed.</strong>
