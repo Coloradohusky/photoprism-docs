@@ -2359,9 +2359,40 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Formats
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Formats
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cli-command" class="md-nav__link">
+    CLI Command
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3006,6 +3037,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cli-command" class="md-nav__link">
+    CLI Command
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3026,213 +3072,220 @@
 <table>
 <thead>
 <tr>
-<th align="left">Format</th>
-<th align="left">Description</th>
-<th align="left">Type</th>
-<th align="left">Extensions</th>
+<th>Format</th>
+<th>Description</th>
+<th>Type</th>
+<th>Extensions</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">BMP</td>
-<td align="left">Bitmap</td>
-<td align="left">Image</td>
-<td align="left">.bmp</td>
+<td>BMP</td>
+<td>Bitmap</td>
+<td>Image</td>
+<td>.bmp</td>
 </tr>
 <tr>
-<td align="left">GIF</td>
-<td align="left">Graphics Interchange Format</td>
-<td align="left">Image</td>
-<td align="left">.gif</td>
+<td>GIF</td>
+<td>Graphics Interchange Format</td>
+<td>Image</td>
+<td>.gif</td>
 </tr>
 <tr>
-<td align="left">HEIF</td>
-<td align="left">High Efficiency Image File Format</td>
-<td align="left">Image</td>
-<td align="left">.heic, .heif</td>
+<td>HEIF</td>
+<td>High Efficiency Image File Format</td>
+<td>Image</td>
+<td>.heic, .heif</td>
 </tr>
 <tr>
-<td align="left">JPG</td>
-<td align="left">JPEG (Joint Photographic Experts Group)</td>
-<td align="left">Image</td>
-<td align="left">.jfi, .jfif, .jif, .jpe, .jpeg, .jpg, .thm</td>
+<td>JPG</td>
+<td>JPEG (Joint Photographic Experts Group)</td>
+<td>Image</td>
+<td>.jfi, .jfif, .jif, .jpe, .jpeg, .jpg, .thm</td>
 </tr>
 <tr>
-<td align="left">MPO</td>
-<td align="left">Stereoscopic 3D Format based on JPEG</td>
-<td align="left">Image</td>
-<td align="left">.mpo</td>
+<td>MPO</td>
+<td>Stereoscopic 3D Format based on JPEG</td>
+<td>Image</td>
+<td>.mpo</td>
 </tr>
 <tr>
-<td align="left">PNG</td>
-<td align="left">Portable Network Graphics</td>
-<td align="left">Image</td>
-<td align="left">.pn, .png</td>
+<td>PNG</td>
+<td>Portable Network Graphics</td>
+<td>Image</td>
+<td>.pn, .png</td>
 </tr>
 <tr>
-<td align="left">TIFF</td>
-<td align="left">Tag Image File Format</td>
-<td align="left">Image</td>
-<td align="left">.tif, .tiff</td>
+<td>TIFF</td>
+<td>Tag Image File Format</td>
+<td>Image</td>
+<td>.tif, .tiff</td>
 </tr>
 <tr>
-<td align="left">WEBP</td>
-<td align="left">Google WebP</td>
-<td align="left">Image</td>
-<td align="left">.webp</td>
+<td>WEBP</td>
+<td>Google WebP</td>
+<td>Image</td>
+<td>.webp</td>
 </tr>
 <tr>
-<td align="left">RAW</td>
-<td align="left">Unprocessed Image Data</td>
-<td align="left">Raw</td>
-<td align="left">.3fr, .ari, .arw, .bay, .cap, .cr2, .cr3, .crw, .data, .dcr, .dcs, .dng, .drf, .eip, .erf, .fff, .gpr, .iiq, .k25, .kdc, .mdc, .mef, .mos, .mrw, .nef, .nrw, .obm, .orf, .pef, .ptx, .pxn, .r3d, .raf, .raw, .rw2, .rwl, .rwz, .sr2, .srf, .srw, .x3f</td>
+<td>RAW</td>
+<td>Unprocessed Image Data</td>
+<td>Raw</td>
+<td>.3fr, .ari, .arw, .bay, .cap, .cr2, .cr3, .crw, .data, .dcr, .dcs, .dng, .drf, .eip, .erf, .fff, .gpr, .iiq, .k25, .kdc, .mdc, .mef, .mos, .mrw, .nef, .nrw, .obm, .orf, .pef, .ptx, .pxn, .r3d, .raf, .raw, .rw2, .rwl, .rwz, .sr2, .srf, .srw, .x3f</td>
 </tr>
 <tr>
-<td align="left">AAE</td>
-<td align="left">Apple Image Edits</td>
-<td align="left">Sidecar</td>
-<td align="left">.aae</td>
+<td>AAE</td>
+<td>Apple Image Edits</td>
+<td>Sidecar</td>
+<td>.aae</td>
 </tr>
 <tr>
-<td align="left">JSON</td>
-<td align="left">Serialized JSON Data (Exiftool, Google Photos)</td>
-<td align="left">Sidecar</td>
-<td align="left">.json</td>
+<td>JSON</td>
+<td>Serialized JSON Data (Exiftool, Google Photos)</td>
+<td>Sidecar</td>
+<td>.json</td>
 </tr>
 <tr>
-<td align="left">MD</td>
-<td align="left">Markdown Formatted Text</td>
-<td align="left">Sidecar</td>
-<td align="left">.markdown, .md</td>
+<td>MD</td>
+<td>Markdown Formatted Text</td>
+<td>Sidecar</td>
+<td>.markdown, .md</td>
 </tr>
 <tr>
-<td align="left">TOML</td>
-<td align="left">Serialized TOML Data (Tom's Obvious, Minimal Language)</td>
-<td align="left">Sidecar</td>
-<td align="left">.toml</td>
+<td>TOML</td>
+<td>Serialized TOML Data (Tom's Obvious, Minimal Language)</td>
+<td>Sidecar</td>
+<td>.toml</td>
 </tr>
 <tr>
-<td align="left">TXT</td>
-<td align="left">Plain Text</td>
-<td align="left">Sidecar</td>
-<td align="left">.txt</td>
+<td>TXT</td>
+<td>Plain Text</td>
+<td>Sidecar</td>
+<td>.txt</td>
 </tr>
 <tr>
-<td align="left">XML</td>
-<td align="left">Extensible Markup Language</td>
-<td align="left">Sidecar</td>
-<td align="left">.xml</td>
+<td>XML</td>
+<td>Extensible Markup Language</td>
+<td>Sidecar</td>
+<td>.xml</td>
 </tr>
 <tr>
-<td align="left">XMP</td>
-<td align="left">Adobe Extensible Metadata Platform</td>
-<td align="left">Sidecar</td>
-<td align="left">.xmp</td>
+<td>XMP</td>
+<td>Adobe Extensible Metadata Platform</td>
+<td>Sidecar</td>
+<td>.xmp</td>
 </tr>
 <tr>
-<td align="left">YML</td>
-<td align="left">Serialized YAML Data (Metadata, Config Values)</td>
-<td align="left">Sidecar</td>
-<td align="left">.yaml, .yml</td>
+<td>YML</td>
+<td>Serialized YAML Data (Config, Metadata)</td>
+<td>Sidecar</td>
+<td>.yaml, .yml</td>
 </tr>
 <tr>
-<td align="left">3G2</td>
-<td align="left">Multimedia Container for 3G CDMA2000, based on 3GP</td>
-<td align="left">Video</td>
-<td align="left">.3g2</td>
+<td>3G2</td>
+<td>Multimedia Container for 3G CDMA2000, based on 3GP</td>
+<td>Video</td>
+<td>.3g2</td>
 </tr>
 <tr>
-<td align="left">3GP</td>
-<td align="left">MPEG-4 Part 12, Mobile Multimedia Container</td>
-<td align="left">Video</td>
-<td align="left">.3gp</td>
+<td>3GP</td>
+<td>MPEG-4 Part 12, Mobile Multimedia Container</td>
+<td>Video</td>
+<td>.3gp</td>
 </tr>
 <tr>
-<td align="left">AV1</td>
-<td align="left">Alliance for Open Media</td>
-<td align="left">Video</td>
-<td align="left">.av1</td>
+<td>AV1</td>
+<td>Alliance for Open Media</td>
+<td>Video</td>
+<td>.av1</td>
 </tr>
 <tr>
-<td align="left">AVC</td>
-<td align="left">H.264, Advanced Video Coding, MPEG-4 Part 10</td>
-<td align="left">Video</td>
-<td align="left">.avc</td>
+<td>AVC</td>
+<td>H.264, Advanced Video Coding, MPEG-4 Part 10</td>
+<td>Video</td>
+<td>.avc</td>
 </tr>
 <tr>
-<td align="left">AVI</td>
-<td align="left">Microsoft Audio Video Interleave</td>
-<td align="left">Video</td>
-<td align="left">.avi</td>
+<td>AVI</td>
+<td>Microsoft Audio Video Interleave</td>
+<td>Video</td>
+<td>.avi</td>
 </tr>
 <tr>
-<td align="left">FLV</td>
-<td align="left">Flash Video</td>
-<td align="left">Video</td>
-<td align="left">.f4v, .flv</td>
+<td>FLV</td>
+<td>Flash Video</td>
+<td>Video</td>
+<td>.f4v, .flv</td>
 </tr>
 <tr>
-<td align="left">HEVC</td>
-<td align="left">H.265, High Efficiency Video Coding</td>
-<td align="left">Video</td>
-<td align="left">.hevc</td>
+<td>HEVC</td>
+<td>H.265, High Efficiency Video Coding</td>
+<td>Video</td>
+<td>.hevc</td>
 </tr>
 <tr>
-<td align="left">MKV</td>
-<td align="left">Matroska Multimedia Container</td>
-<td align="left">Video</td>
-<td align="left">.mkv</td>
+<td>MKV</td>
+<td>Matroska Multimedia Container</td>
+<td>Video</td>
+<td>.mkv</td>
 </tr>
 <tr>
-<td align="left">MOV</td>
-<td align="left">QuickTime File Format</td>
-<td align="left">Video</td>
-<td align="left">.mov, .qt</td>
+<td>MOV</td>
+<td>Apple QuickTime</td>
+<td>Video</td>
+<td>.mov, .qt</td>
 </tr>
 <tr>
-<td align="left">MP2</td>
-<td align="left">MPEG-2, H.222, H.262</td>
-<td align="left">Video</td>
-<td align="left">.mp2, .mpv</td>
+<td>MP2</td>
+<td>H.262, H.222, MPEG-2</td>
+<td>Video</td>
+<td>.mp2, .mpv</td>
 </tr>
 <tr>
-<td align="left">MP4</td>
-<td align="left">MPEG-4 Part 14 Multimedia Container</td>
-<td align="left">Video</td>
-<td align="left">.m4v, .mp, .mp4</td>
+<td>MP4</td>
+<td>MPEG-4 Part 14 Multimedia Container</td>
+<td>Video</td>
+<td>.m4v, .mp, .mp4</td>
 </tr>
 <tr>
-<td align="left">MPG</td>
-<td align="left">MPEG (Moving Picture Experts Group)</td>
-<td align="left">Video</td>
-<td align="left">.mpeg, .mpg</td>
+<td>MPG</td>
+<td>MPEG (Moving Picture Experts Group)</td>
+<td>Video</td>
+<td>.mpeg, .mpg</td>
 </tr>
 <tr>
-<td align="left">MTS</td>
-<td align="left">AVCHD (Advanced Video Coding High Definition)</td>
-<td align="left">Video</td>
-<td align="left">.mts</td>
+<td>MTS</td>
+<td>AVCHD (Advanced Video Coding High Definition)</td>
+<td>Video</td>
+<td>.mts</td>
 </tr>
 <tr>
-<td align="left">OGV</td>
-<td align="left">Ogg Media by Xiph.Org</td>
-<td align="left">Video</td>
-<td align="left">.ogg, .ogv, .ogx</td>
+<td>OGV</td>
+<td>Ogg Media by Xiph.Org</td>
+<td>Video</td>
+<td>.ogg, .ogv, .ogx</td>
 </tr>
 <tr>
-<td align="left">WEBM</td>
-<td align="left">Google WebM</td>
-<td align="left">Video</td>
-<td align="left">.webm</td>
+<td>WEBM</td>
+<td>Google WebM</td>
+<td>Video</td>
+<td>.webm</td>
 </tr>
 <tr>
-<td align="left">WMV</td>
-<td align="left">Windows Media</td>
-<td align="left">Video</td>
-<td align="left">.wmv</td>
+<td>WMV</td>
+<td>Windows Media</td>
+<td>Video</td>
+<td>.wmv</td>
 </tr>
 </tbody>
 </table>
+<h2 id="cli-command">CLI Command<a class="headerlink" href="#cli-command" title="Permanent link">&para;</a></h2>
+<p>Run <code>photoprism show formats</code> to display all supported formats as a Markdown formatted table.</p>
+<p>Command Flags:</p>
+<ul>
+<li><code>-c</code> hides format descriptions to make the output more compact</li>
+<li><code>-n</code> disables text-wrapping so <a href="https://github.com/photoprism/photoprism-docs/blob/master/docs/developer-guide/media/index.md">the output can be pasted into Markdown files</a></li>
+</ul>
 
               
             </article>
