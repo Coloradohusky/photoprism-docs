@@ -3576,13 +3576,14 @@
 Your continued support <a href="../funding/">helps us</a> provide regular updates and services like <a href="https://try.photoprism.app/places">world maps</a>. Thank you! 💜</p>
 </div>
 <h3 id="development-preview">Development Preview<a class="headerlink" href="#development-preview" title="Permanent link">&para;</a></h3>
-<p><span class="build">Build 220411-ad345805</span></p>
+<p><span class="build">Build 220412-20c8d73b</span></p>
 <p>This update features search UX improvements, a new Docker base image based on Debian 12 "Bookworm",
 as well as fixes for recently discovered issues. Front- and backend <a href="https://translate.photoprism.app/">translations</a> in numerous
 languages have been added and updated. Thanks to all involved!</p>
 <ul>
 <li>File Formats: <a href="https://github.com/photoprism/photoprism/issues/1226">Added native support for WebP images</a></li>
 <li>UX: <a href="https://github.com/photoprism/photoprism/issues/2234">RAW files are skipped by default when downloading photos and albums</a></li>
+<li>Auth: <a href="https://github.com/photoprism/photoprism/issues/2248">Passwords must have at least 8 characters to mitigate brute-force attacks</a></li>
 <li>Search: <a href="https://github.com/photoprism/photoprism/issues/1438">User interface and database performance optimizations</a></li>
 <li>Search: <a href="https://github.com/photoprism/photoprism/issues/1995">Fixed occasional lag when entering queries in the search toolbar</a></li>
 <li>Search: <a href="https://github.com/photoprism/photoprism/issues/1994">Improved <code>album:...</code> filter allows searching for numeric names, <code>albums:..</code> also supports AND/OR conditions via <code>&amp;</code> and <code>|</code></a></li>
@@ -3594,18 +3595,20 @@ languages have been added and updated. Thanks to all involved!</p>
 <li>Library: <a href="https://github.com/photoprism/photoprism/discussions/1683">Added button to clear log history in <em>Library</em> &gt; <em>Errors</em></a></li>
 <li>Library: <a href="https://github.com/photoprism/photoprism/issues/2189">Disabled hidden files warning while indexing as it can be misleading</a></li>
 <li>Thumbnails: <a href="https://github.com/photoprism/photoprism/issues/2215">Reduced default JPEG quality from 92 to 85 to optimize storage and loading</a></li>
+<li>Metadata: <a href="https://github.com/photoprism/photoprism/issues/2239">Manual local time changes are always preserved when reindexing</a></li>
 <li>Metadata: <a href="https://github.com/photoprism/photoprism/discussions/2214">Fixed Exif orientation flag when converting HEIC photos to JPEG</a></li>
 <li>Metadata: <a href="https://github.com/photoprism/photoprism/issues/625">Fault-tolerant parsing of timestamps from Exif and JSON sidecar files</a></li>
 <li>Metadata: <a href="https://github.com/photoprism/photoprism/issues/2231">Exif IFD1 tags with existing IFD0 values are ignored to improve standard compliance</a></li>
 <li>Metadata: <a href="https://github.com/photoprism/photoprism/issues/2196">Brute-force search is skipped by default if no Exif headers were found in JPEG, PNG, TIFF, and HEIF files</a></li>
 <li>WebDAV: <a href="https://github.com/photoprism/photoprism/issues/1785">Up- and download sync can no longer be enabled at the same time to prevent unexpected behavior</a></li>
 <li>WebDAV: <a href="https://github.com/photoprism/photoprism/issues/1781">Added timeout/retry settings and improved handling of sync errors</a></li>
+<li>CLI: <a href="https://github.com/photoprism/photoprism/issues/2195">Added short names for common config flags, e.g. <code>-i</code> for <code>--wakeup-interval</code></a></li>
+<li>CLI: <a href="https://github.com/photoprism/photoprism/issues/2247">Run <code>photoprism show formats</code> to display supported media and sidecar file formats</a></li>
 <li>Docker: <a href="https://github.com/photoprism/photoprism/issues/2178">Upgraded base image to Debian 12 "Bookworm", which includes FFmpeg 4.4.1 and Darktable 3.8.1</a></li>
 <li>Config: <a href="https://github.com/photoprism/photoprism/issues/2222">Improved FFmpeg parameters for Intel QSV hardware transcoding</a></li>
 <li>Config: <a href="https://github.com/photoprism/photoprism/issues/2125">Added NVIDIA hardware video transcoding support for sponsors</a></li>
 <li>Config: <a href="https://github.com/photoprism/photoprism/issues/2227">Added <code>--disable-raw</code> flag to disable indexing and conversion of RAW files</a></li>
 <li>Config: <a href="https://github.com/photoprism/photoprism/issues/1017">Added <code>--resolution-limit</code> option to skip high-resolution images when indexing</a></li>
-<li>Config: <a href="https://github.com/photoprism/photoprism/issues/2195">Added short names for common CLI parameters, e.g. <code>-i</code> for <code>--wakeup-interval</code></a></li>
 </ul>
 <div class="admonition tldr">
 <p>You can test upcoming features and improvements by changing the image from <code>photoprism/photoprism:latest</code>
